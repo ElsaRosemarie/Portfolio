@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { asset } from "@/lib/paths";
 
 export default function WorkshopsPage() {
   return (
     <div className="mx-auto w-full max-w-4xl px-4 pb-20 sm:px-6 md:px-10">
       <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden bg-neutral-100">
         <Image
-          src="/images/WORKSHOPS/hero.jpg"
+          src={asset("/images/WORKSHOPS/hero.jpg")}
           alt="Workshops"
           fill
           className="object-cover"

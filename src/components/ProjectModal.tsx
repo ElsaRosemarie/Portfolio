@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import type { Project } from "@/types/gallery";
+import { asset } from "@/lib/paths";
 
 interface ProjectModalProps {
   project: Project;
@@ -78,7 +79,7 @@ export default function ProjectModal({
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={images[imageIndex].src}
+            src={asset(images[imageIndex].src)}
             alt={images[imageIndex].alt}
             className="max-h-[70vh] w-auto max-w-full object-contain"
           />
@@ -115,7 +116,7 @@ export default function ProjectModal({
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={img.src}
+                  src={asset(img.src)}
                   alt={img.alt}
                   className={`block max-h-40 w-auto max-w-full object-contain transition-opacity sm:max-h-44 ${
                     i === imageIndex

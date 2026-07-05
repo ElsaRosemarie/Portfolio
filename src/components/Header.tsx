@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { asset } from "@/lib/paths";
 
 const links = [
   { href: "/work", label: "work" },
@@ -22,7 +23,7 @@ export default function Header() {
         <Link href="/" className="block w-36 shrink-0 sm:w-40 md:w-48">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/HOME/Logo.png"
+            src={asset("/images/HOME/Logo.png")}
             alt="Elsa van Dam"
             className="h-auto w-full"
           />

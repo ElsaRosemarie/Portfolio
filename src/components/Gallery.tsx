@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { GallerySection, Project } from "@/types/gallery";
+import { asset } from "@/lib/paths";
 import ProjectModal from "./ProjectModal";
 
 interface GalleryProps {
@@ -52,7 +53,7 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={project.cover}
+                src={asset(project.cover)}
                 alt={project.title}
                 className="w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-75"
                 loading="lazy"
