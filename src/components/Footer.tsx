@@ -2,11 +2,11 @@ export default function Footer() {
   return (
     <footer className="flex justify-center px-6 py-12">
       <a
-        href="https://instagram.com"
+        href="https://instagram.com/elsa.rosemarie"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="text-neutral-800 transition-opacity hover:opacity-50"
+        className="text-neutral-800 transition-colors hover:text-brand"
       >
         <svg
           width="22"

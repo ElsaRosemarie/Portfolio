@@ -57,42 +57,42 @@ export default function ProjectModal({
       <button
         type="button"
         onClick={onClose}
-        className="fixed right-6 top-6 z-10 text-2xl leading-none text-neutral-800 transition-opacity hover:opacity-50 md:right-10 md:top-8"
+        className="fixed right-4 top-4 z-10 text-2xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:right-8 sm:top-8"
         aria-label="Close"
       >
         ×
       </button>
 
-      {currentIndex > 0 && (
-        <button
-          type="button"
-          onClick={goPrev}
-          className="fixed left-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-neutral-400 transition-colors hover:text-neutral-800 md:left-8"
-          aria-label="Previous project"
-        >
-          ‹
-        </button>
-      )}
+      <div className="mx-auto w-full max-w-5xl px-4 pt-8 sm:px-6">
+        <div className="relative mb-8 flex min-h-[40vh] items-center justify-center px-8 sm:px-12 md:min-h-[55vh] md:px-14">
+          {currentIndex > 0 && (
+            <button
+              type="button"
+              onClick={goPrev}
+              className="absolute left-0 top-1/2 z-10 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:text-5xl"
+              aria-label="Previous project"
+            >
+              ‹
+            </button>
+          )}
 
-      {currentIndex < projects.length - 1 && (
-        <button
-          type="button"
-          onClick={goNext}
-          className="fixed right-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-neutral-400 transition-colors hover:text-neutral-800 md:right-8"
-          aria-label="Next project"
-        >
-          ›
-        </button>
-      )}
-
-      <div className="mx-auto w-full max-w-4xl pt-8">
-        <div className="mb-8 flex min-h-[40vh] items-center justify-center md:min-h-[55vh]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={images[imageIndex].src}
             alt={images[imageIndex].alt}
             className="max-h-[70vh] w-auto max-w-full object-contain"
           />
+
+          {currentIndex < projects.length - 1 && (
+            <button
+              type="button"
+              onClick={goNext}
+              className="absolute right-0 top-1/2 z-10 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:text-5xl"
+              aria-label="Next project"
+            >
+              ›
+            </button>
+          )}
         </div>
 
         <div className="mx-auto max-w-2xl space-y-4 px-2 pb-8 text-center">
@@ -105,23 +105,23 @@ export default function ProjectModal({
         </div>
 
         {images.length > 1 && (
-          <div className="mx-auto grid max-w-3xl grid-cols-3 gap-3 px-2 pb-12 sm:grid-cols-4 md:gap-4">
+          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-4 px-2 pb-12 sm:grid-cols-3 md:gap-5">
             {images.map((img, i) => (
               <button
                 key={img.src}
                 type="button"
                 onClick={() => setImageIndex(i)}
-                className={`overflow-hidden border transition-opacity ${
-                  i === imageIndex
-                    ? "border-neutral-800 opacity-100"
-                    : "border-transparent opacity-60 hover:opacity-100"
-                }`}
+                className="flex items-center justify-center bg-transparent p-0"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="aspect-[4/3] w-full object-cover"
+                  className={`block max-h-40 w-auto max-w-full object-contain transition-opacity sm:max-h-44 ${
+                    i === imageIndex
+                      ? "outline outline-2 outline-offset-0 outline-brand"
+                      : "opacity-60 hover:opacity-100"
+                  }`}
                 />
               </button>
             ))}

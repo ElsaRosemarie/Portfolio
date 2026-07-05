@@ -3,6 +3,9 @@
 @theme {
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: "Cormorant Garamond", Georgia, serif;
+  --color-brand: #8b9b46;
+  --color-brand-dark: #6d7a38;
+  --color-brand-light: #eef0e3;
 }
 
 @layer base {
@@ -13,5 +16,16 @@
   body {
     @apply bg-white text-neutral-900 antialiased;
     font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

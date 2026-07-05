@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
+    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10">
       <section className="mb-16 md:mb-24">
-        <div className="relative aspect-[16/7] w-full overflow-hidden bg-neutral-100">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 sm:aspect-[16/7]">
           <Image
             src="/images/HOME/hero.jpg"
             alt="Illustration by Elsa van Dam"

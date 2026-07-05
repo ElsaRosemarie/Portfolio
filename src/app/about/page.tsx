@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-20 md:px-10">
+    <div className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6 md:px-10">
       <div className="grid gap-12 md:grid-cols-2 md:gap-16">
         <div className="space-y-6 text-sm leading-relaxed text-neutral-700 md:text-base">
           <p>
