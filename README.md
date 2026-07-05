@@ -19,6 +19,12 @@ npm run build
 
 Gallery data and images are generated from `Afbeeldingen portfolio/` when you build.
 
+## Live site
+
+After GitHub Actions deploys, the site is at:
+
+**https://elsarosemarie.github.io/Portfolio/**
+
 ## Pages
 
 - **Home** — hero banner and introduction
