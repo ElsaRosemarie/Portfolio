@@ -20,12 +20,14 @@ export default function Header() {
   return (
     <header className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:px-10 md:py-8">
       <div className="flex items-center justify-between gap-4">
-        <Link href="/" className="block w-36 shrink-0 sm:w-40 md:w-48">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset("/images/HOME/Logo.png")}
+        <Link href="/" className="relative block h-10 w-36 shrink-0 sm:h-11 sm:w-40 md:h-12 md:w-48">
+          <Image
+            src="/images/HOME/Logo.png"
             alt="Elsa van Dam"
-            className="h-auto w-full"
+            fill
+            className="object-contain object-left"
+            sizes="(max-width: 768px) 144px, 192px"
+            priority
           />
         </Link>
 
