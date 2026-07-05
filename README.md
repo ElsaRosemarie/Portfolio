@@ -23,7 +23,7 @@ Gallery data and images are generated from `Afbeeldingen portfolio/` when you bu
 
 **https://elsarosemarie.github.io/Portfolio/**
 
-In **Settings → Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”). Pushes to `main` build and deploy automatically.
+In **Settings → Pages**, set **Source** to **Deploy from a branch**, then choose branch **`gh-pages`** and folder **`/ (root)`**. (Do not use `main` — that branch only has source code.)
 
 ## Pages
 
