@@ -21,7 +21,14 @@ Gallery data and images are generated from `Afbeeldingen portfolio/` when you bu
 
 ## Live site
 
-After GitHub Actions deploys, the site is at:
+After deployment, enable GitHub Pages once:
+
+1. Open **Settings → Pages** on the repo
+2. Set **Source** to **Deploy from a branch**
+3. Choose branch **`gh-pages`** and folder **`/ (root)`**
+4. Save
+
+The site will be live at:
 
 **https://elsarosemarie.github.io/Portfolio/**
 
