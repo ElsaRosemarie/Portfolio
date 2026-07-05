@@ -3,7 +3,7 @@ import { content, getPage } from "@/lib/content";
 
 export default function ContactPage() {
   const page = getPage("contact");
-  const { email, instagram } = content.links;
+  const { email, instagram, linkedin } = content.links;
 
   return (
     <div className="mx-auto w-full max-w-2xl px-4 pb-20 sm:px-6 md:px-10">
@@ -11,10 +11,7 @@ export default function ContactPage() {
         <PageText content={page} className="space-y-6" />
         {page.showEmail !== false && (
           <p>
-            <a
-              href={`mailto:${email}`}
-              className="border-b border-brand-light"
-            >
+            <a href={`mailto:${email}`} className="border-b border-brand-light">
               {email}
             </a>
           </p>
@@ -28,6 +25,18 @@ export default function ContactPage() {
               className="border-b border-brand-light"
             >
               Instagram
+            </a>
+          </p>
+        )}
+        {page.showLinkedin !== false && (
+          <p>
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b border-brand-light"
+            >
+              LinkedIn
             </a>
           </p>
         )}

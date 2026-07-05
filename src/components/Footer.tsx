@@ -1,28 +1,28 @@
 import { content } from "@/lib/content";
+import { InstagramIcon, LinkedInIcon } from "./SocialIcons";
 
 export default function Footer() {
+  const { instagram, linkedin } = content.links;
+
   return (
-    <footer className="flex justify-center px-6 py-12">
+    <footer className="flex justify-center gap-8 px-6 py-12">
       <a
-        href={content.links.instagram}
+        href={instagram}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
         className="text-neutral-800 transition-colors hover:text-brand"
       >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          aria-hidden
-        >
-          <rect x="3" y="3" width="18" height="18" rx="5" />
-          <circle cx="12" cy="12" r="4" />
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-        </svg>
+        <InstagramIcon />
+      </a>
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="text-neutral-800 transition-colors hover:text-brand"
+      >
+        <LinkedInIcon />
       </a>
     </footer>
   );

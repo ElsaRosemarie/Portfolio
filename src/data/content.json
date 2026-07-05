@@ -5,7 +5,8 @@
   "customDomain": "",
   "links": {
     "email": "hello@elsavandam.nl",
-    "instagram": "https://instagram.com/elsa.rosemarie"
+    "instagram": "https://instagram.com/elsa.rosemarie",
+    "linkedin": "https://www.linkedin.com/in/elsavandam"
   },
   "navigation": [
     {
@@ -42,13 +43,15 @@
         "For commissions, collaborations, or workshop requests, feel free to reach out."
       ],
       "showEmail": true,
-      "showInstagram": true
+      "showInstagram": true,
+      "showLinkedin": true
     },
     "home": {
       "heroAlt": "Illustration by Elsa van Dam",
+      "greeting": "Hi, I am Elsa,",
       "paragraphs": [
-        "Elsa van Dam is an illustrator and visual researcher based in the Netherlands. Her work moves between editorial illustration, participatory design, and narrative image-making.",
-        "With a background in design research, she creates images that help people see complex stories more clearly — from zines and reports to workshops and visual tools.",
+        "an illustrator and visual researcher based in the Netherlands. My work moves between editorial illustration, participatory design, and narrative image-making.",
+        "With a background in design research, I create images that help people see complex stories more clearly — from zines and reports to workshops and visual tools.",
         "This portfolio brings together selected work, ongoing research, and creative collaborations. Welcome."
       ],
       "cta": {
@@ -65,5 +68,5 @@
       ]
     }
   },
-  "generatedAt": "2026-07-05T13:52:57.560Z"
+  "generatedAt": "2026-07-05T14:09:36.579Z"
 }

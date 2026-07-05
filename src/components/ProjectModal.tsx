@@ -79,35 +79,23 @@ export default function ProjectModal({
         ×
       </button>
 
-      <button
-        type="button"
-        onClick={goPrev}
-        disabled={!hasPrev}
-        className={`fixed left-3 top-1/2 z-[60] w-10 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity sm:left-6 sm:text-5xl md:left-10 ${
-          hasPrev ? "hover:opacity-50" : "pointer-events-none opacity-0"
-        }`}
-        aria-label="Previous project"
-      >
-        ‹
-      </button>
-
-      <button
-        type="button"
-        onClick={goNext}
-        disabled={!hasNext}
-        className={`fixed right-3 top-1/2 z-[60] w-10 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity sm:right-6 sm:text-5xl md:right-10 ${
-          hasNext ? "hover:opacity-50" : "pointer-events-none opacity-0"
-        }`}
-        aria-label="Next project"
-      >
-        ›
-      </button>
-
       <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:px-12 md:px-24">
-        <div className="relative mb-8 flex h-[50vh] min-h-[280px] items-center justify-center sm:h-[55vh] md:min-h-[360px]">
+        <div className="relative mb-8 flex h-[50vh] min-h-[280px] items-center justify-center px-10 sm:h-[55vh] sm:px-12 md:min-h-[360px] md:px-14">
+          <button
+            type="button"
+            onClick={goPrev}
+            disabled={!hasPrev}
+            className={`absolute left-0 top-1/2 z-10 w-8 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity sm:text-5xl ${
+              hasPrev ? "hover:opacity-50" : "pointer-events-none opacity-0"
+            }`}
+            aria-label="Previous project"
+          >
+            ‹
+          </button>
+
           {!imageLoaded && (
             <div
-              className="absolute inset-0 animate-pulse rounded bg-neutral-100"
+              className="absolute inset-x-10 inset-y-0 animate-pulse rounded bg-neutral-100 sm:inset-x-12 md:inset-x-14"
               aria-hidden
             />
           )}
@@ -120,6 +108,18 @@ export default function ProjectModal({
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}
           />
+
+          <button
+            type="button"
+            onClick={goNext}
+            disabled={!hasNext}
+            className={`absolute right-0 top-1/2 z-10 w-8 -translate-y-1/2 text-4xl leading-none text-neutral-800 transition-opacity sm:text-5xl ${
+              hasNext ? "hover:opacity-50" : "pointer-events-none opacity-0"
+            }`}
+            aria-label="Next project"
+          >
+            ›
+          </button>
         </div>
 
         <div className="mx-auto max-w-2xl space-y-4 pb-8 text-center">
@@ -136,11 +136,11 @@ export default function ProjectModal({
               </a>
             </p>
           )}
-          {!project.standalone && project.description && (
-            <p className="leading-relaxed text-neutral-600">
-              {project.description}
+          {!project.standalone && project.paragraphs?.map((paragraph, index) => (
+            <p key={index} className="leading-relaxed text-neutral-600">
+              {paragraph}
             </p>
-          )}
+          ))}
         </div>
 
         {images.length > 1 && (

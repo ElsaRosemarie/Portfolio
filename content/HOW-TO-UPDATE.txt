@@ -20,10 +20,10 @@ Each paragraph is one block of text between quote marks.
 Keep the quote marks and commas — only change the words inside.
 
 
-─── CHANGE EMAIL OR INSTAGRAM ──────────────────────────────────────
+─── CHANGE EMAIL, INSTAGRAM, OR LINKEDIN ───────────────────────────
 
 1. Open:  content  →  site.json
-2. Edit the "links" section (email and instagram)
+2. Edit the "links" section
 3. Commit changes
 
 
@@ -66,23 +66,53 @@ Examples:
   My piece dig, com.png        (appears in two filters)
 
 
-─── PROJECT DESCRIPTION (popup text) ─────────────────────────────
+─── PROJECT TEXT & LINKS (folder projects) ───────────────────────
 
-For multi-image project folders only, add:
+Edit the same way as page text — in the  content  folder on GitHub.
 
-  description.txt
+1. Open:  content  →  projects
+2. Click  work.json  (work gallery) or  research.json  (research gallery)
+3. Click the pencil icon  ✏️  Edit this file
+4. Find your project by its folder name, or add a new entry
+5. Commit changes
 
-Single images (no folder) show the title only — no description needed.
+Each project entry looks like this:
+
+  "My Project Folder Name": {
+    "paragraphs": [
+      "First paragraph shown in the popup.",
+      "Optional second paragraph — add as many as you like."
+    ],
+    "link": {
+      "label": "Publication or exhibition name",
+      "url": "https://example.com"
+    }
+  }
+
+•  "paragraphs"  — optional text in the popup (folder projects only)
+•  "link"  — optional credit line with a clickable URL
+•  You can use paragraphs, link, or both
+•  The project name must match the folder name in WORK or RESEARCH
+
+Single images (no folder) can also be added here — use the image title
+as the key. They show the title only unless you add a link.
 
 
-─── PROJECT LINK (popup credit line) ─────────────────────────────
+─── PROJECT TEXT (alternative: description.txt) ──────────────────
 
-Add info.txt in the project folder, or for a single image:
+You can also add  description.txt  inside a project folder.
+Separate paragraphs with a blank line. The JSON files above are easier
+to edit on GitHub.
 
-  My piece.info.txt
 
-Line 1: label   (e.g. 2024   >the village, June)
-Line 2: URL
+─── PROJECT LINK (alternative: info.txt) ─────────────────────────
+
+You can also add  info.txt  in the project folder:
+
+  Line 1: link label   (e.g. the village, June)
+  Line 2: URL
+
+JSON in  content/projects/  is preferred — same place as all other text.
 
 
 ─── CHANGE IMAGES ON A PAGE ──────────────────────────────────────

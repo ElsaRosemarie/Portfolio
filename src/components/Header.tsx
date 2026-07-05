@@ -34,7 +34,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="flex shrink-0 items-center gap-2 rounded border border-neutral-300 px-3 py-2 text-sm font-medium uppercase tracking-[0.15em] text-neutral-800 md:hidden"
+            className="flex shrink-0 items-center gap-2 rounded border border-neutral-300 px-3 py-2 text-base font-medium uppercase tracking-[0.15em] text-neutral-800 md:hidden"
             aria-expanded={menuOpen}
             aria-label="Toggle menu"
           >
@@ -52,7 +52,7 @@ export default function Header() {
             </span>
           </button>
 
-          <nav className="hidden items-center justify-end gap-x-6 text-sm uppercase tracking-[0.2em] md:flex md:gap-x-8 md:text-base">
+          <nav className="hidden items-center justify-end gap-x-6 text-base uppercase tracking-[0.2em] md:flex md:gap-x-8 md:text-lg">
             {links.map((link) => {
               const active = pathname === link.href;
               return (
@@ -82,7 +82,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className={`block rounded px-3 py-3 text-center text-sm uppercase tracking-[0.12em] transition-colors ${
+                      className={`block rounded px-3 py-3 text-center text-base uppercase tracking-[0.12em] transition-colors ${
                         active
                           ? "bg-brand-light font-medium text-brand"
                           : "text-neutral-800 hover:bg-brand-light/60 hover:text-brand"

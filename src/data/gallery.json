@@ -99,7 +99,7 @@
         ],
         "standalone": false,
         "credit": {
-          "label": "2024   >Once Upon a Time, juni",
+          "label": "Once Upon a Time, juni",
           "url": "https://dl.acm.org/doi/10.1145/3706599.3716223"
         }
       },
@@ -753,7 +753,7 @@
         ],
         "standalone": false,
         "credit": {
-          "label": "2024   >the village, June",
+          "label": "the village, June",
           "url": "https://www.thevillage.ie/education-group-visits/research-publications/"
         }
       },
@@ -847,7 +847,7 @@
         ],
         "standalone": true,
         "credit": {
-          "label": "2022   >Research Art & the Climate Crisis, November",
+          "label": "Research Art & the Climate Crisis, November",
           "url": "https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621"
         }
       },
@@ -892,5 +892,5 @@
       "All"
     ]
   },
-  "generatedAt": "2026-07-05T13:52:57.739Z"
+  "generatedAt": "2026-07-05T14:09:36.731Z"
 }

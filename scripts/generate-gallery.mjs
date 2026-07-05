@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const SOURCE = path.join(ROOT, "Afbeeldingen portfolio");
+const CONTENT_PROJECTS = path.join(ROOT, "content", "projects");
 const PUBLIC = path.join(ROOT, "public", "images");
 const OUT = path.join(ROOT, "src", "data", "gallery.json");
 
@@ -83,12 +84,77 @@ function mirrorToPublic(relativePath, srcFile) {
   return `/images/${relativePath.replace(/\\/g, "/")}`;
 }
 
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function loadProjectContent(sectionName) {
+  const filePath = path.join(
+    CONTENT_PROJECTS,
+    `${sectionName.toLowerCase()}.json`
+  );
+  if (!fs.existsSync(filePath)) return {};
+
+  const raw = readJson(filePath);
+  return Object.fromEntries(
+    Object.entries(raw).filter(([key]) => !key.startsWith("_"))
+  );
+}
+
+function findContentEntry(contentMap, title) {
+  if (contentMap[title]) return contentMap[title];
+
+  const titleKey = normalizeKey(title);
+  for (const [key, value] of Object.entries(contentMap)) {
+    if (normalizeKey(key) === titleKey) return value;
+  }
+
+  return null;
+}
+
+function readParagraphsFromTxt(sectionDir, folderPath, title) {
+  const candidates = [
+    path.join(folderPath, "description.txt"),
+    path.join(sectionDir, `${title}.description.txt`),
+  ];
+
+  for (const file of candidates) {
+    if (!fs.existsSync(file)) continue;
+    const text = fs.readFileSync(file, "utf8").trim();
+    if (!text) continue;
+
+    return text
+      .split(/\n\s*\n/)
+      .map((part) => part.trim())
+      .filter(Boolean);
+  }
+
+  return null;
+}
+
+function resolveProjectCopy(contentMap, sectionDir, folderPath, title) {
+  const entry = findContentEntry(contentMap, title);
+  const paragraphs =
+    entry?.paragraphs?.filter((part) => part.trim()) ??
+    readParagraphsFromTxt(sectionDir, folderPath, title);
+
+  const credit =
+    entry?.link ??
+    readProjectInfo(sectionDir, folderPath, title);
+
+  return {
+    ...(paragraphs?.length ? { paragraphs } : {}),
+    ...(credit ? { credit } : {}),
+  };
+}
+
 function buildSection(sectionName) {
   const sectionDir = path.join(SOURCE, sectionName);
   if (!fs.existsSync(sectionDir)) {
     return { projects: [], filters: [] };
   }
 
+  const projectContent = loadProjectContent(sectionName);
   const useMediumFilters = sectionName === "WORK";
   const entries = fs.readdirSync(sectionDir, { withFileTypes: true });
   const projects = [];
@@ -144,8 +210,12 @@ function buildSection(sectionName) {
       }
     }
 
-    const description = readOptionalDescription(sectionDir, folderPath, folder);
-    const credit = readProjectInfo(sectionDir, folderPath, folder);
+    const copy = resolveProjectCopy(
+      projectContent,
+      sectionDir,
+      folderPath,
+      folder
+    );
 
     projects.push({
       id,
@@ -155,8 +225,7 @@ function buildSection(sectionName) {
       cover: imageUrls[0].src,
       images: imageUrls,
       standalone: false,
-      ...(description ? { description } : {}),
-      ...(credit ? { credit } : {}),
+      ...copy,
     });
   }
 
@@ -169,7 +238,7 @@ function buildSection(sectionName) {
     const id = `${sectionName.toLowerCase()}-${slugify(title)}`;
     const categories = parseCategories(img);
 
-    const credit = readProjectInfo(sectionDir, sectionDir, title);
+    const copy = resolveProjectCopy(projectContent, sectionDir, sectionDir, title);
 
     projects.push({
       id,
@@ -179,7 +248,7 @@ function buildSection(sectionName) {
       cover: url,
       images: [{ src: url, alt: title }],
       standalone: true,
-      ...(credit ? { credit } : {}),
+      ...copy,
     });
   }
 
@@ -193,19 +262,8 @@ function buildSection(sectionName) {
   return { projects: orderedProjects, filters };
 }
 
-function readOptionalDescription(sectionDir, folderPath, title) {
-  const candidates = [
-    path.join(folderPath, "description.txt"),
-    path.join(sectionDir, `${title}.description.txt`),
-  ];
-
-  for (const file of candidates) {
-    if (!fs.existsSync(file)) continue;
-    const text = fs.readFileSync(file, "utf8").trim();
-    if (text) return text;
-  }
-
-  return null;
+function cleanCreditLabel(label) {
+  return label.replace(/^\d{4}\s*>\s*/, "").trim();
 }
 
 function readProjectInfo(sectionDir, folderPath, title) {
@@ -224,7 +282,7 @@ function readProjectInfo(sectionDir, folderPath, title) {
 
     if (lines.length === 0) continue;
 
-    const label = lines[0];
+    const label = cleanCreditLabel(lines[0]);
     const url =
       lines.find((line) => /^https?:\/\//i.test(line)) ?? lines[1] ?? "";
 

@@ -22,12 +22,17 @@ export default function HomePage() {
       </section>
 
       <section className="grid gap-12 pb-20 md:grid-cols-2 md:items-center md:gap-16">
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center md:py-4">
+          {page.greeting && (
+            <p className="mb-6 text-3xl font-medium md:mb-8 md:text-4xl">
+              {page.greeting}
+            </p>
+          )}
           <PageText content={page} />
           {page.cta && (
             <Link
               href={page.cta.href}
-              className="mt-8 inline-block border border-brand px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] text-brand transition-colors hover:bg-brand hover:text-white md:text-base"
+              className="mt-8 border-b border-brand-light md:mt-10"
             >
               {page.cta.label}
             </Link>

@@ -16,7 +16,7 @@ export interface Project {
   cover: string;
   images: GalleryImage[];
   standalone: boolean;
-  description?: string;
+  paragraphs?: string[];
   credit?: ProjectCredit;
 }
 

@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply bg-white font-sans text-base text-neutral-900 antialiased md:text-lg;
+    @apply bg-white font-sans text-lg text-neutral-900 antialiased md:text-xl;
   }
 
   main a {
