@@ -3,22 +3,16 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10">
-      <section className="mb-16 md:mb-24">
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 sm:aspect-[16/7]">
-          <Image
-            src="/images/HOME/hero.jpg"
-            alt="Illustration by Elsa van Dam"
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 1152px"
-          />
-          <div className="absolute inset-0 flex items-center justify-center bg-white/10">
-            <h1 className="text-5xl font-light italic text-white drop-shadow-md md:text-7xl">
-              illustratie
-            </h1>
-          </div>
-        </div>
+      <section className="pb-16 pt-4 md:pb-24 md:pt-6">
+        <Image
+          src="/images/HOME/hero.jpg"
+          alt="Illustration by Elsa van Dam"
+          width={4651}
+          height={2501}
+          className="block h-auto w-full"
+          priority
+          sizes="(max-width: 768px) 100vw, 1440px"
+        />
       </section>
 
       <section className="grid gap-12 pb-20 md:grid-cols-2 md:gap-16">

@@ -6,7 +6,9 @@ import Footer from "@/components/Footer";
 
 const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  style: ["normal", "italic"],
+  variable: "--font-mulish",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={mulish.variable}>
       <body className={`${mulish.className} flex min-h-screen flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>

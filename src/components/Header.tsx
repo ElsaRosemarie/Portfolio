@@ -20,13 +20,16 @@ export default function Header() {
   return (
     <header className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:px-10 md:py-8">
       <div className="flex items-center justify-between gap-4">
-        <Link href="/" className="relative block h-10 w-36 shrink-0 sm:h-11 sm:w-40 md:h-12 md:w-48">
+        <Link
+          href="/"
+          className="relative block h-[6.37rem] w-[25.48rem] shrink-0 -ml-[2.04rem] sm:h-[7.28rem] sm:w-[29.12rem] sm:-ml-[2.33rem] md:h-[9.1rem] md:w-[32.76rem] md:-ml-[2.91rem]"
+        >
           <Image
             src="/images/HOME/Logo.png"
             alt="Elsa van Dam"
             fill
             className="object-contain object-left"
-            sizes="(max-width: 768px) 144px, 192px"
+            sizes="(max-width: 768px) 407px, 524px"
             priority
           />
         </Link>

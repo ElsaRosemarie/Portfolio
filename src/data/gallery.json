@@ -2,9 +2,208 @@
   "work": {
     "projects": [
       {
+        "id": "work-queer-zine-toekomstboeren",
+        "title": "Queer Zine Toekomstboeren",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
+            "alt": "Queer Zine Toekomstboeren"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren3.png",
+            "alt": "Queer Publication Toekomstboeren3"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren4.png",
+            "alt": "Queer Publication Toekomstboeren4"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren6.png",
+            "alt": "Queer Publication Toekomstboeren6"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren9.png",
+            "alt": "Queer Publication Toekomstboeren9"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren11.png",
+            "alt": "Queer Publication Toekomstboeren11"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren19.png",
+            "alt": "Queer Publication Toekomstboeren19"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren23.png",
+            "alt": "Queer Publication Toekomstboeren23"
+          },
+          {
+            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren29.png",
+            "alt": "Queer Publication Toekomstboeren29"
+          }
+        ],
+        "description": "A selection of work from the series \"Queer Zine Toekomstboeren\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-once-upon-a-time",
+        "title": "Once Upon a Time",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Once Upon a Time dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/Once Upon a Time dig, com.png",
+            "alt": "Once Upon a Time"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time5.png",
+            "alt": "Once Upon a Time5"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time8.png",
+            "alt": "Once Upon a Time8"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time9.png",
+            "alt": "Once Upon a Time9"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time10.png",
+            "alt": "Once Upon a Time10"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time11.png",
+            "alt": "Once Upon a Time11"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time12.png",
+            "alt": "Once Upon a Time12"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time13.png",
+            "alt": "Once Upon a Time13"
+          },
+          {
+            "src": "/images/WORK/Once Upon a Time/Once Upon a Time21.png",
+            "alt": "Once Upon a Time21"
+          }
+        ],
+        "description": "A selection of work from the series \"Once Upon a Time\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-spring-storm",
+        "title": "Spring storm",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Spring storm trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Spring storm trad.jpg",
+            "alt": "Spring storm"
+          }
+        ],
+        "description": "A selection of work from the series \"Spring storm\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-radboud-welcomes-newcomers",
+        "title": "Radboud Welcomes Newcomers",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Radboud Welcomes Newcomers dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers dig, com.png",
+            "alt": "Radboud Welcomes Newcomers"
+          },
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_03.png",
+            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_03"
+          },
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_07.png",
+            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_07"
+          },
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_08.png",
+            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_08"
+          },
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_09.png",
+            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_09"
+          },
+          {
+            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_10.png",
+            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_10"
+          }
+        ],
+        "description": "A selection of work from the series \"Radboud Welcomes Newcomers\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-roots",
+        "title": "Roots",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Roots trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Roots trad.jpg",
+            "alt": "Roots"
+          }
+        ],
+        "description": "A selection of work from the series \"Roots\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-tni-guide",
+        "title": "TNI guide",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/TNI guide dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/TNI guide dig, com.png",
+            "alt": "TNI guide"
+          },
+          {
+            "src": "/images/WORK/TNI guide/TNI guide_Pagina_1.png",
+            "alt": "TNI guide_Pagina_1"
+          },
+          {
+            "src": "/images/WORK/TNI guide/TNI guide_Pagina_2.png",
+            "alt": "TNI guide_Pagina_2"
+          },
+          {
+            "src": "/images/WORK/TNI guide/TNI guide_Pagina_6.png",
+            "alt": "TNI guide_Pagina_6"
+          }
+        ],
+        "description": "A selection of work from the series \"TNI guide\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
         "id": "work-excellence-in-context",
         "title": "Excellence in context",
-        "category": "Excellence in context",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Excellence in Context dig, com.png",
         "images": [
@@ -38,7 +237,10 @@
       {
         "id": "work-innovating-by-design",
         "title": "Innovating by Design",
-        "category": "Innovating by Design",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Innovating by Design dig, com.png",
         "images": [
@@ -102,161 +304,12 @@
         "description": "A selection of work from the series \"Innovating by Design\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "work-once-upon-a-time",
-        "title": "Once Upon a Time",
-        "category": "Once Upon a Time",
-        "section": "work",
-        "cover": "/images/WORK/Once Upon a Time dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/Once Upon a Time dig, com.png",
-            "alt": "Once Upon a Time"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time5.png",
-            "alt": "Once Upon a Time5"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time8.png",
-            "alt": "Once Upon a Time8"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time9.png",
-            "alt": "Once Upon a Time9"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time10.png",
-            "alt": "Once Upon a Time10"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time11.png",
-            "alt": "Once Upon a Time11"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time12.png",
-            "alt": "Once Upon a Time12"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time13.png",
-            "alt": "Once Upon a Time13"
-          },
-          {
-            "src": "/images/WORK/Once Upon a Time/Once Upon a Time21.png",
-            "alt": "Once Upon a Time21"
-          }
-        ],
-        "description": "A selection of work from the series \"Once Upon a Time\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "work-queer-zine-toekomstboeren",
-        "title": "Queer Zine Toekomstboeren",
-        "category": "Queer Zine Toekomstboeren",
-        "section": "work",
-        "cover": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
-            "alt": "Queer Zine Toekomstboeren"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren3.png",
-            "alt": "Queer Publication Toekomstboeren3"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren4.png",
-            "alt": "Queer Publication Toekomstboeren4"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren6.png",
-            "alt": "Queer Publication Toekomstboeren6"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren9.png",
-            "alt": "Queer Publication Toekomstboeren9"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren11.png",
-            "alt": "Queer Publication Toekomstboeren11"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren19.png",
-            "alt": "Queer Publication Toekomstboeren19"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren23.png",
-            "alt": "Queer Publication Toekomstboeren23"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren29.png",
-            "alt": "Queer Publication Toekomstboeren29"
-          }
-        ],
-        "description": "A selection of work from the series \"Queer Zine Toekomstboeren\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "work-radboud-welcomes-newcomers",
-        "title": "Radboud Welcomes Newcomers",
-        "category": "Radboud Welcomes Newcomers",
-        "section": "work",
-        "cover": "/images/WORK/Radboud Welcomes Newcomers dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers dig, com.png",
-            "alt": "Radboud Welcomes Newcomers"
-          },
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_03.png",
-            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_03"
-          },
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_07.png",
-            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_07"
-          },
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_08.png",
-            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_08"
-          },
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_09.png",
-            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_09"
-          },
-          {
-            "src": "/images/WORK/Radboud Welcomes Newcomers/Report Radboud Welcomes Newcomers V4_Pagina_10.png",
-            "alt": "Report Radboud Welcomes Newcomers V4_Pagina_10"
-          }
-        ],
-        "description": "A selection of work from the series \"Radboud Welcomes Newcomers\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "work-tni-guide",
-        "title": "TNI guide",
-        "category": "TNI guide",
-        "section": "work",
-        "cover": "/images/WORK/TNI guide dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/TNI guide dig, com.png",
-            "alt": "TNI guide"
-          },
-          {
-            "src": "/images/WORK/TNI guide/TNI guide_Pagina_1.png",
-            "alt": "TNI guide_Pagina_1"
-          },
-          {
-            "src": "/images/WORK/TNI guide/TNI guide_Pagina_2.png",
-            "alt": "TNI guide_Pagina_2"
-          },
-          {
-            "src": "/images/WORK/TNI guide/TNI guide_Pagina_6.png",
-            "alt": "TNI guide_Pagina_6"
-          }
-        ],
-        "description": "A selection of work from the series \"TNI guide\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
         "id": "work-unid",
         "title": "UNID",
-        "category": "UNID",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/UNID dig, com.png",
         "images": [
@@ -294,7 +347,10 @@
       {
         "id": "work-ur-xr",
         "title": "UR & XR",
-        "category": "UR & XR",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/UR & XR dig, com.png",
         "images": [
@@ -316,7 +372,10 @@
       {
         "id": "work-community-seed-bank-flyer",
         "title": "Community Seed Bank flyer",
-        "category": "Illustrations",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Community Seed Bank flyer dig, com.png",
         "images": [
@@ -328,23 +387,11 @@
         "description": "A selection of work from the series \"Community Seed Bank flyer\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "work-dinner-menu-dig",
-        "title": "Dinner menu dig",
-        "category": "Illustrations",
-        "section": "work",
-        "cover": "/images/WORK/Dinner menu dig.png",
-        "images": [
-          {
-            "src": "/images/WORK/Dinner menu dig.png",
-            "alt": "Dinner menu dig"
-          }
-        ],
-        "description": "A selection of work from the series \"Dinner menu dig\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
         "id": "work-happy-autumn-let-s-decay",
         "title": "Happy autumn, let's decay",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Happy autumn, let's decay trad.png",
         "images": [
@@ -358,7 +405,9 @@
       {
         "id": "work-inner-garden",
         "title": "Inner garden",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Inner garden trad.jpg",
         "images": [
@@ -372,7 +421,9 @@
       {
         "id": "work-limitless-love",
         "title": "Limitless love",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Limitless love trad.jpg",
         "images": [
@@ -384,23 +435,11 @@
         "description": "A selection of work from the series \"Limitless love\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "work-logo-massagesalon",
-        "title": "Logo Massagesalon",
-        "category": "Illustrations",
-        "section": "work",
-        "cover": "/images/WORK/Logo Massagesalon dig, com.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Logo Massagesalon dig, com.jpg",
-            "alt": "Logo Massagesalon"
-          }
-        ],
-        "description": "A selection of work from the series \"Logo Massagesalon\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
         "id": "work-make-kin",
         "title": "Make kin",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Make kin trad.jpg",
         "images": [
@@ -414,7 +453,10 @@
       {
         "id": "work-mignot",
         "title": "Mignot",
-        "category": "Illustrations",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Mignot dig, com.png",
         "images": [
@@ -428,7 +470,9 @@
       {
         "id": "work-my-art-is-enough-to-give",
         "title": "My art is enough to give",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/My art is enough to give resized trad.png",
         "images": [
@@ -442,7 +486,9 @@
       {
         "id": "work-nap-in-the-forest",
         "title": "Nap in the forest",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Nap in the forest trad.jpg",
         "images": [
@@ -456,7 +502,9 @@
       {
         "id": "work-night-walk",
         "title": "Night walk",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Night walk trad.jpg",
         "images": [
@@ -470,7 +518,9 @@
       {
         "id": "work-nurture",
         "title": "Nurture",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Nurture trad.jpg",
         "images": [
@@ -484,7 +534,10 @@
       {
         "id": "work-pino-s-clubhuis",
         "title": "Pino's Clubhuis",
-        "category": "Illustrations",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Pino's Clubhuis dig, com.png",
         "images": [
@@ -498,7 +551,9 @@
       {
         "id": "work-practicing-trees",
         "title": "Practicing trees",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Practicing trees trad.jpg",
         "images": [
@@ -510,37 +565,12 @@
         "description": "A selection of work from the series \"Practicing trees\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "work-roots",
-        "title": "Roots",
-        "category": "Illustrations",
-        "section": "work",
-        "cover": "/images/WORK/Roots trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Roots trad.jpg",
-            "alt": "Roots"
-          }
-        ],
-        "description": "A selection of work from the series \"Roots\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "work-spring-storm",
-        "title": "Spring storm",
-        "category": "Illustrations",
-        "section": "work",
-        "cover": "/images/WORK/Spring storm trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Spring storm trad.jpg",
-            "alt": "Spring storm"
-          }
-        ],
-        "description": "A selection of work from the series \"Spring storm\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
         "id": "work-thesis-cover",
         "title": "Thesis cover",
-        "category": "Illustrations",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Thesis cover dig, com.png",
         "images": [
@@ -554,7 +584,9 @@
       {
         "id": "work-tulips",
         "title": "Tulips",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Tulips trad.jpg",
         "images": [
@@ -566,23 +598,27 @@
         "description": "A selection of work from the series \"Tulips\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "work-weaving-other",
-        "title": "Weaving other",
-        "category": "Illustrations",
+        "id": "work-weaving",
+        "title": "Weaving",
+        "categories": [
+          "other"
+        ],
         "section": "work",
         "cover": "/images/WORK/Weaving other.jpg",
         "images": [
           {
             "src": "/images/WORK/Weaving other.jpg",
-            "alt": "Weaving other"
+            "alt": "Weaving"
           }
         ],
-        "description": "A selection of work from the series \"Weaving other\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "description": "A selection of work from the series \"Weaving\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
         "id": "work-winter-landscape",
         "title": "Winter landscape",
-        "category": "Illustrations",
+        "categories": [
+          "trad"
+        ],
         "section": "work",
         "cover": "/images/WORK/Winter landscape trad.jpg",
         "images": [
@@ -596,7 +632,10 @@
       {
         "id": "work-witchy-hour",
         "title": "Witchy hour",
-        "category": "Illustrations",
+        "categories": [
+          "trad",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Witchy hour trad, com.jpg",
         "images": [
@@ -608,9 +647,45 @@
         "description": "A selection of work from the series \"Witchy hour\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
+        "id": "work-logo-massagesalon",
+        "title": "Logo Massagesalon",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Logo Massagesalon dig, com.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Logo Massagesalon dig, com.jpg",
+            "alt": "Logo Massagesalon"
+          }
+        ],
+        "description": "A selection of work from the series \"Logo Massagesalon\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
+        "id": "work-dinner-menu",
+        "title": "Dinner menu",
+        "categories": [
+          "dig"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Dinner menu dig.png",
+        "images": [
+          {
+            "src": "/images/WORK/Dinner menu dig.png",
+            "alt": "Dinner menu"
+          }
+        ],
+        "description": "A selection of work from the series \"Dinner menu\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
         "id": "work-wool-for-warmth",
         "title": "Wool for Warmth",
-        "category": "Illustrations",
+        "categories": [
+          "dig",
+          "com"
+        ],
         "section": "work",
         "cover": "/images/WORK/Wool for Warmth dig, com.jpg",
         "images": [
@@ -624,64 +699,25 @@
     ],
     "filters": [
       "All",
-      "Excellence in context",
-      "Innovating by Design",
-      "Once Upon a Time",
-      "Queer Zine Toekomstboeren",
-      "Radboud Welcomes Newcomers",
-      "TNI guide",
-      "UNID",
-      "UR & XR",
-      "Illustrations"
+      "Commissioned",
+      "Traditional",
+      "Digital",
+      "Other"
     ]
   },
   "research": {
     "projects": [
       {
-        "id": "research-eden",
-        "title": "EDEN",
-        "category": "EDEN",
-        "section": "research",
-        "cover": "/images/RESEARCH/EDEN/Anarchy-01.png",
-        "images": [
-          {
-            "src": "/images/RESEARCH/EDEN/Anarchy-01.png",
-            "alt": "Anarchy-01"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/DSC_0576-2.jpg",
-            "alt": "DSC_0576-2"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/DSC_0588-2.jpg",
-            "alt": "DSC_0588-2"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/Food table-01.png",
-            "alt": "Food table-01"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/Report images 2-02.png",
-            "alt": "Report images 2-02"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/Report images-02.png",
-            "alt": "Report images-02"
-          },
-          {
-            "src": "/images/RESEARCH/EDEN/Toolbox-02.jpg",
-            "alt": "Toolbox-02"
-          }
-        ],
-        "description": "A selection of work from the series \"EDEN\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
         "id": "research-hum-us",
         "title": "Hum(us)",
-        "category": "Hum(us)",
+        "categories": [],
         "section": "research",
-        "cover": "/images/RESEARCH/Hum(us)/0E3AAC85-E07B-4390-A50D-42B05E73FBC4_1_100_o.jpg",
+        "cover": "/images/RESEARCH/Hum(us).png",
         "images": [
+          {
+            "src": "/images/RESEARCH/Hum(us).png",
+            "alt": "Hum(us)"
+          },
           {
             "src": "/images/RESEARCH/Hum(us)/0E3AAC85-E07B-4390-A50D-42B05E73FBC4_1_100_o.jpg",
             "alt": "0E3AAC85-E07B-4390-A50D-42B05E73FBC4_1_100_o"
@@ -714,12 +750,58 @@
         "description": "A selection of work from the series \"Hum(us)\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
+        "id": "research-eden",
+        "title": "EDEN",
+        "categories": [],
+        "section": "research",
+        "cover": "/images/RESEARCH/EDEN.jpg",
+        "images": [
+          {
+            "src": "/images/RESEARCH/EDEN.jpg",
+            "alt": "EDEN"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/Anarchy-01.png",
+            "alt": "Anarchy-01"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/DSC_0576-2.jpg",
+            "alt": "DSC_0576-2"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/DSC_0588-2.jpg",
+            "alt": "DSC_0588-2"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/Food table-01.png",
+            "alt": "Food table-01"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/Report images 2-02.png",
+            "alt": "Report images 2-02"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/Report images-02.png",
+            "alt": "Report images-02"
+          },
+          {
+            "src": "/images/RESEARCH/EDEN/Toolbox-02.jpg",
+            "alt": "Toolbox-02"
+          }
+        ],
+        "description": "A selection of work from the series \"EDEN\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
         "id": "research-muzus",
         "title": "MUZUS",
-        "category": "MUZUS",
+        "categories": [],
         "section": "research",
-        "cover": "/images/RESEARCH/MUZUS/DSC_0015-2.jpg",
+        "cover": "/images/RESEARCH/MUZUS.png",
         "images": [
+          {
+            "src": "/images/RESEARCH/MUZUS.png",
+            "alt": "MUZUS"
+          },
           {
             "src": "/images/RESEARCH/MUZUS/DSC_0015-2.jpg",
             "alt": "DSC_0015-2"
@@ -744,9 +826,23 @@
         "description": "A selection of work from the series \"MUZUS\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
+        "id": "research-research-art-the-climate-crisis",
+        "title": "Research Art & the Climate Crisis",
+        "categories": [],
+        "section": "research",
+        "cover": "/images/RESEARCH/Research Art & the Climate Crisis.jpg",
+        "images": [
+          {
+            "src": "/images/RESEARCH/Research Art & the Climate Crisis.jpg",
+            "alt": "Research Art & the Climate Crisis"
+          }
+        ],
+        "description": "A selection of work from the series \"Research Art & the Climate Crisis\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+      },
+      {
         "id": "research-una",
         "title": "UNA",
-        "category": "UNA",
+        "categories": [],
         "section": "research",
         "cover": "/images/RESEARCH/UNA.png",
         "images": [
@@ -766,84 +862,23 @@
         "description": "A selection of work from the series \"UNA\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       },
       {
-        "id": "research-cover-01",
-        "title": "Cover-01",
-        "category": "Illustrations",
+        "id": "research-kaliko",
+        "title": "Kaliko",
+        "categories": [],
         "section": "research",
-        "cover": "/images/RESEARCH/Cover-01.png",
+        "cover": "/images/RESEARCH/Kaliko.png",
         "images": [
           {
-            "src": "/images/RESEARCH/Cover-01.png",
-            "alt": "Cover-01"
+            "src": "/images/RESEARCH/Kaliko.png",
+            "alt": "Kaliko"
           }
         ],
-        "description": "A selection of work from the series \"Cover-01\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "research-dsc-0448-2",
-        "title": "DSC_0448-2",
-        "category": "Illustrations",
-        "section": "research",
-        "cover": "/images/RESEARCH/DSC_0448-2.jpg",
-        "images": [
-          {
-            "src": "/images/RESEARCH/DSC_0448-2.jpg",
-            "alt": "DSC_0448-2"
-          }
-        ],
-        "description": "A selection of work from the series \"DSC_0448-2\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "research-kaliko-with-white-background-02",
-        "title": "Kaliko with white background-02",
-        "category": "Illustrations",
-        "section": "research",
-        "cover": "/images/RESEARCH/Kaliko with white background-02.png",
-        "images": [
-          {
-            "src": "/images/RESEARCH/Kaliko with white background-02.png",
-            "alt": "Kaliko with white background-02"
-          }
-        ],
-        "description": "A selection of work from the series \"Kaliko with white background-02\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "research-plaat-eindpresentatie",
-        "title": "Plaat eindpresentatie",
-        "category": "Illustrations",
-        "section": "research",
-        "cover": "/images/RESEARCH/Plaat eindpresentatie.png",
-        "images": [
-          {
-            "src": "/images/RESEARCH/Plaat eindpresentatie.png",
-            "alt": "Plaat eindpresentatie"
-          }
-        ],
-        "description": "A selection of work from the series \"Plaat eindpresentatie\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
-      },
-      {
-        "id": "research-workshops",
-        "title": "Workshops",
-        "category": "Illustrations",
-        "section": "research",
-        "cover": "/images/RESEARCH/Workshops.jpg",
-        "images": [
-          {
-            "src": "/images/RESEARCH/Workshops.jpg",
-            "alt": "Workshops"
-          }
-        ],
-        "description": "A selection of work from the series \"Workshops\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "description": "A selection of work from the series \"Kaliko\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
       }
     ],
     "filters": [
-      "All",
-      "EDEN",
-      "Hum(us)",
-      "MUZUS",
-      "UNA",
-      "Illustrations"
+      "All"
     ]
   },
-  "generatedAt": "2026-07-05T10:47:13.147Z"
+  "generatedAt": "2026-07-05T13:19:23.130Z"
 }

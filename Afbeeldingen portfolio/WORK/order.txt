@@ -1,0 +1,43 @@
+# Work gallery order (left to right, then top to bottom in the grid)
+# ------------------------------------------------------------
+# One entry per line — use the folder name or image title.
+# Lines starting with # are comments.
+# Prefix with - to hide a project without deleting its folder.
+# New folders/images not listed here are added at the end automatically.
+# After editing, run: npm run generate-gallery
+#
+# Categories (filters) come from image filenames, before the extension:
+#   trad = Traditional   dig = Digital   com = Commissioned   other = Other
+# Multiple categories: "My piece trad, com.jpg" or "Cover dig, com.png"
+
+# work order
+Queer Zine Toekomstboeren
+Once Upon a Time
+Spring storm
+Radboud Welcomes Newcomers
+Roots
+TNI guide
+Excellence in context
+Innovating by Design
+UNID
+UR & XR
+Community Seed Bank flyer
+Happy autumn, let's decay
+Inner garden
+Limitless love
+Make kin
+Mignot
+My art is enough to give
+Nap in the forest
+Night walk
+Nurture
+Pino's Clubhuis
+Practicing trees
+Thesis cover
+Tulips
+Weaving other
+Winter landscape
+Witchy hour
+Logo Massagesalon
+Dinner menu dig
+Wool for Warmth

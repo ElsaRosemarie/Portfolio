@@ -1,0 +1,14 @@
+# Research gallery order (left to right, then top to bottom in the grid)
+# ---------------------------------------------------------------
+# One entry per line — use the folder name or image title.
+# Lines starting with # are comments.
+# Prefix with - to hide a project without deleting its folder.
+# New folders/images not listed here are added at the end automatically.
+# After editing, run: npm run generate-gallery
+
+Hum(us)
+EDEN
+MUZUS
+Research Art & the Climate Crisis
+UNA
+Kaliko

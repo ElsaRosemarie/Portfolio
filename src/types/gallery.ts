@@ -6,7 +6,7 @@ export interface GalleryImage {
 export interface Project {
   id: string;
   title: string;
-  category: string;
+  categories: string[];
   section: string;
   cover: string;
   images: GalleryImage[];

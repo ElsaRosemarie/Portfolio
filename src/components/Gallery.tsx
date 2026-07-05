@@ -10,14 +10,70 @@ interface GalleryProps {
   showFilters?: boolean;
 }
 
+const MASONRY_COLUMNS = 3;
+
+const FILTER_TO_CATEGORY: Record<string, string> = {
+  Traditional: "trad",
+  Digital: "dig",
+  Commissioned: "com",
+  Other: "other",
+};
+
+function projectMatchesFilter(project: Project, filter: string) {
+  if (filter === "All") return true;
+  const category = FILTER_TO_CATEGORY[filter];
+  return category ? project.categories.includes(category) : false;
+}
+
+function distributeToColumns<T>(items: T[], columnCount: number): T[][] {
+  const columns = Array.from({ length: columnCount }, () => [] as T[]);
+  items.forEach((item, index) => {
+    columns[index % columnCount].push(item);
+  });
+  return columns;
+}
+
+function GalleryTile({
+  project,
+  onSelect,
+}: {
+  project: Project;
+  onSelect: (project: Project) => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onSelect(project)}
+      className="group relative block w-full overflow-hidden"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={asset(project.cover)}
+        alt={project.title}
+        className="block h-auto w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-75"
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-brand/0 transition-colors duration-300 group-hover:bg-brand/10" />
+    </button>
+  );
+}
+
 export default function Gallery({ section, showFilters = true }: GalleryProps) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
 
   const filtered = useMemo(() => {
     if (!showFilters || activeFilter === "All") return section.projects;
-    return section.projects.filter((p) => p.category === activeFilter);
+    return section.projects.filter((project) =>
+      projectMatchesFilter(project, activeFilter)
+    );
   }, [activeFilter, section.projects, showFilters]);
+
+  const desktopColumns = useMemo(
+    () => distributeToColumns(filtered, MASONRY_COLUMNS),
+    [filtered]
+  );
 
   return (
     <>
@@ -43,23 +99,30 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
           </div>
         )}
 
-        <div className="columns-1 gap-5 md:columns-3 md:gap-6">
+        <div className="flex flex-col gap-5 md:hidden">
           {filtered.map((project) => (
-            <button
+            <GalleryTile
               key={project.id}
-              type="button"
-              onClick={() => setSelected(project)}
-              className="group relative mb-5 block w-full break-inside-avoid overflow-hidden sm:mb-6"
+              project={project}
+              onSelect={setSelected}
+            />
+          ))}
+        </div>
+
+        <div className="hidden gap-5 md:flex md:gap-6">
+          {desktopColumns.map((column, columnIndex) => (
+            <div
+              key={columnIndex}
+              className="flex min-w-0 flex-1 flex-col gap-5 md:gap-6"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={asset(project.cover)}
-                alt={project.title}
-                className="w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-75"
-                loading="lazy"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-brand/0 transition-colors duration-300 group-hover:bg-brand/10" />
-            </button>
+              {column.map((project) => (
+                <GalleryTile
+                  key={project.id}
+                  project={project}
+                  onSelect={setSelected}
+                />
+              ))}
+            </div>
           ))}
         </div>
       </div>
