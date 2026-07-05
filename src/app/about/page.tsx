@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { asset } from "@/lib/paths";
 
 export default function AboutPage() {
   return (
@@ -25,7 +24,7 @@ export default function AboutPage() {
         </div>
         <div className="relative aspect-[3/4] w-full">
           <Image
-            src={asset("/images/ABOUT/portrait.jpg")}
+            src="/images/ABOUT/portrait.jpg"
             alt="Elsa van Dam"
             fill
             className="object-cover"

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { asset } from "@/lib/paths";
 
 export default function HomePage() {
   return (
@@ -7,7 +6,7 @@ export default function HomePage() {
       <section className="mb-16 md:mb-24">
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 sm:aspect-[16/7]">
           <Image
-            src={asset("/images/HOME/hero.jpg")}
+            src="/images/HOME/hero.jpg"
             alt="Illustration by Elsa van Dam"
             fill
             className="object-cover"
@@ -15,7 +14,7 @@ export default function HomePage() {
             sizes="(max-width: 768px) 100vw, 1152px"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-white/10">
-            <h1 className="font-[family-name:var(--font-display)] text-5xl italic text-white drop-shadow-md md:text-7xl">
+            <h1 className="text-5xl font-light italic text-white drop-shadow-md md:text-7xl">
               illustratie
             </h1>
           </div>
@@ -41,7 +40,7 @@ export default function HomePage() {
         </div>
         <div className="relative aspect-[3/4] w-full max-w-md justify-self-center md:justify-self-end">
           <Image
-            src={asset("/images/HOME/portrait.jpg")}
+            src="/images/HOME/portrait.jpg"
             alt="Elsa van Dam"
             fill
             className="object-cover"

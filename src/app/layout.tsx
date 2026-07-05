@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const display = Cormorant_Garamond({
+const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-display",
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -22,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={display.variable}>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en">
+      <body className={`${mulish.className} flex min-h-screen flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
