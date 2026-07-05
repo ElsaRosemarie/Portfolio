@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-brand-light/60 bg-white/95 backdrop-blur-sm md:static md:border-none md:bg-transparent">
-      <div className="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6 md:px-10 md:py-8">
+      <div className="page-shell py-3 md:py-8">
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
@@ -34,25 +34,34 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="flex shrink-0 items-center gap-2 rounded border border-neutral-300 px-3 py-2 text-base font-medium uppercase tracking-[0.15em] text-neutral-800 md:hidden"
+            className="relative flex h-11 w-11 shrink-0 items-center justify-center md:hidden"
             aria-expanded={menuOpen}
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <span>{menuOpen ? "Close" : "Menu"}</span>
-            <span className="flex flex-col gap-1" aria-hidden>
+            <span className="relative block h-4 w-5" aria-hidden>
               <span
-                className={`block h-px w-4 bg-neutral-800 transition-transform ${menuOpen ? "translate-y-[5px] rotate-45" : ""}`}
+                className={`absolute left-0 block h-[1.5px] w-5 bg-neutral-800 transition-all duration-200 ${
+                  menuOpen
+                    ? "top-1/2 -translate-y-1/2 rotate-45"
+                    : "top-0"
+                }`}
               />
               <span
-                className={`block h-px w-4 bg-neutral-800 transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+                className={`absolute left-0 top-1/2 block h-[1.5px] w-5 -translate-y-1/2 bg-neutral-800 transition-opacity duration-200 ${
+                  menuOpen ? "opacity-0" : ""
+                }`}
               />
               <span
-                className={`block h-px w-4 bg-neutral-800 transition-transform ${menuOpen ? "-translate-y-[5px] -rotate-45" : ""}`}
+                className={`absolute left-0 block h-[1.5px] w-5 bg-neutral-800 transition-all duration-200 ${
+                  menuOpen
+                    ? "top-1/2 -translate-y-1/2 -rotate-45"
+                    : "bottom-0"
+                }`}
               />
             </span>
           </button>
 
-          <nav className="hidden items-center justify-end gap-x-6 text-base uppercase tracking-[0.2em] md:flex md:gap-x-8 md:text-lg">
+          <nav className="hidden items-center justify-end gap-x-6 text-sm uppercase tracking-[0.2em] md:flex md:gap-x-8 md:text-base">
             {links.map((link) => {
               const active = pathname === link.href;
               return (
@@ -72,30 +81,34 @@ export default function Header() {
           </nav>
         </div>
 
-        {menuOpen && (
-          <nav className="mt-3 border-t border-brand-light pt-3 md:hidden">
-            <ul className="grid grid-cols-2 gap-2">
-              {links.map((link) => {
-                const active = pathname === link.href;
-                return (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setMenuOpen(false)}
-                      className={`block rounded px-3 py-3 text-center text-base uppercase tracking-[0.12em] transition-colors ${
-                        active
-                          ? "bg-brand-light font-medium text-brand"
-                          : "text-neutral-800 hover:bg-brand-light/60 hover:text-brand"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        )}
+        <nav
+          className={`overflow-hidden transition-[max-height,opacity] duration-200 ease-out md:hidden ${
+            menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
+          aria-hidden={!menuOpen}
+        >
+          <ul className="flex flex-col border-t border-brand-light/60 py-1">
+            {links.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    tabIndex={menuOpen ? undefined : -1}
+                    className={`block py-3 text-sm uppercase tracking-[0.15em] transition-colors ${
+                      active
+                        ? "text-brand"
+                        : "text-neutral-800 hover:text-brand"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
     </header>
   );

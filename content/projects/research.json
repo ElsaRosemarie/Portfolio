@@ -1,14 +1,39 @@
 {
   "Hum(us)": {
-    "link": {
-      "label": "the village, June",
-      "url": "https://www.thevillage.ie/education-group-visits/research-publications/"
-    }
+    "paragraphs": [
+      "*Thesis | MSc Anthropology and Development Studies | Jan. 2024 – July 2024*",
+      "For my master's thesis, I travelled to Ireland and researched how residents of the Cloughjordan Ecovillage aim to create close relationships with other-than-human actors (e.g. plants, trees, soil) as an alternative to the idea that humans and nature stand apart from one another. Applying a combination of ethnography and arts-based methods, I found that although the ecovillage aims for a close-knit community dedicated to sustainable living, there is a lack of cohesion among residents. This, in turn, impacts the more-than-human relationships and the extent to which they are relearned collectively. Cloughjordan appears to be a community by design, rather than by practice, where intellectual relearning prevails over embodied relearning. I concluded that the relearning of more-than-human entanglement cannot be seen as separate from the relearning to live a communal life.",
+      "The full thesis is published on the [Cloughjordan Ecovillage website](https://www.thevillage.ie/education-group-visits/research-publications/)."
+    ]
+  },
+  "EDEN": {
+    "paragraphs": [
+      "*Final Bachelor Project | BSc Industrial Design | Jan. 2022 – July 2022*",
+      "The current wave of climate and social justice activism is dedicated to building more just spaces, while at the same time battling negative eco-emotions and the reproduction of oppressive structures. Having a clear understanding of your hope for the world and working towards this vision, provides support for those involved in justice work. Already expressing your ends through your means aids the building of prefigurative counterpowers as an alternative to the status quo. To support this process, I developed EDEN, a workshop and accompanying toolbox which helps communities to talk about their values and evaluate to what extent they embody them."
+    ]
   },
   "Research Art & the Climate Crisis": {
-    "link": {
-      "label": "Research Art & the Climate Crisis, November",
-      "url": "https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621"
-    }
+    "paragraphs": [
+      "*Kunstloc Brabant | in collaboration with Charlotte Hopmans | Apr. 2022 – Nov. 2022*",
+      "For Kunstloc Brabant, I researched the relationship between art and the climate crisis, using a combination of literature analysis and the interviewing of artists and activists. I looked into both how the arts and culture sector could contribute to a more sustainable and just world, as well as how Kunstloc and the culture sector itself could operate more sustainably. The results of the research were presented at a workshop to a diverse network of interested parties. You can find out more about the research [here](https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621)."
+    ]
+  },
+  "MUZUS": {
+    "paragraphs": [
+      "*Internship | Muzus | Sep. 2021 – Jan. 2022*",
+      "Muzus is a research and design agency active within the fields of social and service design. During my internship, I worked on the project #verBAASjezelf (#amazeyourself), which focused on how to ensure that the dreams, motivations, and talents with which young people want to shape their personal lives, is the starting point of rehabilitation. We developed a healthcare path centred around talent development in cooperation with experts from Rijndam Revalidatie."
+    ]
+  },
+  "UNA": {
+    "paragraphs": [
+      "*Design Research Project | BSc Industrial Design | Feb. 2020 – June 2020*",
+      "UNA is a virtual tool and research project on the influence of designs extending a physical artefact on the feeling of connectivity between an applicant and a recruiter during a virtual job interview."
+    ]
+  },
+  "Kaliko": {
+    "paragraphs": [
+      "*Design Project | BSc Industrial Design | Feb. 2019 – June 2019*",
+      "Kaliko is an interactive set of personalised stuffed animals aimed at enhancing the bond between parent and child."
+    ]
   }
 }

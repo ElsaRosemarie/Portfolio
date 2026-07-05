@@ -33,26 +33,21 @@
   "pages": {
     "about": {
       "paragraphs": [
-        "Elsa van Dam is an illustrator with a love for hand-drawn lines, soft colour palettes, and stories rooted in everyday life. She works across editorial, cultural, and social projects.",
-        "Her practice is informed by design research: listening carefully, making together, and translating complex ideas into accessible visual language. She believes illustration can open conversations and make space for new perspectives.",
-        "When she is not drawing, you will find her walking, reading, or collecting small observations that later find their way back into her sketchbooks."
+        "Hi! I am Elsa (they/she), a queer illustrator, graphic designer and anthropologist living in Utrecht, the Netherlands. Ever since I could hold a pencil, being creative is how I have made a place for myself in the world. Driven by an ever-present need to create, I decided to study industrial design in 2018. Here, I was quickly drawn into the world of social design, inspired by the radical voices of the climate and social justice movement I had become engaged in. For my master's, I switched to anthropology, where I did my thesis on the relearning of more-than-human entanglement and the use of arts-based research methods. I feel most fulfilled in my work, when I can combine digging into complex literature with facilitating workshops and translating insights into art, which is why I have always done illustration and graphic design work next to my studies. Whether I was filling sketchbooks with visions of a better world, designing the magazine of my study association, or creating the visual identity for a climate movement, my hands are always itching to explore and create meaning.",
+        "In 2026, I decided to fully focus on my illustration and graphic design career, often letting myself be inspired by my research background. Fascinated by the complexity of relationships – both human as well as more-than-human, my colourful work seeks openings to intimacy that embrace softer ways of being, while acknowledging the contradictions, imperfections, and struggles of entanglement. In my commissioned work, I have specialised in creating publications and visual identities, often for academic and activist clients. I feel deeply fulfilled by creating visuals to someone else's words and sharing printed copies with the world. In the future, I hope to keep developing my skills and share them with a wider audience of critically engaged dreamers.",
+        "When I'm not working, I drink an insane amount of herbal tea, read books about messy gays, cook experimental vegan dinners, spend quality time with my friends, and wander around town with my camera in hand, finding beauty in things that would otherwise go unnoticed."
       ]
     },
     "contact": {
       "paragraphs": [
-        "For commissions, collaborations, or workshop requests, feel free to reach out."
-      ],
-      "showEmail": true,
-      "showInstagram": true,
-      "showLinkedin": true
+        "For commissions, questions, concerns, saying hi, or sharing your new favourite recipe, please send an email to [elsavandam@gmail.com](mailto:elsavandam@gmail.com)."
+      ]
     },
     "home": {
       "heroAlt": "Illustration by Elsa van Dam",
-      "greeting": "Hi, I am Elsa,",
+      "greeting": "Hi!",
       "paragraphs": [
-        "an illustrator and visual researcher based in the Netherlands. My work moves between editorial illustration, participatory design, and narrative image-making.",
-        "With a background in design research, I create images that help people see complex stories more clearly — from zines and reports to workshops and visual tools.",
-        "This portfolio brings together selected work, ongoing research, and creative collaborations. Welcome."
+        "Elsa (they/she) is a queer illustrator, graphic designer and anthropologist. Their work centres around the complexities of more-than-human entanglement, the search for bodily softness and the joys of the whimsical. With their eye for detail and their love for colours and textures, they create emotionally engaging publications, striking visual identities and poetic mixed-media paintings."
       ],
       "cta": {
         "label": "About",
@@ -62,11 +57,19 @@
     "workshops": {
       "heroAlt": "Workshops",
       "paragraphs": [
-        "Elsa facilitates illustration and visual thinking workshops for communities, students, and organisations. Sessions are hands-on, playful, and grounded in collective making.",
-        "Topics include storytelling through drawing, zine-making, visual research methods, and using illustration as a tool for dialogue. Workshops can be tailored to your group and context.",
-        "For enquiries about availability and custom programmes, please get in touch via the contact page."
-      ]
+        "A selection of workshops I have facilitated.",
+        "**Guest Lecture: Arts-Based Methods** | *taught at the department of Anthropology and Development Studies at Radboud University as part of the Methods of Fieldwork course*",
+        "In this guest lecture, I explain the basics of design thinking, give examples to how anthropology students could apply arts-based methods in their research, and reflect on how my background in industrial design inspired my approach to anthropological fieldwork.",
+        "**EDEN: Workshop for Communities Dedicated to Becoming Prefigurative Counterpowers** | *facilitated for University Rebellion TU/e as part of my final bachelor project*",
+        "Through a series of experimental creative exercises, activist communities explore their values and the extent to which they embody them. You can find out more about this workshop [here](/research).",
+        "**Materialising Memories: Archiving More-than-Human Encounters** | *in collaboration with Elena Dagg | facilitated at the Climbers for Climate Skillshare*",
+        "In this workshop, activists involved in the protecting of forests memorise and honour the other-than-humans they have lost. Through the medium of patch-making, they remember lives taken, story tell their shared pasts and materialise their more-than-human encounters.",
+        "**The Basics of Adobe Illustrator** | *facilitated for the Radboud Creative Collective*",
+        "**The Basics of Adobe InDesign** | *facilitated for members of UNID magazine and the student association of Industrial Design TU/e*",
+        "**The Principles of Graphic Design** | *facilitated for the student association of Industrial Design TU/e*"
+      ],
+      "footerCta": "Would you like to hire me as a facilitator, or would you love to have a custom workshop designed according to your wants and needs? Please [contact me](/contact)."
     }
   },
-  "generatedAt": "2026-07-05T14:09:36.579Z"
+  "generatedAt": "2026-07-05T15:01:03.031Z"
 }

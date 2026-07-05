@@ -20,6 +20,7 @@ export interface PageContent {
     label: string;
     href: string;
   };
+  footerCta?: string;
 }
 
 export interface SiteContent {

@@ -7,7 +7,7 @@ export default function AboutPage() {
   const page = getPage("about");
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6 md:px-10">
+    <div className="page-shell pb-16 md:pb-20">
       <div className="grid gap-12 md:grid-cols-2 md:gap-16">
         <PageText content={page} />
         <div className="relative aspect-[3/4] w-full">

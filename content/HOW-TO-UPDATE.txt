@@ -17,7 +17,7 @@ https://github.com/ElsaRosemarie/Portfolio
 5. Scroll down →  Commit changes  →  Commit changes
 
 Each paragraph is one block of text between quote marks.
-Keep the quote marks and commas — only change the words inside.
+Use *italic* and **bold** for emphasis. Keep the quote marks and commas.
 
 
 ─── CHANGE EMAIL, INSTAGRAM, OR LINKEDIN ───────────────────────────
@@ -81,21 +81,32 @@ Each project entry looks like this:
   "My Project Folder Name": {
     "paragraphs": [
       "First paragraph shown in the popup.",
-      "Optional second paragraph — add as many as you like."
-    ],
-    "link": {
-      "label": "Publication or exhibition name",
-      "url": "https://example.com"
-    }
+      "Optional second paragraph with a [link inside the text](https://example.com)."
+    ]
   }
 
-•  "paragraphs"  — optional text in the popup (folder projects only)
-•  "link"  — optional credit line with a clickable URL
-•  You can use paragraphs, link, or both
+•  "paragraphs"  — text in the popup; use [link text](url) for links inside the text
+•  Use *italic* and **bold** for emphasis
+•  Do not add a separate link under the title — put links in the paragraph text
 •  The project name must match the folder name in WORK or RESEARCH
 
 Single images (no folder) can also be added here — use the image title
 as the key. They show the title only unless you add a link.
+
+
+─── IMAGE ORDER WITHIN A PROJECT ───────────────────────────────────
+
+Inside a project folder, add  images.txt  (one filename per line).
+This controls the order in the popup gallery grid.
+
+  Afbeeldingen portfolio  →  WORK  →  My Project  →  images.txt
+
+Example:
+  photo-cover.jpg
+  detail-1.png
+  detail-2.png
+
+Images not listed are appended at the end. Use  -filename  to hide one.
 
 
 ─── PROJECT TEXT (alternative: description.txt) ──────────────────
@@ -103,16 +114,6 @@ as the key. They show the title only unless you add a link.
 You can also add  description.txt  inside a project folder.
 Separate paragraphs with a blank line. The JSON files above are easier
 to edit on GitHub.
-
-
-─── PROJECT LINK (alternative: info.txt) ─────────────────────────
-
-You can also add  info.txt  in the project folder:
-
-  Line 1: link label   (e.g. the village, June)
-  Line 2: URL
-
-JSON in  content/projects/  is preferred — same place as all other text.
 
 
 ─── CHANGE IMAGES ON A PAGE ──────────────────────────────────────

@@ -48,7 +48,10 @@
             "alt": "Queer Publication Toekomstboeren29"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "For Toekomstboeren, I designed and illustrated their zine about the intersections of queerness and farming."
+        ]
       },
       {
         "id": "work-once-upon-a-time",
@@ -98,10 +101,9 @@
           }
         ],
         "standalone": false,
-        "credit": {
-          "label": "Once Upon a Time, juni",
-          "url": "https://dl.acm.org/doi/10.1145/3706599.3716223"
-        }
+        "paragraphs": [
+          "I designed and illustrated this book of speculative fictions as a supplement to the paper [Once Upon a Time](https://dl.acm.org/doi/10.1145/3706599.3716223) When HCI Prioritised Environmental Sustainability: Reflections on a Collection of Fictions."
+        ]
       },
       {
         "id": "work-spring-storm",
@@ -154,7 +156,10 @@
             "alt": "Report Radboud Welcomes Newcomers V4_Pagina_10"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "For the Radboud Welcomes Newcomers project, I designed and illustrated their 2024 report."
+        ]
       },
       {
         "id": "work-roots",
@@ -199,7 +204,10 @@
             "alt": "TNI guide_Pagina_6"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "For the Radboud DEI Office, I created a Word template and illustrations for their guide for trans, nonbinary and intersex students."
+        ]
       },
       {
         "id": "work-excellence-in-context",
@@ -236,7 +244,10 @@
             "alt": "Excellence in Context V3 4"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "Series of illustrations for the podcast Excellence in Context, which explores the question of what excellence means to people in academia."
+        ]
       },
       {
         "id": "work-innovating-by-design",
@@ -305,7 +316,10 @@
             "alt": "Test"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "For the interdisciplinary course Innovating by Design, I developed a visual identity that makes the design thinking process more accessible to students."
+        ]
       },
       {
         "id": "work-unid",
@@ -346,7 +360,10 @@
             "alt": "Staff Interview2"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "UNID is a design magazine created by students of Industrial Design at the TU/e and as a member of the graphics team, I designed and illustrated various articles. In my second year, I became the magazine's Chief of Graphics, redesigning the magazine's layout and logo and developing a unique style for each issue."
+        ]
       },
       {
         "id": "work-ur-xr",
@@ -371,7 +388,10 @@
             "alt": "Toxic system rave"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "I developed the visual identity of University Rebellion, and created various posters, icons and other graphics for the Dutch climate and social justice movement."
+        ]
       },
       {
         "id": "work-community-seed-bank-flyer",
@@ -469,7 +489,10 @@
             "alt": "Mignot"
           }
         ],
-        "standalone": true
+        "standalone": true,
+        "paragraphs": [
+          "I designed this logo for clothing items created by Mignot, heavily inspired by the branding of Lucy & Yak, but with the whimsical touch of a worm."
+        ]
       },
       {
         "id": "work-my-art-is-enough-to-give",
@@ -752,10 +775,11 @@
           }
         ],
         "standalone": false,
-        "credit": {
-          "label": "the village, June",
-          "url": "https://www.thevillage.ie/education-group-visits/research-publications/"
-        }
+        "paragraphs": [
+          "*Thesis | MSc Anthropology and Development Studies | Jan. 2024 – July 2024*",
+          "For my master's thesis, I travelled to Ireland and researched how residents of the Cloughjordan Ecovillage aim to create close relationships with other-than-human actors (e.g. plants, trees, soil) as an alternative to the idea that humans and nature stand apart from one another. Applying a combination of ethnography and arts-based methods, I found that although the ecovillage aims for a close-knit community dedicated to sustainable living, there is a lack of cohesion among residents. This, in turn, impacts the more-than-human relationships and the extent to which they are relearned collectively. Cloughjordan appears to be a community by design, rather than by practice, where intellectual relearning prevails over embodied relearning. I concluded that the relearning of more-than-human entanglement cannot be seen as separate from the relearning to live a communal life.",
+          "The full thesis is published on the [Cloughjordan Ecovillage website](https://www.thevillage.ie/education-group-visits/research-publications/)."
+        ]
       },
       {
         "id": "research-eden",
@@ -797,7 +821,11 @@
             "alt": "Toolbox-02"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "*Final Bachelor Project | BSc Industrial Design | Jan. 2022 – July 2022*",
+          "The current wave of climate and social justice activism is dedicated to building more just spaces, while at the same time battling negative eco-emotions and the reproduction of oppressive structures. Having a clear understanding of your hope for the world and working towards this vision, provides support for those involved in justice work. Already expressing your ends through your means aids the building of prefigurative counterpowers as an alternative to the status quo. To support this process, I developed EDEN, a workshop and accompanying toolbox which helps communities to talk about their values and evaluate to what extent they embody them."
+        ]
       },
       {
         "id": "research-muzus",
@@ -831,7 +859,11 @@
             "alt": "Wandelplaat Rijndam kleuren_Page_1"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "*Internship | Muzus | Sep. 2021 – Jan. 2022*",
+          "Muzus is a research and design agency active within the fields of social and service design. During my internship, I worked on the project #verBAASjezelf (#amazeyourself), which focused on how to ensure that the dreams, motivations, and talents with which young people want to shape their personal lives, is the starting point of rehabilitation. We developed a healthcare path centred around talent development in cooperation with experts from Rijndam Revalidatie."
+        ]
       },
       {
         "id": "research-research-art-the-climate-crisis",
@@ -846,10 +878,10 @@
           }
         ],
         "standalone": true,
-        "credit": {
-          "label": "Research Art & the Climate Crisis, November",
-          "url": "https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621"
-        }
+        "paragraphs": [
+          "*Kunstloc Brabant | in collaboration with Charlotte Hopmans | Apr. 2022 – Nov. 2022*",
+          "For Kunstloc Brabant, I researched the relationship between art and the climate crisis, using a combination of literature analysis and the interviewing of artists and activists. I looked into both how the arts and culture sector could contribute to a more sustainable and just world, as well as how Kunstloc and the culture sector itself could operate more sustainably. The results of the research were presented at a workshop to a diverse network of interested parties. You can find out more about the research [here](https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621)."
+        ]
       },
       {
         "id": "research-una",
@@ -871,7 +903,11 @@
             "alt": "Prototype"
           }
         ],
-        "standalone": false
+        "standalone": false,
+        "paragraphs": [
+          "*Design Research Project | BSc Industrial Design | Feb. 2020 – June 2020*",
+          "UNA is a virtual tool and research project on the influence of designs extending a physical artefact on the feeling of connectivity between an applicant and a recruiter during a virtual job interview."
+        ]
       },
       {
         "id": "research-kaliko",
@@ -885,12 +921,16 @@
             "alt": "Kaliko"
           }
         ],
-        "standalone": true
+        "standalone": true,
+        "paragraphs": [
+          "*Design Project | BSc Industrial Design | Feb. 2019 – June 2019*",
+          "Kaliko is an interactive set of personalised stuffed animals aimed at enhancing the bond between parent and child."
+        ]
       }
     ],
     "filters": [
       "All"
     ]
   },
-  "generatedAt": "2026-07-05T14:09:36.731Z"
+  "generatedAt": "2026-07-05T15:01:03.150Z"
 }

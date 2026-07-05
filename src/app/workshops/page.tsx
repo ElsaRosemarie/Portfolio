@@ -7,7 +7,7 @@ export default function WorkshopsPage() {
   const page = getPage("workshops");
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6 md:px-10">
+    <div className="page-shell pb-16 md:pb-20">
       <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden bg-neutral-100">
         <Image
           src={asset("/images/WORKSHOPS/hero.jpg")}

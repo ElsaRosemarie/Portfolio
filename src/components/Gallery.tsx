@@ -75,10 +75,10 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 md:px-10">
+      <div className="page-shell pb-8">
         {showFilters && (
-          <div className="-mx-4 mb-8 overflow-x-auto px-4 scrollbar-hide sm:-mx-6 sm:px-6 md:mx-0 md:overflow-visible md:px-0">
-            <div className="flex w-max gap-x-7 gap-y-3 pb-1 text-lg uppercase tracking-[0.15em] md:w-auto md:flex-wrap md:gap-x-8 md:text-xl">
+          <div className="-mx-3 mb-8 overflow-x-auto px-3 scrollbar-hide sm:-mx-4 sm:px-4 md:mx-0 md:overflow-visible md:px-0">
+            <div className="flex w-max gap-x-5 gap-y-2 pb-1 text-sm uppercase tracking-[0.12em] md:w-auto md:flex-wrap md:gap-x-6 md:text-base">
               {section.filters.map((filter) => (
                 <button
                   key={filter}

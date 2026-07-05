@@ -11,7 +11,7 @@
   --max-width-2xl: 52.5rem;
   --max-width-3xl: 60rem;
   --max-width-4xl: 70rem;
-  --max-width-6xl: 90rem;
+  --max-width-6xl: 72rem;
 }
 
 @layer base {
@@ -20,11 +20,17 @@
   }
 
   body {
-    @apply bg-white font-sans text-lg text-neutral-900 antialiased md:text-xl;
+    @apply bg-white font-sans text-base text-neutral-900 antialiased md:text-lg;
   }
 
   main a {
     @apply text-brand transition-colors hover:text-brand-dark;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-3 sm:px-4 md:px-6;
   }
 }
 

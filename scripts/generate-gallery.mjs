@@ -71,11 +71,61 @@ function copyFile(src, dest) {
 
 function collectImages(dir) {
   if (!fs.existsSync(dir)) return [];
-  return fs
+  const images = fs
     .readdirSync(dir)
     .filter((f) => isImage(f))
-    .map((f) => path.join(dir, f))
+    .map((f) => path.join(dir, f));
+
+  const orderPath = path.join(dir, "images.txt");
+  return applyImageOrder(images, orderPath, path.basename(dir));
+}
+
+function imageMatchesKey(imagePath, key) {
+  const base = path.basename(imagePath);
+  const normalizedKey = key.toLowerCase();
+  return (
+    base === key ||
+    base.toLowerCase() === normalizedKey ||
+    cleanTitle(base).toLowerCase() === cleanTitle(key).toLowerCase()
+  );
+}
+
+function applyImageOrder(images, orderPath, label) {
+  const entries = parseOrderFile(orderPath);
+  if (!entries) {
+    return images.sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true })
+    );
+  }
+
+  const ordered = [];
+  const used = new Set();
+
+  for (const { key, exclude } of entries) {
+    const image = images.find(
+      (item) => !used.has(item) && imageMatchesKey(item, key)
+    );
+
+    if (!image) {
+      console.warn(`[${label}] images.txt: no match for "${key}"`);
+      continue;
+    }
+
+    used.add(image);
+    if (!exclude) ordered.push(image);
+  }
+
+  const remaining = images
+    .filter((item) => !used.has(item))
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+  if (remaining.length > 0) {
+    console.log(
+      `[${label}] ${remaining.length} image(s) not in images.txt — appended at end`
+    );
+  }
+
+  return [...ordered, ...remaining];
 }
 
 function mirrorToPublic(relativePath, srcFile) {
@@ -138,13 +188,8 @@ function resolveProjectCopy(contentMap, sectionDir, folderPath, title) {
     entry?.paragraphs?.filter((part) => part.trim()) ??
     readParagraphsFromTxt(sectionDir, folderPath, title);
 
-  const credit =
-    entry?.link ??
-    readProjectInfo(sectionDir, folderPath, title);
-
   return {
     ...(paragraphs?.length ? { paragraphs } : {}),
-    ...(credit ? { credit } : {}),
   };
 }
 
@@ -259,37 +304,17 @@ function buildSection(sectionName) {
   const orderPath = path.join(sectionDir, "order.txt");
   const orderedProjects = applyProjectOrder(projects, orderPath, sectionName);
 
-  return { projects: orderedProjects, filters };
-}
-
-function cleanCreditLabel(label) {
-  return label.replace(/^\d{4}\s*>\s*/, "").trim();
-}
-
-function readProjectInfo(sectionDir, folderPath, title) {
-  const candidates = [
-    path.join(folderPath, "info.txt"),
-    path.join(sectionDir, `${title}.info.txt`),
-  ];
-
-  for (const file of candidates) {
-    if (!fs.existsSync(file)) continue;
-    const lines = fs
-      .readFileSync(file, "utf8")
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter(Boolean);
-
-    if (lines.length === 0) continue;
-
-    const label = cleanCreditLabel(lines[0]);
-    const url =
-      lines.find((line) => /^https?:\/\//i.test(line)) ?? lines[1] ?? "";
-
-    if (label && url) return { label, url };
+  if (sectionName === "RESEARCH") {
+    for (const project of orderedProjects) {
+      if (!project.paragraphs?.length) {
+        console.warn(
+          `[RESEARCH] "${project.title}" has no paragraphs — add text in content/projects/research.json`
+        );
+      }
+    }
   }
 
-  return null;
+  return { projects: orderedProjects, filters };
 }
 
 function parseOrderFile(orderPath) {

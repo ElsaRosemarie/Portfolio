@@ -1,8 +1,47 @@
 {
+  "Queer Zine Toekomstboeren": {
+    "paragraphs": [
+      "For Toekomstboeren, I designed and illustrated their zine about the intersections of queerness and farming."
+    ]
+  },
   "Once Upon a Time": {
-    "link": {
-      "label": "Once Upon a Time, juni",
-      "url": "https://dl.acm.org/doi/10.1145/3706599.3716223"
-    }
+    "paragraphs": [
+      "I designed and illustrated this book of speculative fictions as a supplement to the paper [Once Upon a Time](https://dl.acm.org/doi/10.1145/3706599.3716223) When HCI Prioritised Environmental Sustainability: Reflections on a Collection of Fictions."
+    ]
+  },
+  "Radboud Welcomes Newcomers": {
+    "paragraphs": [
+      "For the Radboud Welcomes Newcomers project, I designed and illustrated their 2024 report."
+    ]
+  },
+  "Excellence in context": {
+    "paragraphs": [
+      "Series of illustrations for the podcast Excellence in Context, which explores the question of what excellence means to people in academia."
+    ]
+  },
+  "TNI guide": {
+    "paragraphs": [
+      "For the Radboud DEI Office, I created a Word template and illustrations for their guide for trans, nonbinary and intersex students."
+    ]
+  },
+  "Mignot": {
+    "paragraphs": [
+      "I designed this logo for clothing items created by Mignot, heavily inspired by the branding of Lucy & Yak, but with the whimsical touch of a worm."
+    ]
+  },
+  "Innovating by Design": {
+    "paragraphs": [
+      "For the interdisciplinary course Innovating by Design, I developed a visual identity that makes the design thinking process more accessible to students."
+    ]
+  },
+  "UR & XR": {
+    "paragraphs": [
+      "I developed the visual identity of University Rebellion, and created various posters, icons and other graphics for the Dutch climate and social justice movement."
+    ]
+  },
+  "UNID": {
+    "paragraphs": [
+      "UNID is a design magazine created by students of Industrial Design at the TU/e and as a member of the graphics team, I designed and illustrated various articles. In my second year, I became the magazine's Chief of Graphics, redesigning the magazine's layout and logo and developing a unique style for each issue."
+    ]
   }
 }
