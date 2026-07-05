@@ -20,7 +20,11 @@
   }
 
   body {
-    @apply bg-white font-sans text-neutral-900 antialiased;
+    @apply bg-white font-sans text-base text-neutral-900 antialiased md:text-lg;
+  }
+
+  main a {
+    @apply text-brand transition-colors hover:text-brand-dark;
   }
 }
 

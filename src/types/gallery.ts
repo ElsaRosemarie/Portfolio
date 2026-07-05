@@ -3,6 +3,11 @@ export interface GalleryImage {
   alt: string;
 }
 
+export interface ProjectCredit {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -10,7 +15,9 @@ export interface Project {
   section: string;
   cover: string;
   images: GalleryImage[];
-  description: string;
+  standalone: boolean;
+  description?: string;
+  credit?: ProjectCredit;
 }
 
 export interface GallerySection {

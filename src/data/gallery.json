@@ -48,7 +48,7 @@
             "alt": "Queer Publication Toekomstboeren29"
           }
         ],
-        "description": "A selection of work from the series \"Queer Zine Toekomstboeren\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-once-upon-a-time",
@@ -97,7 +97,11 @@
             "alt": "Once Upon a Time21"
           }
         ],
-        "description": "A selection of work from the series \"Once Upon a Time\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false,
+        "credit": {
+          "label": "2024   >Once Upon a Time, juni",
+          "url": "https://dl.acm.org/doi/10.1145/3706599.3716223"
+        }
       },
       {
         "id": "work-spring-storm",
@@ -113,7 +117,7 @@
             "alt": "Spring storm"
           }
         ],
-        "description": "A selection of work from the series \"Spring storm\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-radboud-welcomes-newcomers",
@@ -150,7 +154,7 @@
             "alt": "Report Radboud Welcomes Newcomers V4_Pagina_10"
           }
         ],
-        "description": "A selection of work from the series \"Radboud Welcomes Newcomers\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-roots",
@@ -166,7 +170,7 @@
             "alt": "Roots"
           }
         ],
-        "description": "A selection of work from the series \"Roots\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-tni-guide",
@@ -195,7 +199,7 @@
             "alt": "TNI guide_Pagina_6"
           }
         ],
-        "description": "A selection of work from the series \"TNI guide\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-excellence-in-context",
@@ -232,7 +236,7 @@
             "alt": "Excellence in Context V3 4"
           }
         ],
-        "description": "A selection of work from the series \"Excellence in context\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-innovating-by-design",
@@ -301,7 +305,7 @@
             "alt": "Test"
           }
         ],
-        "description": "A selection of work from the series \"Innovating by Design\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-unid",
@@ -342,7 +346,7 @@
             "alt": "Staff Interview2"
           }
         ],
-        "description": "A selection of work from the series \"UNID\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-ur-xr",
@@ -367,7 +371,7 @@
             "alt": "Toxic system rave"
           }
         ],
-        "description": "A selection of work from the series \"UR & XR\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "work-community-seed-bank-flyer",
@@ -384,7 +388,7 @@
             "alt": "Community Seed Bank flyer"
           }
         ],
-        "description": "A selection of work from the series \"Community Seed Bank flyer\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-happy-autumn-let-s-decay",
@@ -400,7 +404,7 @@
             "alt": "Happy autumn, let's decay"
           }
         ],
-        "description": "A selection of work from the series \"Happy autumn, let's decay\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-inner-garden",
@@ -416,7 +420,7 @@
             "alt": "Inner garden"
           }
         ],
-        "description": "A selection of work from the series \"Inner garden\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-limitless-love",
@@ -432,7 +436,7 @@
             "alt": "Limitless love"
           }
         ],
-        "description": "A selection of work from the series \"Limitless love\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-make-kin",
@@ -448,7 +452,7 @@
             "alt": "Make kin"
           }
         ],
-        "description": "A selection of work from the series \"Make kin\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-mignot",
@@ -465,7 +469,7 @@
             "alt": "Mignot"
           }
         ],
-        "description": "A selection of work from the series \"Mignot\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-my-art-is-enough-to-give",
@@ -481,7 +485,7 @@
             "alt": "My art is enough to give"
           }
         ],
-        "description": "A selection of work from the series \"My art is enough to give\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-nap-in-the-forest",
@@ -497,7 +501,7 @@
             "alt": "Nap in the forest"
           }
         ],
-        "description": "A selection of work from the series \"Nap in the forest\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-night-walk",
@@ -513,7 +517,7 @@
             "alt": "Night walk"
           }
         ],
-        "description": "A selection of work from the series \"Night walk\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-nurture",
@@ -529,7 +533,7 @@
             "alt": "Nurture"
           }
         ],
-        "description": "A selection of work from the series \"Nurture\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-pino-s-clubhuis",
@@ -546,7 +550,7 @@
             "alt": "Pino's Clubhuis"
           }
         ],
-        "description": "A selection of work from the series \"Pino's Clubhuis\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-practicing-trees",
@@ -562,7 +566,7 @@
             "alt": "Practicing trees"
           }
         ],
-        "description": "A selection of work from the series \"Practicing trees\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-thesis-cover",
@@ -579,7 +583,7 @@
             "alt": "Thesis cover"
           }
         ],
-        "description": "A selection of work from the series \"Thesis cover\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-tulips",
@@ -595,7 +599,7 @@
             "alt": "Tulips"
           }
         ],
-        "description": "A selection of work from the series \"Tulips\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-weaving",
@@ -611,7 +615,7 @@
             "alt": "Weaving"
           }
         ],
-        "description": "A selection of work from the series \"Weaving\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-winter-landscape",
@@ -627,7 +631,7 @@
             "alt": "Winter landscape"
           }
         ],
-        "description": "A selection of work from the series \"Winter landscape\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-witchy-hour",
@@ -644,7 +648,7 @@
             "alt": "Witchy hour"
           }
         ],
-        "description": "A selection of work from the series \"Witchy hour\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-logo-massagesalon",
@@ -661,7 +665,7 @@
             "alt": "Logo Massagesalon"
           }
         ],
-        "description": "A selection of work from the series \"Logo Massagesalon\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-dinner-menu",
@@ -677,7 +681,7 @@
             "alt": "Dinner menu"
           }
         ],
-        "description": "A selection of work from the series \"Dinner menu\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       },
       {
         "id": "work-wool-for-warmth",
@@ -694,7 +698,7 @@
             "alt": "Wool for Warmth"
           }
         ],
-        "description": "A selection of work from the series \"Wool for Warmth\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       }
     ],
     "filters": [
@@ -747,7 +751,11 @@
             "alt": "IMG-20240607-WA0028-3"
           }
         ],
-        "description": "A selection of work from the series \"Hum(us)\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false,
+        "credit": {
+          "label": "2024   >the village, June",
+          "url": "https://www.thevillage.ie/education-group-visits/research-publications/"
+        }
       },
       {
         "id": "research-eden",
@@ -789,7 +797,7 @@
             "alt": "Toolbox-02"
           }
         ],
-        "description": "A selection of work from the series \"EDEN\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "research-muzus",
@@ -823,7 +831,7 @@
             "alt": "Wandelplaat Rijndam kleuren_Page_1"
           }
         ],
-        "description": "A selection of work from the series \"MUZUS\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "research-research-art-the-climate-crisis",
@@ -837,7 +845,11 @@
             "alt": "Research Art & the Climate Crisis"
           }
         ],
-        "description": "A selection of work from the series \"Research Art & the Climate Crisis\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true,
+        "credit": {
+          "label": "2022   >Research Art & the Climate Crisis, November",
+          "url": "https://www.kunstlocbrabant.nl/kennis-inspiratie/op-verkenning-de-klimaatcrisis-39621"
+        }
       },
       {
         "id": "research-una",
@@ -859,7 +871,7 @@
             "alt": "Prototype"
           }
         ],
-        "description": "A selection of work from the series \"UNA\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": false
       },
       {
         "id": "research-kaliko",
@@ -873,12 +885,12 @@
             "alt": "Kaliko"
           }
         ],
-        "description": "A selection of work from the series \"Kaliko\". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice."
+        "standalone": true
       }
     ],
     "filters": [
       "All"
     ]
   },
-  "generatedAt": "2026-07-05T13:36:18.244Z"
+  "generatedAt": "2026-07-05T13:52:57.739Z"
 }

@@ -144,6 +144,9 @@ function buildSection(sectionName) {
       }
     }
 
+    const description = readOptionalDescription(sectionDir, folderPath, folder);
+    const credit = readProjectInfo(sectionDir, folderPath, folder);
+
     projects.push({
       id,
       title: folder,
@@ -151,7 +154,9 @@ function buildSection(sectionName) {
       section: sectionName.toLowerCase(),
       cover: imageUrls[0].src,
       images: imageUrls,
-      description: readProjectDescription(sectionDir, folderPath, folder),
+      standalone: false,
+      ...(description ? { description } : {}),
+      ...(credit ? { credit } : {}),
     });
   }
 
@@ -164,6 +169,8 @@ function buildSection(sectionName) {
     const id = `${sectionName.toLowerCase()}-${slugify(title)}`;
     const categories = parseCategories(img);
 
+    const credit = readProjectInfo(sectionDir, sectionDir, title);
+
     projects.push({
       id,
       title,
@@ -171,7 +178,8 @@ function buildSection(sectionName) {
       section: sectionName.toLowerCase(),
       cover: url,
       images: [{ src: url, alt: title }],
-      description: readProjectDescription(sectionDir, sectionDir, title),
+      standalone: true,
+      ...(credit ? { credit } : {}),
     });
   }
 
@@ -185,11 +193,7 @@ function buildSection(sectionName) {
   return { projects: orderedProjects, filters };
 }
 
-function getDummyDescription(title) {
-  return `A selection of work from the series "${title}". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice.`;
-}
-
-function readProjectDescription(sectionDir, folderPath, title) {
+function readOptionalDescription(sectionDir, folderPath, title) {
   const candidates = [
     path.join(folderPath, "description.txt"),
     path.join(sectionDir, `${title}.description.txt`),
@@ -201,7 +205,33 @@ function readProjectDescription(sectionDir, folderPath, title) {
     if (text) return text;
   }
 
-  return getDummyDescription(title);
+  return null;
+}
+
+function readProjectInfo(sectionDir, folderPath, title) {
+  const candidates = [
+    path.join(folderPath, "info.txt"),
+    path.join(sectionDir, `${title}.info.txt`),
+  ];
+
+  for (const file of candidates) {
+    if (!fs.existsSync(file)) continue;
+    const lines = fs
+      .readFileSync(file, "utf8")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (lines.length === 0) continue;
+
+    const label = lines[0];
+    const url =
+      lines.find((line) => /^https?:\/\//i.test(line)) ?? lines[1] ?? "";
+
+    if (label && url) return { label, url };
+  }
+
+  return null;
 }
 
 function parseOrderFile(orderPath) {

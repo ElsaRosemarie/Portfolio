@@ -13,6 +13,10 @@ export interface PageContent {
   heroAlt?: string;
   showEmail?: boolean;
   showInstagram?: boolean;
+  cta?: {
+    label: string;
+    href: string;
+  };
 }
 
 export interface SiteContent {

@@ -68,11 +68,21 @@ Examples:
 
 ─── PROJECT DESCRIPTION (popup text) ─────────────────────────────
 
-Inside a project folder, add a file called:
+For multi-image project folders only, add:
 
   description.txt
 
-Write the text you want shown in the popup. Plain text, no special formatting.
+Single images (no folder) show the title only — no description needed.
+
+
+─── PROJECT LINK (popup credit line) ─────────────────────────────
+
+Add info.txt in the project folder, or for a single image:
+
+  My piece.info.txt
+
+Line 1: label   (e.g. 2024   >the village, June)
+Line 2: URL
 
 
 ─── CHANGE IMAGES ON A PAGE ──────────────────────────────────────

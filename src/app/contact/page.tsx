@@ -7,13 +7,13 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto w-full max-w-2xl px-4 pb-20 sm:px-6 md:px-10">
-      <div className="space-y-6 text-sm leading-relaxed text-neutral-700 md:text-base">
+      <div className="space-y-6 leading-relaxed text-neutral-700">
         <PageText content={page} className="space-y-6" />
         {page.showEmail !== false && (
           <p>
             <a
               href={`mailto:${email}`}
-              className="border-b border-brand-light transition-colors hover:border-brand hover:text-brand"
+              className="border-b border-brand-light"
             >
               {email}
             </a>
@@ -25,7 +25,7 @@ export default function ContactPage() {
               href={instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="border-b border-brand-light transition-colors hover:border-brand hover:text-brand"
+              className="border-b border-brand-light"
             >
               Instagram
             </a>

@@ -4,5 +4,9 @@
     "Elsa van Dam is an illustrator and visual researcher based in the Netherlands. Her work moves between editorial illustration, participatory design, and narrative image-making.",
     "With a background in design research, she creates images that help people see complex stories more clearly — from zines and reports to workshops and visual tools.",
     "This portfolio brings together selected work, ongoing research, and creative collaborations. Welcome."
-  ]
+  ],
+  "cta": {
+    "label": "About",
+    "href": "/about"
+  }
 }

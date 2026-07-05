@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { GallerySection, Project } from "@/types/gallery";
 import { asset } from "@/lib/paths";
+import LoadingImage from "./LoadingImage";
 import ProjectModal from "./ProjectModal";
 
 interface GalleryProps {
@@ -46,13 +47,10 @@ function GalleryTile({
       onClick={() => onSelect(project)}
       className="group relative block w-full overflow-hidden"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <LoadingImage
         src={asset(project.cover)}
         alt={project.title}
-        className="block h-auto w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-75"
-        loading="lazy"
-        decoding="async"
+        className="w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-75"
       />
       <div className="pointer-events-none absolute inset-0 bg-brand/0 transition-colors duration-300 group-hover:bg-brand/10" />
     </button>
@@ -80,7 +78,7 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
       <div className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 md:px-10">
         {showFilters && (
           <div className="-mx-4 mb-8 overflow-x-auto px-4 scrollbar-hide sm:-mx-6 sm:px-6 md:mx-0 md:overflow-visible md:px-0">
-            <div className="flex w-max gap-x-5 gap-y-2 pb-1 text-xs uppercase tracking-[0.15em] md:w-auto md:flex-wrap">
+            <div className="flex w-max gap-x-6 gap-y-2 pb-1 text-sm uppercase tracking-[0.15em] md:w-auto md:flex-wrap md:text-base">
               {section.filters.map((filter) => (
                 <button
                   key={filter}

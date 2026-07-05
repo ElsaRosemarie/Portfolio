@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PageText from "@/components/PageText";
 import { getPage } from "@/lib/content";
 import { asset } from "@/lib/paths";
@@ -20,8 +21,18 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="grid gap-12 pb-20 md:grid-cols-2 md:gap-16">
-        <PageText content={page} />
+      <section className="grid gap-12 pb-20 md:grid-cols-2 md:items-center md:gap-16">
+        <div className="flex flex-col items-center justify-center text-center">
+          <PageText content={page} />
+          {page.cta && (
+            <Link
+              href={page.cta.href}
+              className="mt-8 inline-block border border-brand px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] text-brand transition-colors hover:bg-brand hover:text-white md:text-base"
+            >
+              {page.cta.label}
+            </Link>
+          )}
+        </div>
         <div className="relative aspect-[3/4] w-full max-w-md justify-self-center md:justify-self-end">
           <Image
             src={asset("/images/HOME/portrait.jpg")}

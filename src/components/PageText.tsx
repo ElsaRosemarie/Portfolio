@@ -8,7 +8,7 @@ interface PageTextProps {
 export default function PageText({ content, className = "" }: PageTextProps) {
   return (
     <div
-      className={`space-y-5 text-sm leading-relaxed text-neutral-700 md:space-y-6 md:text-base ${className}`}
+      className={`space-y-5 leading-relaxed text-neutral-700 md:space-y-6 ${className}`}
     >
       {content.paragraphs.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
