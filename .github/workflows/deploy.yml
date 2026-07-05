@@ -20,9 +20,18 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - name: Read site config
+        id: site
+        run: |
+          BASE_PATH=$(node -p "JSON.parse(require('fs').readFileSync('content/site.json','utf8')).basePath ?? ''")
+          DOMAIN=$(node -p "JSON.parse(require('fs').readFileSync('content/site.json','utf8')).customDomain?.trim() || ''")
+          echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
+          echo "domain=${DOMAIN}" >> $GITHUB_OUTPUT
+
+      - name: Build static site
+        run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /Portfolio
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.site.outputs.base_path }}
 
       - run: touch out/.nojekyll
 
@@ -33,3 +42,4 @@ jobs:
           publish_dir: ./out
           publish_branch: gh-pages
           force_orphan: true
+          cname: ${{ steps.site.outputs.domain }}

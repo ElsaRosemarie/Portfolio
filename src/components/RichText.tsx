@@ -15,6 +15,14 @@ function renderLink(label: string, href: string, key: number): ReactNode {
     );
   }
 
+  if (href.startsWith("mailto:")) {
+    return (
+      <a key={key} href={href} className={linkClassName}>
+        {label}
+      </a>
+    );
+  }
+
   return (
     <a
       key={key}
