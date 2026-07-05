@@ -1,6 +1,8 @@
+import path from "path";
 import type { NextConfig } from "next";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const projectRoot = __dirname;
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -9,7 +11,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  outputFileTracingRoot: __dirname,
+  outputFileTracingRoot: projectRoot,
+  turbopack: {
+    root: projectRoot,
+  },
 };
 
 export default nextConfig;
