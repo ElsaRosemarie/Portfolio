@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PageText from "@/components/PageText";
 import { getPage } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export default function HomePage() {
   const page = getPage("home");
@@ -9,7 +10,7 @@ export default function HomePage() {
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10">
       <section className="pb-16 pt-4 md:pb-24 md:pt-6">
         <Image
-          src="/images/HOME/hero.jpg"
+          src={asset("/images/HOME/hero.jpg")}
           alt={page.heroAlt ?? "Illustration by Elsa van Dam"}
           width={4651}
           height={2501}
@@ -23,7 +24,7 @@ export default function HomePage() {
         <PageText content={page} />
         <div className="relative aspect-[3/4] w-full max-w-md justify-self-center md:justify-self-end">
           <Image
-            src="/images/HOME/portrait.jpg"
+            src={asset("/images/HOME/portrait.jpg")}
             alt="Elsa van Dam"
             fill
             className="object-cover"

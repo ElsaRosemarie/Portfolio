@@ -1,5 +1,5 @@
 import siteContent from "@/data/content.json";
-import type { SiteContent } from "@/types/content";
+import type { PageContent, SiteContent } from "@/types/content";
 
 export const content = siteContent as SiteContent;
 

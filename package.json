@@ -6,8 +6,8 @@
     "dev": "node scripts/build-content.mjs && node scripts/generate-gallery.mjs && next dev .",
     "build": "node scripts/build-content.mjs && node scripts/generate-gallery.mjs && next build .",
     "start": "next start",
-    "preview": "npm run build && npx --yes serve out -l 3000",
-    "host": "npm run preview",
+    "preview": "node scripts/host-local.mjs",
+    "host": "node scripts/host-local.mjs",
     "lint": "next lint",
     "generate-gallery": "node scripts/generate-gallery.mjs"
   },

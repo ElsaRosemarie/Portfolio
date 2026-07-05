@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PageText from "@/components/PageText";
 import { getPage } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export default function AboutPage() {
   const page = getPage("about");
@@ -11,7 +12,7 @@ export default function AboutPage() {
         <PageText content={page} />
         <div className="relative aspect-[3/4] w-full">
           <Image
-            src="/images/ABOUT/portrait.jpg"
+            src={asset("/images/ABOUT/portrait.jpg")}
             alt="Elsa van Dam"
             fill
             className="object-cover"

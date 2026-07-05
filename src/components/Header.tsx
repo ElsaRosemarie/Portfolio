@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { content } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export default function Header() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function Header() {
           className="relative block h-[6.37rem] w-[25.48rem] shrink-0 -ml-[2.04rem] sm:h-[7.28rem] sm:w-[29.12rem] sm:-ml-[2.33rem] md:h-[9.1rem] md:w-[32.76rem] md:-ml-[2.91rem]"
         >
           <Image
-            src="/images/HOME/Logo.png"
+            src={asset("/images/HOME/Logo.png")}
             alt="Elsa van Dam"
             fill
             className="object-contain object-left"
