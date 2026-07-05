@@ -1,0 +1,107 @@
+HOW TO UPDATE THE WEBSITE (no code editor needed)
+================================================
+
+Everything lives on GitHub. When you save a change, the site rebuilds
+automatically in about 2–3 minutes.
+
+Open your repository in a browser:
+https://github.com/ElsaRosemarie/Portfolio
+
+
+─── CHANGE PAGE TEXT ───────────────────────────────────────────────
+
+1. Open the folder:  content  →  pages
+2. Click the page you want (home, about, workshops, contact)
+3. Click the pencil icon  ✏️  Edit this file
+4. Change the text inside the "paragraphs" list
+5. Scroll down →  Commit changes  →  Commit changes
+
+Each paragraph is one block of text between quote marks.
+Keep the quote marks and commas — only change the words inside.
+
+
+─── CHANGE EMAIL OR INSTAGRAM ──────────────────────────────────────
+
+1. Open:  content  →  site.json
+2. Edit the "links" section (email and instagram)
+3. Commit changes
+
+
+─── CHANGE GALLERY ORDER (work or research) ──────────────────────
+
+1. Open:  Afbeeldingen portfolio  →  WORK  (or RESEARCH)
+2. Click  order.txt  →  pencil icon  ✏️
+3. Move lines up or down (one project name per line)
+4. Commit changes
+
+Order goes left to right, then top to bottom.
+
+
+─── ADD OR REMOVE WORK / RESEARCH ────────────────────────────────
+
+ADD a project folder:
+  Afbeeldingen portfolio  →  WORK  →  Add file  →  Create new file
+  Type:  My Project Name/photo.jpg   (creates a folder + image)
+  Add a cover image in WORK/ named like:  My Project Name dig, com.png
+  Add the project name to order.txt
+  Commit changes
+
+REMOVE a project: delete its folder and its line in order.txt
+
+HIDE without deleting: put a minus before the name in order.txt
+  Example:  - Draft project
+
+
+─── IMAGE CATEGORIES (work gallery filters) ─────────────────────
+
+Add tags at the END of the cover filename, before the extension:
+
+  trad  = Traditional
+  dig   = Digital
+  com   = Commissioned
+  other = Other
+
+Examples:
+  My piece trad.jpg
+  My piece dig, com.png        (appears in two filters)
+
+
+─── PROJECT DESCRIPTION (popup text) ─────────────────────────────
+
+Inside a project folder, add a file called:
+
+  description.txt
+
+Write the text you want shown in the popup. Plain text, no special formatting.
+
+
+─── CHANGE IMAGES ON A PAGE ──────────────────────────────────────
+
+Replace image files in  Afbeeldingen portfolio:
+
+  HOME/          → homepage hero + portrait
+  ABOUT/         → about page portrait
+  WORKSHOPS/     → workshops banner
+
+Keep the same filename, or ask a developer to update the image mapping.
+
+
+─── CUSTOM DOMAIN ────────────────────────────────────────────────
+
+1. Open  content/site.json
+2. Set  "basePath"  to  ""  (empty — already set for custom domain)
+3. Set  "customDomain"  to your domain, e.g.  "www.elsavandam.nl"
+4. Commit changes
+5. In GitHub:  Settings  →  Pages  →  Custom domain  → enter the same domain
+6. At your domain provider, add the DNS records GitHub shows you
+
+While still using  elsarosemarie.github.io/Portfolio  temporarily, set:
+  "basePath": "/Portfolio"
+
+
+─── NEED HELP? ───────────────────────────────────────────────────
+
+After committing, check the deploy status:
+  GitHub  →  Actions  tab  →  latest green checkmark = live
+
+If something breaks, use  History  on the file to undo your last edit.

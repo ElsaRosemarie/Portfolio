@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev .",
-    "build": "node scripts/generate-gallery.mjs && next build .",
+    "dev": "node scripts/build-content.mjs && node scripts/generate-gallery.mjs && next dev .",
+    "build": "node scripts/build-content.mjs && node scripts/generate-gallery.mjs && next build .",
     "start": "next start",
+    "preview": "npm run build && npx --yes serve out -l 3000",
+    "host": "npm run preview",
     "lint": "next lint",
     "generate-gallery": "node scripts/generate-gallery.mjs"
   },

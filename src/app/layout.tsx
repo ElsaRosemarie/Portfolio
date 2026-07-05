@@ -3,6 +3,7 @@ import { Mulish } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { content } from "@/lib/content";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -12,9 +13,8 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Elsa van Dam — Illustration",
-  description:
-    "Portfolio of Elsa van Dam — illustration, research, and workshops.",
+  title: content.siteName,
+  description: content.siteDescription,
 };
 
 export default function RootLayout({

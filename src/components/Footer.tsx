@@ -1,8 +1,10 @@
+import { content } from "@/lib/content";
+
 export default function Footer() {
   return (
     <footer className="flex justify-center px-6 py-12">
       <a
-        href="https://instagram.com/elsa.rosemarie"
+        href={content.links.instagram}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"

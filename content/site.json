@@ -1,0 +1,17 @@
+{
+  "siteName": "Elsa van Dam — Illustration",
+  "siteDescription": "Portfolio of Elsa van Dam — illustration, research, and workshops.",
+  "basePath": "/Portfolio",
+  "customDomain": "",
+  "links": {
+    "email": "hello@elsavandam.nl",
+    "instagram": "https://instagram.com/elsa.rosemarie"
+  },
+  "navigation": [
+    { "href": "/work", "label": "work" },
+    { "href": "/research", "label": "research" },
+    { "href": "/workshops", "label": "workshops" },
+    { "href": "/about", "label": "about" },
+    { "href": "/contact", "label": "contact" }
+  ]
+}

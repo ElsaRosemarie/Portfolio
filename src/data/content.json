@@ -1,0 +1,65 @@
+{
+  "siteName": "Elsa van Dam — Illustration",
+  "siteDescription": "Portfolio of Elsa van Dam — illustration, research, and workshops.",
+  "basePath": "/Portfolio",
+  "customDomain": "",
+  "links": {
+    "email": "hello@elsavandam.nl",
+    "instagram": "https://instagram.com/elsa.rosemarie"
+  },
+  "navigation": [
+    {
+      "href": "/work",
+      "label": "work"
+    },
+    {
+      "href": "/research",
+      "label": "research"
+    },
+    {
+      "href": "/workshops",
+      "label": "workshops"
+    },
+    {
+      "href": "/about",
+      "label": "about"
+    },
+    {
+      "href": "/contact",
+      "label": "contact"
+    }
+  ],
+  "pages": {
+    "about": {
+      "paragraphs": [
+        "Elsa van Dam is an illustrator with a love for hand-drawn lines, soft colour palettes, and stories rooted in everyday life. She works across editorial, cultural, and social projects.",
+        "Her practice is informed by design research: listening carefully, making together, and translating complex ideas into accessible visual language. She believes illustration can open conversations and make space for new perspectives.",
+        "When she is not drawing, you will find her walking, reading, or collecting small observations that later find their way back into her sketchbooks."
+      ]
+    },
+    "contact": {
+      "paragraphs": [
+        "For commissions, collaborations, or workshop requests, feel free to reach out."
+      ],
+      "showEmail": true,
+      "showInstagram": true
+    },
+    "home": {
+      "heroAlt": "Illustration by Elsa van Dam",
+      "paragraphs": [
+        "Elsa van Dam is an illustrator and visual researcher based in the Netherlands. Her work moves between editorial illustration, participatory design, and narrative image-making.",
+        "With a background in design research, she creates images that help people see complex stories more clearly — from zines and reports to workshops and visual tools.",
+        "This portfolio brings together selected work, ongoing research, and creative collaborations. Welcome."
+      ]
+    },
+    "workshops": {
+      "heroAlt": "Workshops",
+      "paragraphs": [
+        "Elsa facilitates illustration and visual thinking workshops for communities, students, and organisations. Sessions are hands-on, playful, and grounded in collective making.",
+        "Topics include storytelling through drawing, zine-making, visual research methods, and using illustration as a tool for dialogue. Workshops can be tailored to your group and context.",
+        "For enquiries about availability and custom programmes, please get in touch via the contact page."
+      ]
+    }
+  },
+  "generatedAt": "2026-07-05T13:29:01.471Z"
+}

@@ -151,7 +151,7 @@ function buildSection(sectionName) {
       section: sectionName.toLowerCase(),
       cover: imageUrls[0].src,
       images: imageUrls,
-      description: getDummyDescription(folder),
+      description: readProjectDescription(sectionDir, folderPath, folder),
     });
   }
 
@@ -171,7 +171,7 @@ function buildSection(sectionName) {
       section: sectionName.toLowerCase(),
       cover: url,
       images: [{ src: url, alt: title }],
-      description: getDummyDescription(title),
+      description: readProjectDescription(sectionDir, sectionDir, title),
     });
   }
 
@@ -187,6 +187,21 @@ function buildSection(sectionName) {
 
 function getDummyDescription(title) {
   return `A selection of work from the series "${title}". This piece explores narrative, colour, and composition through hand-drawn illustration. Created by Elsa van Dam as part of her ongoing visual practice.`;
+}
+
+function readProjectDescription(sectionDir, folderPath, title) {
+  const candidates = [
+    path.join(folderPath, "description.txt"),
+    path.join(sectionDir, `${title}.description.txt`),
+  ];
+
+  for (const file of candidates) {
+    if (!fs.existsSync(file)) continue;
+    const text = fs.readFileSync(file, "utf8").trim();
+    if (text) return text;
+  }
+
+  return getDummyDescription(title);
 }
 
 function parseOrderFile(orderPath) {

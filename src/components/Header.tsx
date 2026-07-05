@@ -4,18 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-const links = [
-  { href: "/work", label: "work" },
-  { href: "/research", label: "research" },
-  { href: "/workshops", label: "workshops" },
-  { href: "/about", label: "about" },
-  { href: "/contact", label: "contact" },
-];
+import { content } from "@/lib/content";
 
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const links = content.navigation;
 
   return (
     <header className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 md:px-10 md:py-8">
