@@ -1,15 +1,15 @@
 {
-  "siteName": "Elsa van Dam — Illustration",
-  "siteDescription": "Portfolio of Elsa van Dam — illustration, research, and workshops.",
+  "siteName": "Portfolio Elsa van Da,",
+  "siteDescription": "Portfolio of Elsa van Dam — illustrator, graphic design, anthropologist.",
   "basePath": "/Portfolio",
   "customDomain": "",
   "links": {
-    "email": "hello@elsavandam.nl",
+    "email": "elsavandam@gmail.com",
     "instagram": "https://instagram.com/elsa.rosemarie",
     "linkedin": "https://www.linkedin.com/in/elsavandam"
   },
   "navigation": [
-    { "href": "/work", "label": "work" },
+    { "href": "/work", "label": "illustration" },
     { "href": "/research", "label": "research" },
     { "href": "/workshops", "label": "workshops" },
     { "href": "/about", "label": "about" },
