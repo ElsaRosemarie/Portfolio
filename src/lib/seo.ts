@@ -3,7 +3,7 @@ import { content } from "@/lib/content";
 import { asset } from "@/lib/paths";
 
 const DEFAULT_OG_IMAGE = "/og.jpg";
-const DEFAULT_OG_ALT = "Elsa van Dam";
+const DEFAULT_OG_ALT = "Elsa Rosemarie";
 
 export function getSiteUrl(): string {
   const domain = content.customDomain?.trim();
