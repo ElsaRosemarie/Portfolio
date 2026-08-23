@@ -4,7 +4,7 @@ import { Fragment, type ReactNode } from "react";
 const TOKEN_PATTERN =
   /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*]+\*)/g;
 
-const linkClassName = "border-b border-brand-light";
+const linkClassName = "cursor-pointer border-b border-brand-light";
 
 function renderLink(label: string, href: string, key: number): ReactNode {
   if (href.startsWith("/")) {

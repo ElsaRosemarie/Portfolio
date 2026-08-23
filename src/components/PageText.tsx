@@ -9,10 +9,10 @@ interface PageTextProps {
 export default function PageText({ content, className = "" }: PageTextProps) {
   return (
     <div
-      className={`space-y-5 leading-relaxed text-neutral-700 md:space-y-6 ${className}`}
+      className={`min-w-0 space-y-5 break-words leading-relaxed text-neutral-700 md:space-y-6 ${className}`}
     >
       {content.paragraphs.map((paragraph, index) => (
-        <p key={index}>
+        <p key={index} className="whitespace-pre-line">
           <RichText text={paragraph} />
         </p>
       ))}

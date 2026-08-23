@@ -24,9 +24,7 @@ export default function ProjectModal({
   const currentIndex = projects.findIndex((p) => p.id === project.id);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < projects.length - 1;
-  const showText =
-    project.section === "research" ||
-    (!project.standalone && Boolean(project.paragraphs?.length));
+  const showText = Boolean(project.paragraphs?.length);
 
   useEffect(() => {
     setImageIndex(0);
@@ -77,14 +75,14 @@ export default function ProjectModal({
       <button
         type="button"
         onClick={onClose}
-        className="fixed right-4 top-4 z-[60] text-3xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:right-8 sm:top-8"
+        className="fixed right-3 top-3 z-[60] flex h-11 w-11 cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:right-6 sm:top-6"
         aria-label="Close"
       >
         ×
       </button>
 
-      <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:px-12 md:px-24">
-        <div className="mb-8 grid grid-cols-[3rem_1fr_3rem] items-center sm:grid-cols-[3.5rem_1fr_3.5rem]">
+      <div className="mx-auto w-full max-w-4xl px-4 py-14 pt-16 sm:px-6 sm:py-16 lg:px-10 xl:px-16">
+        <div className="mb-6 grid grid-cols-[2.25rem_1fr_2.25rem] items-center gap-1 sm:mb-8 sm:grid-cols-[3rem_1fr_3rem] sm:gap-2">
           <button
             type="button"
             onClick={goPrev}
@@ -92,12 +90,12 @@ export default function ProjectModal({
             aria-label="Previous project"
             aria-hidden={!hasPrev}
             tabIndex={hasPrev ? 0 : -1}
-            className="flex h-12 w-full items-center justify-center text-4xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:text-5xl [&:not(:disabled)]:hover:text-brand"
+            className="flex h-10 w-full cursor-pointer items-center justify-center rounded-sm text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:bg-brand/10 [&:not(:disabled):hover]:text-brand"
           >
             ‹
           </button>
 
-          <div className="relative h-[min(55vh,32rem)] min-h-[280px]">
+          <div className="relative min-h-[220px] h-[min(45vh,24rem)] sm:min-h-[260px] sm:h-[min(50vh,28rem)] lg:min-h-[280px] lg:h-[min(55vh,32rem)]">
             <div className="flex h-full items-center justify-center">
               {!imageLoaded && (
                 <div
@@ -124,42 +122,55 @@ export default function ProjectModal({
             aria-label="Next project"
             aria-hidden={!hasNext}
             tabIndex={hasNext ? 0 : -1}
-            className="flex h-12 w-full items-center justify-center text-4xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:text-5xl [&:not(:disabled)]:hover:text-brand"
+            className="flex h-10 w-full cursor-pointer items-center justify-center rounded-sm text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:bg-brand/10 [&:not(:disabled):hover]:text-brand"
           >
             ›
           </button>
         </div>
 
-        <div className="mx-auto max-w-2xl space-y-4 pb-8 text-center">
-          <h2 className="text-2xl font-medium md:text-3xl">{project.title}</h2>
+        <div className="mx-auto max-w-2xl space-y-3 pb-6 text-center sm:space-y-4 sm:pb-8">
+          <h2 className="text-xl font-medium sm:text-2xl lg:text-3xl">{project.title}</h2>
           {showText &&
             project.paragraphs?.map((paragraph, index) => (
-              <p key={index} className="leading-relaxed text-neutral-600">
+              <p key={index} className="whitespace-pre-line text-left text-sm leading-relaxed text-neutral-600 sm:text-center sm:text-base">
                 <RichText text={paragraph} />
               </p>
             ))}
         </div>
 
         {images.length > 1 && (
-          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-4 pb-12 sm:grid-cols-3 md:gap-5">
-            {images.map((img, i) => (
-              <button
-                key={img.src}
-                type="button"
-                onClick={() => setImageIndex(i)}
-                className="flex min-h-[120px] items-center justify-center bg-transparent p-0 sm:min-h-[140px]"
-              >
-                <LoadingImage
-                  src={asset(img.src)}
-                  alt={img.alt}
-                  className={`max-h-40 w-auto max-w-full object-contain sm:max-h-44 ${
-                    i === imageIndex
-                      ? "outline outline-2 outline-offset-0 outline-brand"
-                      : "opacity-60 hover:opacity-100"
-                  }`}
-                />
-              </button>
-            ))}
+          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 pb-10 sm:grid-cols-3 sm:gap-4 lg:gap-5 lg:pb-12">
+            {images.map((img, i) => {
+              const isSelected = i === imageIndex;
+
+              return (
+                <button
+                  key={img.src}
+                  type="button"
+                  onClick={() => setImageIndex(i)}
+                  aria-label={`View image ${i + 1}: ${img.alt}`}
+                  aria-current={isSelected ? "true" : undefined}
+                  className="group relative min-h-[120px] w-full cursor-pointer overflow-hidden bg-transparent p-0 sm:min-h-[140px]"
+                >
+                  <LoadingImage
+                    src={asset(img.src)}
+                    alt={img.alt}
+                    className={`max-h-40 w-auto max-w-full object-contain transition-all duration-300 sm:max-h-44 ${
+                      isSelected
+                        ? "opacity-100"
+                        : "opacity-100 group-hover:scale-[1.02] group-hover:opacity-75"
+                    }`}
+                  />
+                  <div
+                    className={`pointer-events-none absolute inset-0 transition-colors duration-300 ${
+                      isSelected
+                        ? "bg-brand/15 ring-2 ring-inset ring-brand"
+                        : "bg-brand/0 group-hover:bg-brand/10"
+                    }`}
+                  />
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

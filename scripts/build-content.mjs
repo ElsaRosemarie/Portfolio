@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { loadPageContent, readJsonLenient } from "./lib/parse-content.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -10,25 +11,31 @@ const OUT = path.join(ROOT, "src", "data", "content.json");
 const ENV_OUT = path.join(ROOT, ".env.production.local");
 const CNAME_OUT = path.join(ROOT, "public", "CNAME");
 
-function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
-}
-
 function loadPages() {
   const pages = {};
   if (!fs.existsSync(PAGES_DIR)) return pages;
 
+  const pageNames = new Set();
+
   for (const file of fs.readdirSync(PAGES_DIR)) {
-    if (!file.endsWith(".json")) continue;
-    const name = path.basename(file, ".json");
-    pages[name] = readJson(path.join(PAGES_DIR, file));
+    if (file.endsWith(".txt")) {
+      pageNames.add(file.slice(0, -4));
+    } else if (file.endsWith(".meta.json")) {
+      pageNames.add(file.slice(0, -".meta.json".length));
+    } else if (file.endsWith(".json")) {
+      pageNames.add(file.slice(0, -5));
+    }
+  }
+
+  for (const name of [...pageNames].sort()) {
+    pages[name] = loadPageContent(name, PAGES_DIR);
   }
 
   return pages;
 }
 
 function main() {
-  const site = readJson(path.join(CONTENT_DIR, "site.json"));
+  const site = readJsonLenient(path.join(CONTENT_DIR, "site.json"));
   const pages = loadPages();
 
   const content = {

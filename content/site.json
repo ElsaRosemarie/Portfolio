@@ -1,8 +1,8 @@
 {
-  "siteName": "Portfolio Elsa van Dam,",
+  "siteName": "Portfolio Elsa van Dam",
   "siteDescription": "Portfolio of Elsa van Dam — illustrator, graphic designer, anthropologist.",
-  "basePath": "/Portfolio",
-  "customDomain": "",
+  "basePath": "",
+  "customDomain": "elsarosemarie.com",
   "links": {
     "email": "elsavandam@gmail.com",
     "instagram": "https://instagram.com/elsa.rosemarie",

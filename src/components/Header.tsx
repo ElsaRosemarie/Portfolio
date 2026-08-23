@@ -13,12 +13,12 @@ export default function Header() {
   const links = content.navigation;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-brand-light/60 bg-white/95 backdrop-blur-sm md:static md:border-none md:bg-transparent">
-      <div className="page-shell py-3 md:py-8">
-        <div className="flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 border-b border-brand-light/60 bg-white/95 backdrop-blur-sm lg:static lg:border-none lg:bg-transparent">
+      <div className="page-shell py-3 lg:py-6">
+        <div className="flex min-w-0 items-center justify-between gap-3 sm:gap-4">
           <Link
             href="/"
-            className="relative block h-12 w-44 shrink-0 -ml-1 sm:h-14 sm:w-52 md:h-[9.1rem] md:w-[32.76rem] md:-ml-[2.91rem]"
+            className="relative block h-11 w-[9.5rem] shrink-0 cursor-pointer sm:h-12 sm:w-44 md:h-14 md:w-52 lg:h-[4.5rem] lg:w-[16rem] xl:h-20 xl:w-[18rem] 2xl:h-24 2xl:w-[22rem]"
             onClick={() => setMenuOpen(false)}
           >
             <Image
@@ -26,7 +26,7 @@ export default function Header() {
               alt="Elsa van Dam"
               fill
               className="object-contain object-left"
-              sizes="(max-width: 768px) 176px, 524px"
+              sizes="(max-width: 640px) 152px, (max-width: 1024px) 208px, 352px"
               priority
             />
           </Link>
@@ -34,7 +34,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            className="relative flex h-11 w-11 shrink-0 items-center justify-center md:hidden"
+            className="relative flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center lg:hidden"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
@@ -61,14 +61,14 @@ export default function Header() {
             </span>
           </button>
 
-          <nav className="hidden items-center justify-end gap-x-6 text-sm uppercase tracking-[0.2em] md:flex md:gap-x-8 md:text-base">
+          <nav className="hidden min-w-0 shrink items-center justify-end gap-x-4 text-xs uppercase tracking-[0.14em] lg:flex xl:gap-x-6 xl:text-sm xl:tracking-[0.18em] 2xl:gap-x-8 2xl:text-base 2xl:tracking-[0.2em]">
             {links.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors ${
+                  className={`whitespace-nowrap cursor-pointer transition-colors ${
                     active
                       ? "text-brand"
                       : "text-neutral-800 hover:text-brand"
@@ -82,7 +82,7 @@ export default function Header() {
         </div>
 
         <nav
-          className={`overflow-hidden transition-[max-height,opacity] duration-200 ease-out md:hidden ${
+          className={`overflow-hidden transition-[max-height,opacity] duration-200 ease-out lg:hidden ${
             menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
           }`}
           aria-hidden={!menuOpen}

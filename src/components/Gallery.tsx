@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { GallerySection, Project } from "@/types/gallery";
 import { asset } from "@/lib/paths";
 import LoadingImage from "./LoadingImage";
@@ -10,8 +10,6 @@ interface GalleryProps {
   section: GallerySection;
   showFilters?: boolean;
 }
-
-const MASONRY_COLUMNS = 3;
 
 const FILTER_TO_CATEGORY: Record<string, string> = {
   Traditional: "trad",
@@ -34,6 +32,12 @@ function distributeToColumns<T>(items: T[], columnCount: number): T[][] {
   return columns;
 }
 
+function getColumnCount(width: number) {
+  if (width >= 1024) return 3;
+  if (width >= 640) return 2;
+  return 1;
+}
+
 function GalleryTile({
   project,
   onSelect,
@@ -45,7 +49,7 @@ function GalleryTile({
     <button
       type="button"
       onClick={() => onSelect(project)}
-      className="group relative block w-full overflow-hidden"
+      className="group relative block w-full min-w-0 cursor-pointer overflow-hidden"
     >
       <LoadingImage
         src={asset(project.cover)}
@@ -60,6 +64,30 @@ function GalleryTile({
 export default function Gallery({ section, showFilters = true }: GalleryProps) {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
+  const [columnCount, setColumnCount] = useState(1);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      setColumnCount(getColumnCount(window.innerWidth));
+    };
+
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
+  useEffect(() => {
+    const openFromHash = () => {
+      const id = window.location.hash.replace(/^#/, "");
+      if (!id) return;
+      const project = section.projects.find((item) => item.id === id);
+      if (project) setSelected(project);
+    };
+
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, [section.projects]);
 
   const filtered = useMemo(() => {
     if (!showFilters || activeFilter === "All") return section.projects;
@@ -68,23 +96,23 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
     );
   }, [activeFilter, section.projects, showFilters]);
 
-  const desktopColumns = useMemo(
-    () => distributeToColumns(filtered, MASONRY_COLUMNS),
-    [filtered]
+  const columns = useMemo(
+    () => distributeToColumns(filtered, columnCount),
+    [filtered, columnCount]
   );
 
   return (
     <>
       <div className="page-shell pb-8">
         {showFilters && (
-          <div className="-mx-3 mb-8 overflow-x-auto px-3 scrollbar-hide sm:-mx-4 sm:px-4 md:mx-0 md:overflow-visible md:px-0">
-            <div className="flex w-max gap-x-5 gap-y-2 pb-1 text-sm uppercase tracking-[0.12em] md:w-auto md:flex-wrap md:gap-x-6 md:text-base">
+          <div className="-mx-3 mb-8 overflow-x-auto px-3 scrollbar-hide sm:-mx-4 sm:overflow-visible sm:px-4 md:mx-0 md:px-0">
+            <div className="flex w-max flex-nowrap gap-x-4 pb-1 text-xs uppercase tracking-[0.12em] sm:w-auto sm:flex-wrap sm:gap-x-5 sm:text-sm md:gap-x-6 md:text-base">
               {section.filters.map((filter) => (
                 <button
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`shrink-0 whitespace-nowrap transition-colors ${
+                  className={`shrink-0 cursor-pointer whitespace-nowrap transition-colors ${
                     activeFilter === filter
                       ? "font-medium text-brand"
                       : "text-neutral-500 hover:text-brand-dark"
@@ -97,21 +125,11 @@ export default function Gallery({ section, showFilters = true }: GalleryProps) {
           </div>
         )}
 
-        <div className="flex flex-col gap-5 md:hidden">
-          {filtered.map((project) => (
-            <GalleryTile
-              key={project.id}
-              project={project}
-              onSelect={setSelected}
-            />
-          ))}
-        </div>
-
-        <div className="hidden gap-5 md:flex md:gap-6">
-          {desktopColumns.map((column, columnIndex) => (
+        <div className="flex gap-4 sm:gap-5 lg:gap-6">
+          {columns.map((column, columnIndex) => (
             <div
               key={columnIndex}
-              className="flex min-w-0 flex-1 flex-col gap-5 md:gap-6"
+              className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-5 lg:gap-6"
             >
               {column.map((project) => (
                 <GalleryTile

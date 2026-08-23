@@ -11,7 +11,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="text-neutral-800 transition-colors hover:text-brand"
+        className="text-neutral-800 cursor-pointer transition-colors hover:text-brand"
       >
         <InstagramIcon />
       </a>
@@ -20,7 +20,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
-        className="text-neutral-800 transition-colors hover:text-brand"
+        className="text-neutral-800 cursor-pointer transition-colors hover:text-brand"
       >
         <LinkedInIcon />
       </a>

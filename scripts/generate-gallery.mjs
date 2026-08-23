@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readJsonLenient } from "./lib/parse-content.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -135,7 +136,23 @@ function mirrorToPublic(relativePath, srcFile) {
 }
 
 function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  return readJsonLenient(filePath);
+}
+
+function parseFolderOrder(name) {
+  const match = name.match(/^(\d+)\s*[-–._)\]]+\s*/);
+  if (match) return Number.parseInt(match[1], 10);
+  return null;
+}
+
+function compareFolderNames(a, b) {
+  const orderA = parseFolderOrder(a);
+  const orderB = parseFolderOrder(b);
+
+  if (orderA !== null && orderB !== null) return orderA - orderB;
+  if (orderA !== null) return -1;
+  if (orderB !== null) return 1;
+  return a.localeCompare(b, undefined, { numeric: true });
 }
 
 function loadProjectContent(sectionName) {
@@ -162,11 +179,24 @@ function findContentEntry(contentMap, title) {
   return null;
 }
 
-function readParagraphsFromTxt(sectionDir, folderPath, title) {
+function readParagraphsFromTxt(
+  sectionDir,
+  folderPath,
+  title,
+  sourceImageName = null
+) {
   const candidates = [
     path.join(folderPath, "description.txt"),
     path.join(sectionDir, `${title}.description.txt`),
   ];
+
+  if (sourceImageName) {
+    const stem = path.basename(
+      sourceImageName,
+      path.extname(sourceImageName)
+    );
+    candidates.push(path.join(sectionDir, `${stem}.description.txt`));
+  }
 
   for (const file of candidates) {
     if (!fs.existsSync(file)) continue;
@@ -182,11 +212,17 @@ function readParagraphsFromTxt(sectionDir, folderPath, title) {
   return null;
 }
 
-function resolveProjectCopy(contentMap, sectionDir, folderPath, title) {
+function resolveProjectCopy(
+  contentMap,
+  sectionDir,
+  folderPath,
+  title,
+  sourceImageName = null
+) {
   const entry = findContentEntry(contentMap, title);
   const paragraphs =
     entry?.paragraphs?.filter((part) => part.trim()) ??
-    readParagraphsFromTxt(sectionDir, folderPath, title);
+    readParagraphsFromTxt(sectionDir, folderPath, title, sourceImageName);
 
   return {
     ...(paragraphs?.length ? { paragraphs } : {}),
@@ -208,7 +244,10 @@ function buildSection(sectionName) {
     .filter((e) => e.isFile() && isImage(e.name))
     .map((e) => e.name);
 
-  const folders = entries.filter((e) => e.isDirectory()).map((e) => e.name);
+  const folders = entries
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort(compareFolderNames);
 
   const usedRootImages = new Set();
 
@@ -283,7 +322,13 @@ function buildSection(sectionName) {
     const id = `${sectionName.toLowerCase()}-${slugify(title)}`;
     const categories = parseCategories(img);
 
-    const copy = resolveProjectCopy(projectContent, sectionDir, sectionDir, title);
+    const copy = resolveProjectCopy(
+      projectContent,
+      sectionDir,
+      sectionDir,
+      title,
+      img
+    );
 
     projects.push({
       id,
@@ -377,7 +422,7 @@ function applyProjectOrder(projects, orderPath, sectionLabel) {
 
   const remaining = projects
     .filter((project) => !used.has(project.id))
-    .sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true }));
+    .sort((a, b) => compareFolderNames(a.title, b.title));
 
   if (remaining.length > 0) {
     console.log(

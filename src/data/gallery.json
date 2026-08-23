@@ -54,6 +54,22 @@
         ]
       },
       {
+        "id": "work-spring-storm",
+        "title": "Spring storm",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Spring storm trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Spring storm trad.jpg",
+            "alt": "Spring storm"
+          }
+        ],
+        "standalone": true
+      },
+      {
         "id": "work-once-upon-a-time",
         "title": "Once Upon a Time",
         "categories": [
@@ -104,22 +120,6 @@
         "paragraphs": [
           "I designed and illustrated this book of speculative fictions as a supplement to the paper [Once Upon a Time](https://dl.acm.org/doi/10.1145/3706599.3716223) When HCI Prioritised Environmental Sustainability: Reflections on a Collection of Fictions."
         ]
-      },
-      {
-        "id": "work-spring-storm",
-        "title": "Spring storm",
-        "categories": [
-          "trad"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Spring storm trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Spring storm trad.jpg",
-            "alt": "Spring storm"
-          }
-        ],
-        "standalone": true
       },
       {
         "id": "work-radboud-welcomes-newcomers",
@@ -394,6 +394,23 @@
         ]
       },
       {
+        "id": "work-witchy-hour",
+        "title": "Witchy hour",
+        "categories": [
+          "trad",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Witchy hour trad, com.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Witchy hour trad, com.jpg",
+            "alt": "Witchy hour"
+          }
+        ],
+        "standalone": true
+      },
+      {
         "id": "work-community-seed-bank-flyer",
         "title": "Community Seed Bank flyer",
         "categories": [
@@ -657,23 +674,6 @@
         "standalone": true
       },
       {
-        "id": "work-witchy-hour",
-        "title": "Witchy hour",
-        "categories": [
-          "trad",
-          "com"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Witchy hour trad, com.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Witchy hour trad, com.jpg",
-            "alt": "Witchy hour"
-          }
-        ],
-        "standalone": true
-      },
-      {
         "id": "work-logo-massagesalon",
         "title": "Logo Massagesalon",
         "categories": [
@@ -932,5 +932,5 @@
       "All"
     ]
   },
-  "generatedAt": "2026-07-05T15:16:23.267Z"
+  "generatedAt": "2026-08-23T08:55:28.963Z"
 }

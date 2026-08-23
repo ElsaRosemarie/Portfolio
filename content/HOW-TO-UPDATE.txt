@@ -8,16 +8,30 @@ Open your repository in a browser:
 https://github.com/ElsaRosemarie/Portfolio
 
 
-─── CHANGE PAGE TEXT ───────────────────────────────────────────────
+─── CHANGE PAGE TEXT (easiest way) ────────────────────────────────
+
+Page text is now plain .txt files — no JSON commas to worry about.
 
 1. Open the folder:  content  →  pages
-2. Click the page you want (home, about, workshops, contact)
+2. Click the page you want:
+     home.txt
+     about.txt
+     contact.txt
+     workshops.txt
 3. Click the pencil icon  ✏️  Edit this file
-4. Change the text inside the "paragraphs" list
+4. Change the text
 5. Scroll down →  Commit changes  →  Commit changes
 
-Each paragraph is one block of text between quote marks.
-Use *italic* and **bold** for emphasis. Keep the quote marks and commas.
+HOW THE TEXT FILE WORKS
+• Leave a blank line between paragraphs
+• Use *italic* and **bold** for emphasis
+• Use [link text](https://url) or [link text](/page) for links
+• No quote marks or commas needed around paragraphs
+
+Small settings (greeting, buttons, etc.) live in matching .meta.json files:
+  home.meta.json
+  workshops.meta.json
+These files are optional and much smaller than before.
 
 
 ─── CHANGE EMAIL, INSTAGRAM, OR LINKEDIN ───────────────────────────
@@ -26,24 +40,40 @@ Use *italic* and **bold** for emphasis. Keep the quote marks and commas.
 2. Edit the "links" section
 3. Commit changes
 
+Tips for site.json:
+• You may add // comments at the start of a line
+• A comma after the last item is OK — the site fixes that automatically
 
-─── CHANGE GALLERY ORDER (work or research) ──────────────────────
 
+─── CHANGE GALLERY ORDER ───────────────────────────────────────────
+
+You can use EITHER method (or both):
+
+METHOD A — order.txt (recommended for exact control)
 1. Open:  Afbeeldingen portfolio  →  WORK  (or RESEARCH)
 2. Click  order.txt  →  pencil icon  ✏️
 3. Move lines up or down (one project name per line)
 4. Commit changes
 
+METHOD B — rename folders with a number at the start
+Rename a project folder like this:
+  01 - Queer Zine Toekomstboeren
+  02 - Spring storm
+  03 - Once Upon a Time
+
+Lower numbers appear first. Projects not in order.txt still follow
+these numbers when they are added at the end.
+
 Order goes left to right, then top to bottom.
 
 
-─── ADD OR REMOVE WORK / RESEARCH ────────────────────────────────
+─── ADD OR REMOVE WORK / RESEARCH ─────────────────────────────────
 
 ADD a project folder:
   Afbeeldingen portfolio  →  WORK  →  Add file  →  Create new file
   Type:  My Project Name/photo.jpg   (creates a folder + image)
   Add a cover image in WORK/ named like:  My Project Name dig, com.png
-  Add the project name to order.txt
+  Add the project name to order.txt (or use 01 - My Project Name)
   Commit changes
 
 REMOVE a project: delete its folder and its line in order.txt
@@ -52,7 +82,7 @@ HIDE without deleting: put a minus before the name in order.txt
   Example:  - Draft project
 
 
-─── IMAGE CATEGORIES (work gallery filters) ─────────────────────
+─── IMAGE CATEGORIES (work gallery filters) ───────────────────────
 
 Add tags at the END of the cover filename, before the extension:
 
@@ -66,38 +96,37 @@ Examples:
   My piece dig, com.png        (appears in two filters)
 
 
-─── PROJECT TEXT & LINKS (folder projects) ───────────────────────
+─── SINGLE-IMAGE ILLUSTRATIONS (title + description in popup) ─────
 
-Edit the same way as page text — in the  content  folder on GitHub.
+Single images in WORK/ show only a title until you add a description.
+The popup then looks the same as multi-image projects like Queer Zine.
 
-1. Open:  content  →  projects
-2. Click  work.json  (work gallery) or  research.json  (research gallery)
-3. Click the pencil icon  ✏️  Edit this file
-4. Find your project by its folder name, or add a new entry
-5. Commit changes
+Easiest: create a description file next to the image.
 
-Each project entry looks like this:
+  Image:        Afbeeldingen portfolio/WORK/Thesis cover trad.jpg
+  Description:  Afbeeldingen portfolio/WORK/Thesis cover trad.description.txt
 
-  "My Project Folder Name": {
-    "paragraphs": [
-      "First paragraph shown in the popup.",
-      "Optional second paragraph with a [link inside the text](https://example.com)."
-    ]
-  }
+Write your text in that file. Blank line = new paragraph.
+Use *italic*, **bold**, and [links](url) like page text.
 
-•  "paragraphs"  — text in the popup; use [link text](url) for links inside the text
-•  Use *italic* and **bold** for emphasis
-•  Do not add a separate link under the title — put links in the paragraph text
-•  The project name must match the folder name in WORK or RESEARCH
-
-Single images (no folder) can also be added here — use the image title
-as the key. They show the title only unless you add a link.
+Alternative: add an entry in  content/projects/work.json  keyed by title.
 
 
-─── IMAGE ORDER WITHIN A PROJECT ───────────────────────────────────
+─── PROJECT TEXT (folder projects) ───────────────────────────────
+
+Add  description.txt  inside the project folder:
+
+  Afbeeldingen portfolio  →  WORK  →  My Project  →  description.txt
+
+Write your text there. Separate paragraphs with a blank line.
+Use [link text](url) for links. No JSON needed.
+
+Alternative: edit  content/projects/work.json  or  research.json
+
+
+─── IMAGE ORDER WITHIN A PROJECT ──────────────────────────────────
 
 Inside a project folder, add  images.txt  (one filename per line).
-This controls the order in the popup gallery grid.
 
   Afbeeldingen portfolio  →  WORK  →  My Project  →  images.txt
 
@@ -109,14 +138,7 @@ Example:
 Images not listed are appended at the end. Use  -filename  to hide one.
 
 
-─── PROJECT TEXT (alternative: description.txt) ──────────────────
-
-You can also add  description.txt  inside a project folder.
-Separate paragraphs with a blank line. The JSON files above are easier
-to edit on GitHub.
-
-
-─── CHANGE IMAGES ON A PAGE ──────────────────────────────────────
+─── CHANGE IMAGES ON A PAGE ─────────────────────────────────────
 
 Replace image files in  Afbeeldingen portfolio:
 
@@ -127,22 +149,23 @@ Replace image files in  Afbeeldingen portfolio:
 Keep the same filename, or ask a developer to update the image mapping.
 
 
-─── CUSTOM DOMAIN ────────────────────────────────────────────────
+─── CUSTOM DOMAIN ─────────────────────────────────────────────────
 
 1. Open  content/site.json
-2. Set  "basePath"  to  ""  (empty — already set for custom domain)
-3. Set  "customDomain"  to your domain, e.g.  "www.elsavandam.nl"
+2. Set  "basePath"  to  ""  (empty)
+3. Set  "customDomain"  to your domain, e.g.  "elsarosemarie.com"
 4. Commit changes
-5. In GitHub:  Settings  →  Pages  →  Custom domain  → enter the same domain
-6. At your domain provider, add the DNS records GitHub shows you
-
-While still using  elsarosemarie.github.io/Portfolio  temporarily, set:
-  "basePath": "/Portfolio"
+5. In GitHub:  Settings  →  Pages  →  Custom domain
 
 
-─── NEED HELP? ───────────────────────────────────────────────────
+─── IF SOMETHING BREAKS ───────────────────────────────────────────
 
 After committing, check the deploy status:
   GitHub  →  Actions  tab  →  latest green checkmark = live
 
-If something breaks, use  History  on the file to undo your last edit.
+Use  History  on the file to undo your last edit.
+
+Common mistakes:
+• Forgetting a blank line between paragraphs in .txt files
+• Typo in a project name inside order.txt
+• Broken link brackets: use [text](url) with no spaces inside the brackets

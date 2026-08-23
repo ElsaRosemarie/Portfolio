@@ -17,14 +17,26 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
-    @apply bg-white font-sans text-base text-neutral-900 antialiased md:text-lg;
+    @apply min-w-0 overflow-x-clip bg-white font-sans text-base text-neutral-900 antialiased md:text-lg;
   }
 
   main a {
-    @apply text-brand transition-colors hover:text-brand-dark;
+    @apply cursor-pointer text-brand transition-colors hover:text-brand-dark;
+  }
+
+  a[href],
+  button:not(:disabled),
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: default;
   }
 }
 
