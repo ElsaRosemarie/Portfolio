@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { content } from "@/lib/content";
 import { asset } from "@/lib/paths";
 
-const DEFAULT_OG_IMAGE = "/images/HOME/hero.jpg";
+const DEFAULT_OG_IMAGE = "/og.jpg";
+const DEFAULT_OG_ALT = "Elsa van Dam";
 
 export function getSiteUrl(): string {
   const domain = content.customDomain?.trim();
@@ -43,7 +44,7 @@ export function buildPageMetadata({
   path,
   description,
   imagePath = DEFAULT_OG_IMAGE,
-  imageAlt = "Illustration by Elsa van Dam",
+  imageAlt = DEFAULT_OG_ALT,
 }: {
   title?: string;
   path: string;
@@ -92,6 +93,9 @@ export function buildPageMetadata({
         {
           url: imageUrl,
           alt: imageAlt,
+          type: "image/jpeg",
+          width: 1200,
+          height: 1200,
         },
       ],
     },

@@ -1,71 +1,107 @@
 # Elsa van Dam — Portfolio
 
-Static portfolio site for illustration, research, and workshops. Built with [Next.js](https://nextjs.org/) (static export) and [Tailwind CSS](https://tailwindcss.com/).
+Static portfolio site for illustration, research, and workshops.
 
 **Live site:** [https://elsarosemarie.com](https://elsarosemarie.com)
 
----
+**Edit the site on GitHub:** [github.com/ElsaRosemarie/Portfolio](https://github.com/ElsaRosemarie/Portfolio)
 
-## Updating content on GitHub (tutorial)
-
-Everything below can be done in the GitHub web editor — no code editor needed. After you **Commit changes**, the site rebuilds in about 2–3 minutes.
-
-Open the repo: [github.com/ElsaRosemarie/Portfolio](https://github.com/ElsaRosemarie/Portfolio)
-
-Also see **[content/HOW-TO-UPDATE.txt](content/HOW-TO-UPDATE.txt)** for a short checklist.
+After you save a change and click **Commit changes**, the site rebuilds in about 2–3 minutes.
 
 ---
 
-### 1. Edit page text (home, about, contact, workshops)
+## How to edit text on GitHub
 
-Page text lives in plain **`.txt`** files — no JSON commas or quote marks.
+Page text is stored in plain **`.txt`** files. You do **not** need JSON, quote marks, or commas around paragraphs.
 
-**Where:** `content/pages/`
+### Step by step
 
-| File | What it controls |
-|------|------------------|
+1. Open the repo on GitHub
+2. Go to **`content`** → **`pages`**
+3. Click the file you want to edit (for example `about.txt`)
+4. Click the pencil icon ✏️ **Edit this file**
+5. Change the text
+6. Scroll down → **Commit changes**
+
+### The files
+
+| File | What it controls on the website |
+|------|----------------------------------|
 | `home.txt` | Text under “Hi! → Meet the Artist” |
-| `about.txt` | About page body |
-| `contact.txt` | Contact page text |
-| `workshops.txt` | Workshops list |
+| `about.txt` | About page |
+| `contact.txt` | Contact page |
+| `workshops.txt` | Workshops page |
 
-**Rules:**
-- Leave a **blank line** between paragraphs
-- Use `*italic*` and `**bold**` for emphasis
-- Use `[link text](https://url)` or `[link text](/about)` for links
+Small settings (greeting, buttons) live in matching **`.meta.json`** files — for example `home.meta.json`. You rarely need to touch these.
 
-**Example — editing the about page**
+### Rules for `.txt` files
 
-1. Go to `content/pages/about.txt`
-2. Click the pencil icon ✏️ **Edit this file**
-3. Change the text. For example:
+- **Blank line** = new paragraph
+- `*italic*` and `**bold**` for emphasis
+- `[link text](https://example.com)` for external links
+- `[link text](/about)` for links to another page on the site
+
+### Example 1 — change one sentence on About
+
+Open `content/pages/about.txt`. It might look like this:
 
 ```text
-Hi! I am Elsa van Dam (they/she), a queer illustrator, graphic designer and anthropologist living in Utrecht, the Netherlands. My work centres around the complexities of more-than-human entanglement, the search for bodily softness and the joys of the whimsical.
+Hi! I am Elsa van Dam (they/she), a queer illustrator, graphic designer and anthropologist living in Utrecht, the Netherlands. My work centres around the complexities of more-than-human entanglement, the search for bodily softness and the joys of the whimsical. Themes that often occur in my work are climate change, social justice, and LGBTQI* liberation. With an eye for detail and a love for colours and textures, I create emotionally engaging publications, striking visual identities and poetic mixed-media paintings.
 
 Several of my clients include:
 
 Toekomstboeren
 Department of Industrial Design, Eindhoven University of Technology
 
+Diversity, Equity and Inclusion Office, Radboud University
+Kunstloc Brabant
+
 [Full resume](/cv-july-2026.pdf)
 ```
 
-4. Scroll down → **Commit changes**
+Change the words you want, keep the blank lines between paragraphs, then commit.
 
-Small page settings (greeting, buttons) live in matching `.meta.json` files, e.g. `home.meta.json`.
+### Example 2 — add a link in Workshops
+
+In `content/pages/workshops.txt`, a link looks like this:
+
+```text
+You can find out more about this workshop [here](/research#research-eden).
+```
+
+The word **here** becomes the clickable link.
+
+### Example 3 — change the home greeting
+
+Open `content/pages/home.meta.json`:
+
+```json
+{
+  "greeting": "Hi! → Meet the Artist",
+  "cta": {
+    "label": "About",
+    "href": "/about"
+  }
+}
+```
+
+The main home paragraph text is still in `home.txt`.
 
 ---
 
-### 2. Change the gallery order (illustration & research)
+## How to change gallery order
 
-**Method A — `order.txt` (most control)**
+Use **`order.txt`** — one project name per line. The gallery reads **left to right, then top to bottom**.
 
-1. Open `Afbeeldingen portfolio/WORK/order.txt` (or `RESEARCH/order.txt`)
-2. Move lines up or down — **one project name per line**
-3. Commit changes
+### Step by step
 
-Example:
+1. Open **`Afbeeldingen portfolio`** → **`WORK`** (or **`RESEARCH`** for research)
+2. Click **`order.txt`**
+3. Click ✏️ **Edit this file**
+4. Move lines up or down
+5. **Commit changes**
+
+### Example
 
 ```text
 # work order
@@ -74,126 +110,78 @@ Spring storm
 Once Upon a Time
 Radboud Welcomes Newcomers
 Roots
+TNI guide
 ```
 
-The grid reads left to right, then top to bottom in this order.
+Put the project you want first at the top. The name must match the folder name or image title in `WORK/`.
 
-**Method B — number folders**
+### Hide a project without deleting it
 
-Rename a project folder with a number at the start:
-
-```text
-01 - Queer Zine Toekomstboeren
-02 - Spring storm
-03 - Once Upon a Time
-```
-
-Lower numbers appear first. Useful when adding new work.
-
-**Hide a project without deleting it:** put a minus before the name in `order.txt`:
+Put a **minus** before the name:
 
 ```text
 - Draft project I am not ready to show
 ```
 
+The project stays in the folder but disappears from the gallery.
+
 ---
 
-### 3. Add text under a single-image illustration
+## How to add text under a single-image illustration
 
-Multi-image projects (like **Queer Zine Toekomstboeren**) show a **title** and **description** in the popup. Single-image illustrations can do the same — title only until you add a description file.
+Multi-image projects (like **Queer Zine Toekomstboeren**) show a title and description in the popup. Single-image illustrations can too.
 
-**Option A — description file next to the image (easiest)**
+**Add a description file next to the image** — same name as the image, plus `.description.txt`.
 
-For an image file:
+### Step by step
+
+1. Find the image in **`Afbeeldingen portfolio/WORK/`**  
+   Example: `Thesis cover trad.jpg`
+2. Create a new file named:  
+   **`Thesis cover trad.description.txt`** (in the same folder)
+3. Write your text inside
+4. **Commit changes**
+
+### Example
+
+Image file:
 
 ```text
 Afbeeldingen portfolio/WORK/Thesis cover trad.jpg
 ```
 
-Create a text file with the **same name** plus `.description.txt`:
+Description file:
 
 ```text
 Afbeeldingen portfolio/WORK/Thesis cover trad.description.txt
 ```
 
-Write your description inside. Blank line = new paragraph. Same formatting as page text (`*italic*`, `[links](url)`).
-
-Example file contents:
+Contents of the description file:
 
 ```text
 For my thesis, I illustrated the cover using mixed media and ink.
 ```
 
-After committing, the popup shows the title **Thesis cover** with this text underneath — same layout as the Queer Zine project.
+After the site rebuilds, clicking that illustration shows the title **Thesis cover** with your text underneath — the same layout as the Queer Zine project.
 
-**Option B — `work.json` entry**
-
-In `content/projects/work.json`, add an entry keyed by the illustration title:
-
-```json
-"Thesis cover": {
-  "paragraphs": [
-    "For my thesis, I illustrated the cover using mixed media and ink."
-  ]
-}
-```
-
-Trailing commas and `//` comments are OK in this file.
-
-**Option C — folder projects**
-
-For projects with their own folder, add `description.txt` inside the folder:
-
-```text
-Afbeeldingen portfolio/WORK/Queer Zine Toekomstboeren/description.txt
-```
+Use a **blank line** between paragraphs if you need more than one. Links and italic work the same as page text.
 
 ---
 
-### Quick reference
+## Quick reference
 
 | What to change | Where |
 |----------------|--------|
 | Page text | `content/pages/*.txt` |
 | Page greeting / buttons | `content/pages/*.meta.json` |
-| Single-image description | `WORK/Image name.description.txt` or `content/projects/work.json` |
-| Multi-image project text | `WORK/Project folder/description.txt` or `work.json` |
-| Research project text | `RESEARCH/.../description.txt` or `content/projects/research.json` |
-| Gallery order | `WORK/order.txt` or rename folders `01 - Name` |
-| Image order inside a project | `images.txt` inside the project folder |
+| Gallery order | `Afbeeldingen portfolio/WORK/order.txt` (or `RESEARCH/order.txt`) |
+| Text under a single illustration | `WORK/Image name.description.txt` next to the image |
+| Text under a folder project | `WORK/Project folder/description.txt` |
+| Image order inside a project popup | `images.txt` inside the project folder |
 | Email, Instagram, LinkedIn | `content/site.json` |
 | Images | `Afbeeldingen portfolio/` |
 
----
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-To preview the production build locally:
-
-```bash
-npm run host
-```
-
----
-
-## Build
-
-```bash
-npm run build
-```
-
-This runs three steps:
-
-1. `scripts/build-content.mjs` — merges `content/` into `src/data/content.json`
-2. `scripts/generate-gallery.mjs` — copies images to `public/images/` and builds `src/data/gallery.json`
-3. `next build` — outputs the static site to `out/`
+Short checklist: **[content/HOW-TO-UPDATE.txt](content/HOW-TO-UPDATE.txt)**
 
 ---
 
@@ -201,7 +189,7 @@ This runs three steps:
 
 ```
 content/
-  HOW-TO-UPDATE.txt     Short editing checklist
+  HOW-TO-UPDATE.txt       Short editing checklist
   site.json               Site name, email, Instagram, LinkedIn
   pages/
     home.txt              Home page body text
@@ -209,33 +197,30 @@ content/
     about.txt             About page text
     contact.txt           Contact page text
     workshops.txt         Workshops page text
-    workshops.meta.json   Workshops banner alt + footer CTA
-  projects/
-    work.json             Optional illustration popup text
-    research.json         Optional research popup text
+    workshops.meta.json   Workshops footer CTA
 
 Afbeeldingen portfolio/
-  HOME/                   Homepage hero, logo, portrait
-  ABOUT/                  About portrait
-  WORKSHOPS/              Workshops banner
   WORK/
     order.txt             Illustration gallery order
-    Project folder/       Multi-image project
-      description.txt     Optional popup text
-      images.txt          Optional image order inside popup
-    Single image.jpg      Standalone illustration
-    Single image.description.txt   Optional popup text for that image
+    My Project/           Multi-image project folder
+      description.txt     Popup text for this project
+      images.txt          Image order inside the popup
+    My image.jpg          Single illustration
+    My image.description.txt   Popup text for that illustration
   RESEARCH/
     order.txt             Research gallery order
     ...                   Same pattern as WORK
+  HOME/                   Homepage images
+  ABOUT/                  About portrait
+  WORKSHOPS/              Workshops banner
 
 public/
-  cv-july-2026.pdf        Resume linked from About
-  images/                 Generated copies (do not edit by hand)
+  cv-july-2026.pdf        Resume (linked from About)
+  images/                 Generated copies — do not edit by hand
 
-scripts/                  Build scripts for content & gallery
-src/                      Next.js app (pages, components)
-out/                      Generated static site (do not edit by hand)
+scripts/                  Build scripts
+src/                      Website code
+out/                      Generated site — do not edit by hand
 ```
 
 ---

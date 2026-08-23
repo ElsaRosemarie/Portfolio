@@ -7,20 +7,18 @@ automatically in about 2–3 minutes.
 Open your repository in a browser:
 https://github.com/ElsaRosemarie/Portfolio
 
+Full tutorial with examples: see README.md in the repo root.
 
-─── CHANGE PAGE TEXT (easiest way) ────────────────────────────────
 
-Page text is now plain .txt files — no JSON commas to worry about.
+─── CHANGE PAGE TEXT ───────────────────────────────────────────────
 
-1. Open the folder:  content  →  pages
-2. Click the page you want:
-     home.txt
-     about.txt
-     contact.txt
-     workshops.txt
+Page text is plain .txt files — no JSON commas to worry about.
+
+1. Open:  content  →  pages
+2. Click the file you want (home.txt, about.txt, contact.txt, workshops.txt)
 3. Click the pencil icon  ✏️  Edit this file
 4. Change the text
-5. Scroll down →  Commit changes  →  Commit changes
+5. Commit changes
 
 HOW THE TEXT FILE WORKS
 • Leave a blank line between paragraphs
@@ -28,10 +26,9 @@ HOW THE TEXT FILE WORKS
 • Use [link text](https://url) or [link text](/page) for links
 • No quote marks or commas needed around paragraphs
 
-Small settings (greeting, buttons, etc.) live in matching .meta.json files:
+Small settings (greeting, buttons) live in matching .meta.json files:
   home.meta.json
   workshops.meta.json
-These files are optional and much smaller than before.
 
 
 ─── CHANGE EMAIL, INSTAGRAM, OR LINKEDIN ───────────────────────────
@@ -47,24 +44,22 @@ Tips for site.json:
 
 ─── CHANGE GALLERY ORDER ───────────────────────────────────────────
 
-You can use EITHER method (or both):
+Use  order.txt  — one project name per line.
 
-METHOD A — order.txt (recommended for exact control)
 1. Open:  Afbeeldingen portfolio  →  WORK  (or RESEARCH)
 2. Click  order.txt  →  pencil icon  ✏️
-3. Move lines up or down (one project name per line)
+3. Move lines up or down
 4. Commit changes
 
-METHOD B — rename folders with a number at the start
-Rename a project folder like this:
-  01 - Queer Zine Toekomstboeren
-  02 - Spring storm
-  03 - Once Upon a Time
-
-Lower numbers appear first. Projects not in order.txt still follow
-these numbers when they are added at the end.
-
 Order goes left to right, then top to bottom.
+
+Example:
+  Queer Zine Toekomstboeren
+  Spring storm
+  Once Upon a Time
+
+HIDE without deleting: put a minus before the name in order.txt
+  Example:  - Draft project
 
 
 ─── ADD OR REMOVE WORK / RESEARCH ─────────────────────────────────
@@ -72,14 +67,37 @@ Order goes left to right, then top to bottom.
 ADD a project folder:
   Afbeeldingen portfolio  →  WORK  →  Add file  →  Create new file
   Type:  My Project Name/photo.jpg   (creates a folder + image)
-  Add a cover image in WORK/ named like:  My Project Name dig, com.png
-  Add the project name to order.txt (or use 01 - My Project Name)
+  Add the project name to order.txt
   Commit changes
 
 REMOVE a project: delete its folder and its line in order.txt
 
-HIDE without deleting: put a minus before the name in order.txt
-  Example:  - Draft project
+
+─── TEXT UNDER A SINGLE-IMAGE ILLUSTRATION ────────────────────────
+
+Create a description file next to the image — same name + .description.txt
+
+  Image:         WORK/Thesis cover trad.jpg
+  Description:   WORK/Thesis cover trad.description.txt
+
+Write your text in that file. Blank line = new paragraph.
+Use *italic*, **bold**, and [links](url) like page text.
+
+
+─── PROJECT TEXT (folder projects) ───────────────────────────────
+
+Add  description.txt  inside the project folder:
+
+  Afbeeldingen portfolio  →  WORK  →  My Project  →  description.txt
+
+
+─── IMAGE ORDER WITHIN A PROJECT ──────────────────────────────────
+
+Inside a project folder, add  images.txt  (one filename per line).
+
+  Afbeeldingen portfolio  →  WORK  →  My Project  →  images.txt
+
+Images not listed are appended at the end. Use  -filename  to hide one.
 
 
 ─── IMAGE CATEGORIES (work gallery filters) ───────────────────────
@@ -91,78 +109,10 @@ Add tags at the END of the cover filename, before the extension:
   com   = Commissioned
   other = Other
 
-Examples:
-  My piece trad.jpg
-  My piece dig, com.png        (appears in two filters)
-
-
-─── SINGLE-IMAGE ILLUSTRATIONS (title + description in popup) ─────
-
-Single images in WORK/ show only a title until you add a description.
-The popup then looks the same as multi-image projects like Queer Zine.
-
-Easiest: create a description file next to the image.
-
-  Image:        Afbeeldingen portfolio/WORK/Thesis cover trad.jpg
-  Description:  Afbeeldingen portfolio/WORK/Thesis cover trad.description.txt
-
-Write your text in that file. Blank line = new paragraph.
-Use *italic*, **bold**, and [links](url) like page text.
-
-Alternative: add an entry in  content/projects/work.json  keyed by title.
-
-
-─── PROJECT TEXT (folder projects) ───────────────────────────────
-
-Add  description.txt  inside the project folder:
-
-  Afbeeldingen portfolio  →  WORK  →  My Project  →  description.txt
-
-Write your text there. Separate paragraphs with a blank line.
-Use [link text](url) for links. No JSON needed.
-
-Alternative: edit  content/projects/work.json  or  research.json
-
-
-─── IMAGE ORDER WITHIN A PROJECT ──────────────────────────────────
-
-Inside a project folder, add  images.txt  (one filename per line).
-
-  Afbeeldingen portfolio  →  WORK  →  My Project  →  images.txt
-
-Example:
-  photo-cover.jpg
-  detail-1.png
-  detail-2.png
-
-Images not listed are appended at the end. Use  -filename  to hide one.
-
-
-─── CHANGE IMAGES ON A PAGE ─────────────────────────────────────
-
-Replace image files in  Afbeeldingen portfolio:
-
-  HOME/          → homepage hero + portrait
-  ABOUT/         → about page portrait
-  WORKSHOPS/     → workshops banner
-
-Keep the same filename, or ask a developer to update the image mapping.
-
-
-─── CUSTOM DOMAIN ─────────────────────────────────────────────────
-
-1. Open  content/site.json
-2. Set  "basePath"  to  ""  (empty)
-3. Set  "customDomain"  to your domain, e.g.  "elsarosemarie.com"
-4. Commit changes
-5. In GitHub:  Settings  →  Pages  →  Custom domain
-
 
 ─── IF SOMETHING BREAKS ───────────────────────────────────────────
 
-After committing, check the deploy status:
-  GitHub  →  Actions  tab  →  latest green checkmark = live
-
+After committing, check:  GitHub  →  Actions  →  green checkmark = live
 Use  History  on the file to undo your last edit.
 
 Common mistakes:
