@@ -166,13 +166,6 @@ Afbeeldingen portfolio/WORK/Queer Zine Toekomstboeren/description.txt
 
 ---
 
-## Updating content (no code required)
-
-Most text and images can be edited directly on GitHub. After you commit, the site rebuilds automatically in about 2–3 minutes.
-
-See the tutorial above, or **[content/HOW-TO-UPDATE.txt](content/HOW-TO-UPDATE.txt)** for a short checklist.
-
-
 ## Local development
 
 ```bash
@@ -182,7 +175,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-To preview the production build locally (same as the static export):
+To preview the production build locally:
 
 ```bash
 npm run host
@@ -204,75 +197,45 @@ This runs three steps:
 
 ---
 
-## Deployment (GitHub Pages)
-
-Pushing to **`main`** triggers [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which builds the site and publishes `out/` to the **`gh-pages`** branch.
-
-### One-time GitHub setup
-
-1. Open the repo → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to **Deploy from a branch**
-3. Branch: **`gh-pages`**, folder: **`/ (root)`**
-4. Save
-
-The live URL uses `basePath` from `content/site.json` (currently empty for `elsarosemarie.com`).
-
----
-
-## Custom domain & DNS
-
-When you have a domain (e.g. `www.elsavandam.nl`), connect it in two places:
-
-### 1. In this repository
-
-Edit **`content/site.json`**:
-
-```json
-{
-  "basePath": "",
-  "customDomain": "www.elsavandam.nl"
-}
-```
-
-- **`basePath`** — set to `""` (empty) for a custom domain. Use `"/Portfolio"` only while on `github.io/Portfolio`.
-- **`customDomain`** — your domain without `https://`. The build writes `public/CNAME` for GitHub Pages.
-
-Commit and push. Wait for the deploy to finish.
-
-### 2. At your domain provider (DNS)
-
-In GitHub → **Settings** → **Pages** → **Custom domain**, enter the same domain. GitHub will show the DNS records you need. Typically:
-
-| Type | Name | Value |
-|------|------|--------|
-| **CNAME** | `www` | `elsarosemarie.github.io` |
-| **A** | `@` (apex) | GitHub Pages IPs (shown in GitHub UI) |
-
-DNS can take up to 24–48 hours to propagate. Enable **Enforce HTTPS** in GitHub Pages once the domain is verified.
-
-### Switching back to github.io temporarily
-
-Set in `content/site.json`:
-
-```json
-"basePath": "/Portfolio",
-"customDomain": ""
-```
-
----
-
 ## Project structure
 
 ```
-content/                  Editable text
-  site.json               Site settings, links, domain
-  pages/                  Page text (.txt) and settings (.meta.json)
-  projects/               Optional project text (work.json, research.json)
-Afbeeldingen portfolio/   Source images, order.txt, description files
-public/images/            Generated image copies (do not edit by hand)
-src/                      Next.js app (pages, components)
+content/
+  HOW-TO-UPDATE.txt     Short editing checklist
+  site.json               Site name, email, Instagram, LinkedIn
+  pages/
+    home.txt              Home page body text
+    home.meta.json        Home greeting + About button
+    about.txt             About page text
+    contact.txt           Contact page text
+    workshops.txt         Workshops page text
+    workshops.meta.json   Workshops banner alt + footer CTA
+  projects/
+    work.json             Optional illustration popup text
+    research.json         Optional research popup text
+
+Afbeeldingen portfolio/
+  HOME/                   Homepage hero, logo, portrait
+  ABOUT/                  About portrait
+  WORKSHOPS/              Workshops banner
+  WORK/
+    order.txt             Illustration gallery order
+    Project folder/       Multi-image project
+      description.txt     Optional popup text
+      images.txt          Optional image order inside popup
+    Single image.jpg      Standalone illustration
+    Single image.description.txt   Optional popup text for that image
+  RESEARCH/
+    order.txt             Research gallery order
+    ...                   Same pattern as WORK
+
+public/
+  cv-july-2026.pdf        Resume linked from About
+  images/                 Generated copies (do not edit by hand)
+
 scripts/                  Build scripts for content & gallery
-out/                      Static export (generated, deployed to gh-pages)
+src/                      Next.js app (pages, components)
+out/                      Generated static site (do not edit by hand)
 ```
 
 ---

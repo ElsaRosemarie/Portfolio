@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
 import { asset } from "@/lib/paths";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
   const siteUrl = getSiteUrl();
 
