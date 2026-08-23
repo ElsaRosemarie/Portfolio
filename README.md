@@ -27,7 +27,7 @@ Page text is stored in plain **`.txt`** files. You do **not** need JSON, quote m
 
 | File | What it controls on the website |
 |------|----------------------------------|
-| `home.txt` | Text under “Hi! → Meet the Artist” |
+| `home.txt` | Text under “Meet the Artist” |
 | `about.txt` | About page |
 | `contact.txt` | Contact page |
 | `workshops.txt` | Workshops page |
@@ -77,7 +77,7 @@ Open `content/pages/home.meta.json`:
 
 ```json
 {
-  "greeting": "Hi! → Meet the Artist",
+  "greeting": "Meet the Artist",
   "cta": {
     "label": "About",
     "href": "/about"
