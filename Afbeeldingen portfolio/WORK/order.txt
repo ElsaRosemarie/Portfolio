@@ -11,7 +11,7 @@
 # Multiple categories: "My piece trad, com.jpg" or "Cover dig, com.png"
 
 # work order
-Queer Zine Toekomstboeren
+- Queer Zine Toekomstboeren
 Spring storm
 Once Upon a Time
 Radboud Welcomes Newcomers
