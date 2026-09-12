@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex min-w-0 items-center justify-between gap-3 sm:gap-4">
           <Link
             href="/"
-            className="relative -ml-5 block h-16 w-[14rem] shrink-0 cursor-pointer sm:-ml-5.5 sm:h-[4.5rem] sm:w-64 md:-ml-6 md:h-20 md:w-72 lg:-ml-6.5 lg:h-24 lg:w-[22rem] xl:-ml-7 xl:h-28 xl:w-[25rem] 2xl:h-32 2xl:w-[28rem]"
+            className="relative -ml-7 block h-16 w-[14rem] shrink-0 cursor-pointer sm:-ml-8 sm:h-[4.5rem] sm:w-64 md:-ml-8 md:h-20 md:w-72 lg:-ml-9 lg:h-24 lg:w-[22rem] xl:-ml-10 xl:h-28 xl:w-[25rem] 2xl:h-32 2xl:w-[28rem]"
             onClick={() => setMenuOpen(false)}
           >
             <Image
