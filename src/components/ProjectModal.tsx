@@ -90,7 +90,7 @@ export default function ProjectModal({
             aria-label="Previous project"
             aria-hidden={!hasPrev}
             tabIndex={hasPrev ? 0 : -1}
-            className="flex h-10 w-full cursor-pointer items-center justify-center rounded-sm text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:bg-brand/10 [&:not(:disabled):hover]:text-brand"
+            className="flex h-10 w-full cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:text-brand"
           >
             ‹
           </button>
@@ -122,7 +122,7 @@ export default function ProjectModal({
             aria-label="Next project"
             aria-hidden={!hasNext}
             tabIndex={hasNext ? 0 : -1}
-            className="flex h-10 w-full cursor-pointer items-center justify-center rounded-sm text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:bg-brand/10 [&:not(:disabled):hover]:text-brand"
+            className="flex h-10 w-full cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:text-brand"
           >
             ›
           </button>

@@ -2,74 +2,6 @@
   "work": {
     "projects": [
       {
-        "id": "work-queer-zine-toekomstboeren",
-        "title": "Queer Zine Toekomstboeren",
-        "categories": [
-          "dig",
-          "com"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren dig, com.png",
-            "alt": "Queer Zine Toekomstboeren"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren3.png",
-            "alt": "Queer Publication Toekomstboeren3"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren4.png",
-            "alt": "Queer Publication Toekomstboeren4"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren6.png",
-            "alt": "Queer Publication Toekomstboeren6"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren9.png",
-            "alt": "Queer Publication Toekomstboeren9"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren11.png",
-            "alt": "Queer Publication Toekomstboeren11"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren19.png",
-            "alt": "Queer Publication Toekomstboeren19"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren23.png",
-            "alt": "Queer Publication Toekomstboeren23"
-          },
-          {
-            "src": "/images/WORK/Queer Zine Toekomstboeren/Queer Publication Toekomstboeren29.png",
-            "alt": "Queer Publication Toekomstboeren29"
-          }
-        ],
-        "standalone": false,
-        "paragraphs": [
-          "For Toekomstboeren, I designed and illustrated their zine about the intersections of queerness and farming."
-        ]
-      },
-      {
-        "id": "work-spring-storm",
-        "title": "Spring storm",
-        "categories": [
-          "trad"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Spring storm trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Spring storm trad.jpg",
-            "alt": "Spring storm"
-          }
-        ],
-        "standalone": true
-      },
-      {
         "id": "work-once-upon-a-time",
         "title": "Once Upon a Time",
         "categories": [
@@ -120,6 +52,22 @@
         "paragraphs": [
           "I designed and illustrated this book of speculative fictions as a supplement to the paper [Once Upon a Time](https://dl.acm.org/doi/10.1145/3706599.3716223) When HCI Prioritised Environmental Sustainability: Reflections on a Collection of Fictions."
         ]
+      },
+      {
+        "id": "work-spring-storm",
+        "title": "Spring storm",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Spring storm trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Spring storm trad.jpg",
+            "alt": "Spring storm"
+          }
+        ],
+        "standalone": true
       },
       {
         "id": "work-radboud-welcomes-newcomers",
@@ -196,12 +144,12 @@
             "alt": "TNI guide_Pagina_1"
           },
           {
-            "src": "/images/WORK/TNI guide/TNI guide_Pagina_2.png",
-            "alt": "TNI guide_Pagina_2"
-          },
-          {
             "src": "/images/WORK/TNI guide/TNI guide_Pagina_6.png",
             "alt": "TNI guide_Pagina_6"
+          },
+          {
+            "src": "/images/WORK/TNI guide/TNI guide_Pagina_2.png",
+            "alt": "TNI guide_Pagina_2"
           }
         ],
         "standalone": false,
@@ -248,6 +196,94 @@
         "paragraphs": [
           "Series of illustrations for the podcast Excellence in Context, which explores the question of what excellence means to people in academia."
         ]
+      },
+      {
+        "id": "work-ur-xr",
+        "title": "UR & XR",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/UR & XR dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/UR & XR dig, com.png",
+            "alt": "UR & XR"
+          },
+          {
+            "src": "/images/WORK/UR & XR/Logo UR TUe.png",
+            "alt": "Logo UR TUe"
+          },
+          {
+            "src": "/images/WORK/UR & XR/Toxic system rave.png",
+            "alt": "Toxic system rave"
+          }
+        ],
+        "standalone": false,
+        "paragraphs": [
+          "I developed the visual identity of University Rebellion, and created various posters, icons and other graphics for the Dutch climate and social justice movement."
+        ]
+      },
+      {
+        "id": "work-unid",
+        "title": "UNID",
+        "categories": [
+          "dig",
+          "com"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/UNID dig, com.png",
+        "images": [
+          {
+            "src": "/images/WORK/UNID dig, com.png",
+            "alt": "UNID"
+          },
+          {
+            "src": "/images/WORK/UNID/16_17_Here_&_now.png",
+            "alt": "16_17_Here_&_now"
+          },
+          {
+            "src": "/images/WORK/UNID/34-35.U40-16.png",
+            "alt": "34-35.U40-16"
+          },
+          {
+            "src": "/images/WORK/UNID/cover.png",
+            "alt": "cover"
+          },
+          {
+            "src": "/images/WORK/UNID/Design trends final.png",
+            "alt": "Design trends final"
+          },
+          {
+            "src": "/images/WORK/UNID/Design trends final2.png",
+            "alt": "Design trends final2"
+          },
+          {
+            "src": "/images/WORK/UNID/Staff Interview2.png",
+            "alt": "Staff Interview2"
+          }
+        ],
+        "standalone": false,
+        "paragraphs": [
+          "UNID is a design magazine created by students of Industrial Design at the TU/e and as a member of the graphics team, I designed and illustrated various articles. In my second year, I became the magazine's Chief of Graphics, redesigning the magazine's layout and logo and developing a unique style for each issue."
+        ]
+      },
+      {
+        "id": "work-nap-in-the-forest",
+        "title": "Nap in the forest",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Nap in the forest trad.png",
+        "images": [
+          {
+            "src": "/images/WORK/Nap in the forest trad.png",
+            "alt": "Nap in the forest"
+          }
+        ],
+        "standalone": true
       },
       {
         "id": "work-innovating-by-design",
@@ -322,78 +358,6 @@
         ]
       },
       {
-        "id": "work-unid",
-        "title": "UNID",
-        "categories": [
-          "dig",
-          "com"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/UNID dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/UNID dig, com.png",
-            "alt": "UNID"
-          },
-          {
-            "src": "/images/WORK/UNID/16_17_Here_&_now.png",
-            "alt": "16_17_Here_&_now"
-          },
-          {
-            "src": "/images/WORK/UNID/34-35.U40-16.png",
-            "alt": "34-35.U40-16"
-          },
-          {
-            "src": "/images/WORK/UNID/cover.png",
-            "alt": "cover"
-          },
-          {
-            "src": "/images/WORK/UNID/Design trends final.png",
-            "alt": "Design trends final"
-          },
-          {
-            "src": "/images/WORK/UNID/Design trends final2.png",
-            "alt": "Design trends final2"
-          },
-          {
-            "src": "/images/WORK/UNID/Staff Interview2.png",
-            "alt": "Staff Interview2"
-          }
-        ],
-        "standalone": false,
-        "paragraphs": [
-          "UNID is a design magazine created by students of Industrial Design at the TU/e and as a member of the graphics team, I designed and illustrated various articles. In my second year, I became the magazine's Chief of Graphics, redesigning the magazine's layout and logo and developing a unique style for each issue."
-        ]
-      },
-      {
-        "id": "work-ur-xr",
-        "title": "UR & XR",
-        "categories": [
-          "dig",
-          "com"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/UR & XR dig, com.png",
-        "images": [
-          {
-            "src": "/images/WORK/UR & XR dig, com.png",
-            "alt": "UR & XR"
-          },
-          {
-            "src": "/images/WORK/UR & XR/Logo UR TUe.png",
-            "alt": "Logo UR TUe"
-          },
-          {
-            "src": "/images/WORK/UR & XR/Toxic system rave.png",
-            "alt": "Toxic system rave"
-          }
-        ],
-        "standalone": false,
-        "paragraphs": [
-          "I developed the visual identity of University Rebellion, and created various posters, icons and other graphics for the Dutch climate and social justice movement."
-        ]
-      },
-      {
         "id": "work-witchy-hour",
         "title": "Witchy hour",
         "categories": [
@@ -401,28 +365,142 @@
           "com"
         ],
         "section": "work",
-        "cover": "/images/WORK/Witchy hour trad, com.jpg",
+        "cover": "/images/WORK/Witchy hour trad, com.png",
         "images": [
           {
-            "src": "/images/WORK/Witchy hour trad, com.jpg",
+            "src": "/images/WORK/Witchy hour trad, com.png",
             "alt": "Witchy hour"
+          }
+        ],
+        "standalone": true,
+        "paragraphs": [
+          "Custom portrait of Thea and their cat"
+        ]
+      },
+      {
+        "id": "work-custom-denim-jacket",
+        "title": "Custom Denim Jacket",
+        "categories": [
+          "other"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Custom Denim Jacket other.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Custom Denim Jacket other.jpg",
+            "alt": "Custom Denim Jacket"
+          },
+          {
+            "src": "/images/WORK/Custom Denim Jacket/DSC_4115.jpg",
+            "alt": "DSC_4115"
+          },
+          {
+            "src": "/images/WORK/Custom Denim Jacket/DSC_4117.jpg",
+            "alt": "DSC_4117"
+          },
+          {
+            "src": "/images/WORK/Custom Denim Jacket/DSC_4155.jpg",
+            "alt": "DSC_4155"
+          }
+        ],
+        "standalone": false
+      },
+      {
+        "id": "work-winter-landscape",
+        "title": "Winter landscape",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Winter landscape trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Winter landscape trad.jpg",
+            "alt": "Winter landscape"
           }
         ],
         "standalone": true
       },
       {
-        "id": "work-community-seed-bank-flyer",
-        "title": "Community Seed Bank flyer",
+        "id": "work-weaving-projects",
+        "title": "Weaving projects",
         "categories": [
-          "dig",
+          "other"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Weaving projects other.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Weaving projects other.jpg",
+            "alt": "Weaving projects"
+          },
+          {
+            "src": "/images/WORK/Weaving projects/Sunset.jpg",
+            "alt": "Sunset"
+          }
+        ],
+        "standalone": false
+      },
+      {
+        "id": "work-mural-krakenburg",
+        "title": "Mural Krakenburg",
+        "categories": [
+          "other",
           "com"
         ],
         "section": "work",
-        "cover": "/images/WORK/Community Seed Bank flyer dig, com.png",
+        "cover": "/images/WORK/Mural Krakenburg other, com.png",
         "images": [
           {
-            "src": "/images/WORK/Community Seed Bank flyer dig, com.png",
-            "alt": "Community Seed Bank flyer"
+            "src": "/images/WORK/Mural Krakenburg other, com.png",
+            "alt": "Mural Krakenburg"
+          },
+          {
+            "src": "/images/WORK/Mural Krakenburg/Mural Krakenburg 3.jpg",
+            "alt": "Mural Krakenburg 3"
+          },
+          {
+            "src": "/images/WORK/Mural Krakenburg/Mural Krakenburg 4.jpg",
+            "alt": "Mural Krakenburg 4"
+          },
+          {
+            "src": "/images/WORK/Mural Krakenburg/Mural Krakenburg 5.jpg",
+            "alt": "Mural Krakenburg 5"
+          }
+        ],
+        "standalone": false,
+        "paragraphs": [
+          "For the three-year anniversary of Krakenburg, a piece of squatted land in Amstelveen, I designed a mural that captures the spirit and the vision of the community. The mural was painted in co-creation with members of the community and visitors of their annual festival."
+        ]
+      },
+      {
+        "id": "work-limitless-love",
+        "title": "Limitless love",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Limitless love trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Limitless love trad.jpg",
+            "alt": "Limitless love"
+          }
+        ],
+        "standalone": true
+      },
+      {
+        "id": "work-nurture",
+        "title": "Nurture",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Nurture trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Nurture trad.jpg",
+            "alt": "Nurture"
           }
         ],
         "standalone": true
@@ -460,33 +538,33 @@
         "standalone": true
       },
       {
-        "id": "work-limitless-love",
-        "title": "Limitless love",
+        "id": "work-clay-wall-hanging",
+        "title": "Clay Wall Hanging",
         "categories": [
-          "trad"
+          "other"
         ],
         "section": "work",
-        "cover": "/images/WORK/Limitless love trad.jpg",
+        "cover": "/images/WORK/Clay Wall Hanging other.jpg",
         "images": [
           {
-            "src": "/images/WORK/Limitless love trad.jpg",
-            "alt": "Limitless love"
+            "src": "/images/WORK/Clay Wall Hanging other.jpg",
+            "alt": "Clay Wall Hanging"
           }
         ],
         "standalone": true
       },
       {
-        "id": "work-make-kin",
-        "title": "Make kin",
+        "id": "work-t-shirt-design",
+        "title": "T-shirt Design",
         "categories": [
-          "trad"
+          "other"
         ],
         "section": "work",
-        "cover": "/images/WORK/Make kin trad.jpg",
+        "cover": "/images/WORK/T-shirt Design other.jpg",
         "images": [
           {
-            "src": "/images/WORK/Make kin trad.jpg",
-            "alt": "Make kin"
+            "src": "/images/WORK/T-shirt Design other.jpg",
+            "alt": "T-shirt Design"
           }
         ],
         "standalone": true
@@ -512,6 +590,22 @@
         ]
       },
       {
+        "id": "work-make-kin",
+        "title": "Make kin",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Make kin trad.png",
+        "images": [
+          {
+            "src": "/images/WORK/Make kin trad.png",
+            "alt": "Make kin"
+          }
+        ],
+        "standalone": true
+      },
+      {
         "id": "work-my-art-is-enough-to-give",
         "title": "My art is enough to give",
         "categories": [
@@ -523,22 +617,6 @@
           {
             "src": "/images/WORK/My art is enough to give resized trad.png",
             "alt": "My art is enough to give"
-          }
-        ],
-        "standalone": true
-      },
-      {
-        "id": "work-nap-in-the-forest",
-        "title": "Nap in the forest",
-        "categories": [
-          "trad"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Nap in the forest trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Nap in the forest trad.jpg",
-            "alt": "Nap in the forest"
           }
         ],
         "standalone": true
@@ -560,22 +638,6 @@
         "standalone": true
       },
       {
-        "id": "work-nurture",
-        "title": "Nurture",
-        "categories": [
-          "trad"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Nurture trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Nurture trad.jpg",
-            "alt": "Nurture"
-          }
-        ],
-        "standalone": true
-      },
-      {
         "id": "work-pino-s-clubhuis",
         "title": "Pino's Clubhuis",
         "categories": [
@@ -590,20 +652,24 @@
             "alt": "Pino's Clubhuis"
           }
         ],
-        "standalone": true
+        "standalone": true,
+        "paragraphs": [
+          "For the creation of our co-housing group, I illustrated Pino, our chicken, and designed the project plan for [Pino's Clubhuis](https://pinosclubhuis.wordpress.com/)."
+        ]
       },
       {
-        "id": "work-practicing-trees",
-        "title": "Practicing trees",
+        "id": "work-community-seed-bank-flyer",
+        "title": "Community Seed Bank flyer",
         "categories": [
-          "trad"
+          "dig",
+          "com"
         ],
         "section": "work",
-        "cover": "/images/WORK/Practicing trees trad.jpg",
+        "cover": "/images/WORK/Community Seed Bank flyer dig, com.png",
         "images": [
           {
-            "src": "/images/WORK/Practicing trees trad.jpg",
-            "alt": "Practicing trees"
+            "src": "/images/WORK/Community Seed Bank flyer dig, com.png",
+            "alt": "Community Seed Bank flyer"
           }
         ],
         "standalone": true
@@ -621,6 +687,25 @@
           {
             "src": "/images/WORK/Thesis cover dig, com.png",
             "alt": "Thesis cover"
+          }
+        ],
+        "standalone": true,
+        "paragraphs": [
+          "Illustrated cover for a PhD thesis on dark matter."
+        ]
+      },
+      {
+        "id": "work-practicing-trees",
+        "title": "Practicing trees",
+        "categories": [
+          "trad"
+        ],
+        "section": "work",
+        "cover": "/images/WORK/Practicing trees trad.jpg",
+        "images": [
+          {
+            "src": "/images/WORK/Practicing trees trad.jpg",
+            "alt": "Practicing trees"
           }
         ],
         "standalone": true
@@ -642,50 +727,18 @@
         "standalone": true
       },
       {
-        "id": "work-weaving",
-        "title": "Weaving",
-        "categories": [
-          "other"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Weaving other.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Weaving other.jpg",
-            "alt": "Weaving"
-          }
-        ],
-        "standalone": true
-      },
-      {
-        "id": "work-winter-landscape",
-        "title": "Winter landscape",
-        "categories": [
-          "trad"
-        ],
-        "section": "work",
-        "cover": "/images/WORK/Winter landscape trad.jpg",
-        "images": [
-          {
-            "src": "/images/WORK/Winter landscape trad.jpg",
-            "alt": "Winter landscape"
-          }
-        ],
-        "standalone": true
-      },
-      {
-        "id": "work-logo-massagesalon",
-        "title": "Logo Massagesalon",
+        "id": "work-logo-massage-salon",
+        "title": "Logo Massage Salon",
         "categories": [
           "dig",
           "com"
         ],
         "section": "work",
-        "cover": "/images/WORK/Logo Massagesalon dig, com.jpg",
+        "cover": "/images/WORK/Logo Massage Salon dig, com.jpg",
         "images": [
           {
-            "src": "/images/WORK/Logo Massagesalon dig, com.jpg",
-            "alt": "Logo Massagesalon"
+            "src": "/images/WORK/Logo Massage Salon dig, com.jpg",
+            "alt": "Logo Massage Salon"
           }
         ],
         "standalone": true
@@ -932,5 +985,5 @@
       "All"
     ]
   },
-  "generatedAt": "2026-08-23T08:55:28.963Z"
+  "generatedAt": "2026-09-12T09:19:21.331Z"
 }

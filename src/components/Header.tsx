@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex min-w-0 items-center justify-between gap-3 sm:gap-4">
           <Link
             href="/"
-            className="relative -ml-5 block h-11 w-[9.5rem] shrink-0 cursor-pointer sm:-ml-5.5 sm:h-12 sm:w-44 md:-ml-6 md:h-14 md:w-52 lg:-ml-6.5 lg:h-[4.5rem] lg:w-[16rem] xl:-ml-7 xl:h-20 xl:w-[18rem] 2xl:h-24 2xl:w-[22rem]"
+            className="relative -ml-5 block h-16 w-[14rem] shrink-0 cursor-pointer sm:-ml-5.5 sm:h-[4.5rem] sm:w-64 md:-ml-6 md:h-20 md:w-72 lg:-ml-6.5 lg:h-24 lg:w-[22rem] xl:-ml-7 xl:h-28 xl:w-[25rem] 2xl:h-32 2xl:w-[28rem]"
             onClick={() => setMenuOpen(false)}
           >
             <Image
@@ -26,7 +26,7 @@ export default function Header() {
               alt="Elsa van Dam"
               fill
               className="object-contain object-left"
-              sizes="(max-width: 640px) 152px, (max-width: 1024px) 208px, 352px"
+              sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 448px"
               priority
             />
           </Link>
@@ -61,7 +61,7 @@ export default function Header() {
             </span>
           </button>
 
-          <nav className="hidden min-w-0 shrink items-center justify-end gap-x-4 text-xs uppercase tracking-[0.14em] lg:flex xl:gap-x-6 xl:text-sm xl:tracking-[0.18em] 2xl:gap-x-8 2xl:text-base 2xl:tracking-[0.2em]">
+          <nav className="hidden min-w-0 shrink items-center justify-end gap-x-4 text-[0.7rem] uppercase tracking-[0.14em] lg:flex xl:gap-x-5 xl:text-xs xl:tracking-[0.16em] 2xl:gap-x-6 2xl:text-sm 2xl:tracking-[0.18em]">
             {links.map((link) => {
               const active = pathname === link.href;
               return (
@@ -96,7 +96,7 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     tabIndex={menuOpen ? undefined : -1}
-                    className={`block py-3 text-sm uppercase tracking-[0.15em] transition-colors ${
+                    className={`block py-3 text-xs uppercase tracking-[0.15em] transition-colors ${
                       active
                         ? "text-brand"
                         : "text-neutral-800 hover:text-brand"

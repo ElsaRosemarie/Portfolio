@@ -437,8 +437,8 @@ function copyStaticAssets() {
   const mappings = [
     ["HOME/Logo.png", "HOME/Logo.png"],
     ["HOME/Welcome landscape 2-2.jpg", "HOME/hero.jpg"],
-    ["HOME/DSC_9623.jpg", "HOME/portrait.jpg"],
-    ["ABOUT/DSC_9623.jpg", "ABOUT/portrait.jpg"],
+    ["HOME/DSC_4215.jpg", "HOME/portrait.jpg"],
+    ["ABOUT/DSC_4187-2.jpg", "ABOUT/portrait.jpg"],
     ["ABOUT/IMG-20190609-WA0002-2.jpg", "ABOUT/portrait-alt.jpg"],
     ["WORKSHOPS/Workshops.jpg", "WORKSHOPS/hero.jpg"],
   ];
