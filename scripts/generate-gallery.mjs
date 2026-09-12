@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import sharp from "sharp";
 import { readJsonLenient } from "./lib/parse-content.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -70,6 +71,57 @@ function copyFile(src, dest) {
   }
 }
 
+const MAX_IMAGE_EDGE = 1600;
+const JPEG_QUALITY = 82;
+const PNG_QUALITY = 80;
+
+function shouldRefreshOptimized(src, dest) {
+  if (!fs.existsSync(dest)) return true;
+  const srcStat = fs.statSync(src);
+  const destStat = fs.statSync(dest);
+  if (srcStat.mtimeMs > destStat.mtimeMs) return true;
+  // Recompress very large leftovers from older plain copies
+  if (destStat.size > 900_000) return true;
+  return false;
+}
+
+async function optimizeToPublic(relativePath, srcFile) {
+  const dest = path.join(PUBLIC, relativePath);
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+
+  if (!shouldRefreshOptimized(srcFile, dest)) {
+    return `/images/${relativePath.replace(/\\/g, "/")}`;
+  }
+
+  const ext = path.extname(dest).toLowerCase();
+  const pipeline = sharp(srcFile, { failOn: "none", limitInputPixels: false })
+    .rotate()
+    .resize({
+      width: MAX_IMAGE_EDGE,
+      height: MAX_IMAGE_EDGE,
+      fit: "inside",
+      withoutEnlargement: true,
+    });
+
+  try {
+    if (ext === ".png") {
+      await pipeline.png({ quality: PNG_QUALITY, compressionLevel: 8 }).toFile(dest);
+    } else if (ext === ".webp") {
+      await pipeline.webp({ quality: JPEG_QUALITY }).toFile(dest);
+    } else if (ext === ".gif") {
+      // Keep animated/simple gifs as-is
+      fs.copyFileSync(srcFile, dest);
+    } else {
+      await pipeline.jpeg({ quality: JPEG_QUALITY, mozjpeg: true }).toFile(dest);
+    }
+  } catch (error) {
+    console.warn(`Image optimize failed for ${relativePath}, copying original:`, error.message);
+    fs.copyFileSync(srcFile, dest);
+  }
+
+  return `/images/${relativePath.replace(/\\/g, "/")}`;
+}
+
 function collectImages(dir) {
   if (!fs.existsSync(dir)) return [];
   const images = fs
@@ -129,10 +181,8 @@ function applyImageOrder(images, orderPath, label) {
   return [...ordered, ...remaining];
 }
 
-function mirrorToPublic(relativePath, srcFile) {
-  const dest = path.join(PUBLIC, relativePath);
-  copyFile(srcFile, dest);
-  return `/images/${relativePath.replace(/\\/g, "/")}`;
+async function mirrorToPublic(relativePath, srcFile) {
+  return optimizeToPublic(relativePath, srcFile);
 }
 
 function readJson(filePath) {
@@ -229,7 +279,7 @@ function resolveProjectCopy(
   };
 }
 
-function buildSection(sectionName) {
+async function buildSection(sectionName) {
   const sectionDir = path.join(SOURCE, sectionName);
   if (!fs.existsSync(sectionDir)) {
     return { projects: [], filters: [] };
@@ -275,17 +325,19 @@ function buildSection(sectionName) {
     const categories = parseCategories(categorySource);
 
     const id = `${sectionName.toLowerCase()}-${slugify(folder)}`;
-    const imageUrls = images.map((img) => {
-      const rel = path.join(sectionName, folder, path.basename(img));
-      return {
-        src: mirrorToPublic(rel, img),
-        alt: cleanTitle(path.basename(img)),
-      };
-    });
+    const imageUrls = await Promise.all(
+      images.map(async (img) => {
+        const rel = path.join(sectionName, folder, path.basename(img));
+        return {
+          src: await mirrorToPublic(rel, img),
+          alt: cleanTitle(path.basename(img)),
+        };
+      })
+    );
 
     if (coverCandidate && !images.some((img) => img === coverSrc)) {
       const rel = path.join(sectionName, coverCandidate);
-      const coverUrl = mirrorToPublic(rel, coverSrc);
+      const coverUrl = await mirrorToPublic(rel, coverSrc);
       if (!imageUrls.some((u) => u.src === coverUrl)) {
         imageUrls.unshift({
           src: coverUrl,
@@ -318,7 +370,7 @@ function buildSection(sectionName) {
     const src = path.join(sectionDir, img);
     const title = cleanTitle(img);
     const rel = path.join(sectionName, img);
-    const url = mirrorToPublic(rel, src);
+    const url = await mirrorToPublic(rel, src);
     const id = `${sectionName.toLowerCase()}-${slugify(title)}`;
     const categories = parseCategories(img);
 
@@ -433,7 +485,7 @@ function applyProjectOrder(projects, orderPath, sectionLabel) {
   return [...ordered, ...remaining];
 }
 
-function copyStaticAssets() {
+async function copyStaticAssets() {
   const mappings = [
     ["HOME/Logo.png", "HOME/Logo.png"],
     ["HOME/Welcome landscape 2-2.jpg", "HOME/hero.jpg"],
@@ -446,16 +498,16 @@ function copyStaticAssets() {
   for (const [src, dest] of mappings) {
     const srcPath = path.join(SOURCE, src);
     if (fs.existsSync(srcPath)) {
-      mirrorToPublic(dest, srcPath);
+      await mirrorToPublic(dest, srcPath);
     }
   }
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(path.join(ROOT, "src", "data"), { recursive: true });
 
-  const work = buildSection("WORK");
-  const research = buildSection("RESEARCH");
+  const work = await buildSection("WORK");
+  const research = await buildSection("RESEARCH");
 
   const data = {
     work,
@@ -463,11 +515,14 @@ function main() {
     generatedAt: new Date().toISOString(),
   };
 
-  copyStaticAssets();
+  await copyStaticAssets();
   fs.writeFileSync(OUT, JSON.stringify(data, null, 2));
   console.log(
     `Gallery generated: ${work.projects.length} work, ${research.projects.length} research projects`
   );
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

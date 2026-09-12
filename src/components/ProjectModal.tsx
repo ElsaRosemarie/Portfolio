@@ -13,6 +13,12 @@ interface ProjectModalProps {
   onNavigate: (project: Project) => void;
 }
 
+function preloadSrc(src: string) {
+  const img = new window.Image();
+  img.decoding = "async";
+  img.src = src;
+}
+
 export default function ProjectModal({
   project,
   projects,
@@ -61,9 +67,16 @@ export default function ProjectModal({
   const mainSrc = asset(images[imageIndex].src);
 
   useEffect(() => {
-    const preload = new window.Image();
-    preload.src = mainSrc;
-  }, [mainSrc]);
+    preloadSrc(mainSrc);
+
+    if (images[imageIndex + 1]) preloadSrc(asset(images[imageIndex + 1].src));
+    if (images[imageIndex - 1]) preloadSrc(asset(images[imageIndex - 1].src));
+    if (hasNext) preloadSrc(asset(projects[currentIndex + 1].cover));
+    if (hasPrev) preloadSrc(asset(projects[currentIndex - 1].cover));
+  }, [mainSrc, images, imageIndex, hasNext, hasPrev, projects, currentIndex]);
+
+  const arrowClassName =
+    "absolute top-1/2 z-10 flex h-12 w-10 -translate-y-1/2 cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-14 sm:w-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:text-brand";
 
   return (
     <div
@@ -82,7 +95,7 @@ export default function ProjectModal({
       </button>
 
       <div className="mx-auto w-full max-w-4xl px-4 py-14 pt-16 sm:px-6 sm:py-16 lg:px-10 xl:px-16">
-        <div className="mb-6 grid grid-cols-[2.25rem_1fr_2.25rem] items-center gap-1 sm:mb-8 sm:grid-cols-[3rem_1fr_3rem] sm:gap-2">
+        <div className="relative mb-6 sm:mb-8">
           <button
             type="button"
             onClick={goPrev}
@@ -90,29 +103,30 @@ export default function ProjectModal({
             aria-label="Previous project"
             aria-hidden={!hasPrev}
             tabIndex={hasPrev ? 0 : -1}
-            className="flex h-10 w-full cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:text-brand"
+            className={`${arrowClassName} left-0`}
           >
             ‹
           </button>
 
-          <div className="relative min-h-[220px] h-[min(45vh,24rem)] sm:min-h-[260px] sm:h-[min(50vh,28rem)] lg:min-h-[280px] lg:h-[min(55vh,32rem)]">
-            <div className="flex h-full items-center justify-center">
-              {!imageLoaded && (
-                <div
-                  className="absolute inset-0 animate-pulse rounded bg-neutral-100"
-                  aria-hidden
-                />
-              )}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={mainSrc}
-                alt={images[imageIndex].alt}
-                onLoad={() => setImageLoaded(true)}
-                className={`max-h-full w-auto max-w-full object-contain transition-opacity duration-500 ${
-                  imageLoaded ? "opacity-100" : "opacity-0"
-                }`}
+          <div className="relative mx-auto h-[min(45vh,24rem)] min-h-[220px] px-10 sm:h-[min(50vh,28rem)] sm:min-h-[260px] sm:px-14 lg:h-[min(55vh,32rem)] lg:min-h-[280px]">
+            {!imageLoaded && (
+              <div
+                className="absolute inset-0 animate-pulse rounded bg-neutral-100"
+                aria-hidden
               />
-            </div>
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              key={mainSrc}
+              src={mainSrc}
+              alt={images[imageIndex].alt}
+              onLoad={() => setImageLoaded(true)}
+              decoding="async"
+              fetchPriority="high"
+              className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-200 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
+            />
           </div>
 
           <button
@@ -122,7 +136,7 @@ export default function ProjectModal({
             aria-label="Next project"
             aria-hidden={!hasNext}
             tabIndex={hasNext ? 0 : -1}
-            className="flex h-10 w-full cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-colors disabled:pointer-events-none disabled:opacity-0 sm:h-12 sm:text-4xl lg:text-5xl [&:not(:disabled):hover]:text-brand"
+            className={`${arrowClassName} right-0`}
           >
             ›
           </button>

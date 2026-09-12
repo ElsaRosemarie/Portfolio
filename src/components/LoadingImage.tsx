@@ -35,7 +35,7 @@ export default function LoadingImage({
         onLoad={() => setLoaded(true)}
         loading={eager ? "eager" : "lazy"}
         decoding="async"
-        className={`block h-auto w-full ${className} transition-opacity duration-500 ${
+        className={`block h-auto w-full ${className} transition-opacity duration-200 ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       />
