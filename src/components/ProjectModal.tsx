@@ -55,10 +55,10 @@ export default function ProjectModal({
       if (e.key === "ArrowLeft" && hasPrev) goPrev();
       if (e.key === "ArrowRight" && hasNext) goNext();
     };
-    document.body.style.overflow = "hidden";
+    document.documentElement.classList.add("modal-open");
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("modal-open");
       window.removeEventListener("keydown", onKey);
     };
   }, [onClose, goPrev, goNext, hasPrev, hasNext]);
@@ -80,7 +80,7 @@ export default function ProjectModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 overflow-y-auto bg-white/95"
+      className="fixed inset-0 z-50 flex flex-col bg-white/95"
       role="dialog"
       aria-modal="true"
       aria-label={project.title}
@@ -88,12 +88,13 @@ export default function ProjectModal({
       <button
         type="button"
         onClick={onClose}
-        className="fixed right-3 top-3 z-[60] flex h-11 w-11 cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:right-6 sm:top-6"
+        className="absolute right-3 top-3 z-[60] flex h-11 w-11 cursor-pointer items-center justify-center text-3xl leading-none text-neutral-800 transition-opacity hover:opacity-50 sm:right-6 sm:top-6"
         aria-label="Close"
       >
         ×
       </button>
 
+      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
       <div className="mx-auto w-full max-w-4xl px-4 py-14 pt-16 sm:px-6 sm:py-16 lg:px-10 xl:px-16">
         <div className="relative mb-6 sm:mb-8">
           <button
@@ -187,6 +188,7 @@ export default function ProjectModal({
             })}
           </div>
         )}
+      </div>
       </div>
     </div>
   );

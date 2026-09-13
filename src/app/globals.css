@@ -18,6 +18,20 @@
   html {
     scroll-behavior: smooth;
     overflow-x: clip;
+    /* Reserve scrollbar space so centered .page-shell never shifts
+       between short pages (contact) and long pages (gallery). */
+    scrollbar-gutter: stable;
+  }
+
+  /* Modal owns the only scrollbar; drop the page gutter so it
+     doesn't sit beside the modal bar (looks like two scrollbars). */
+  html.modal-open {
+    overflow: hidden;
+    scrollbar-gutter: auto;
+  }
+
+  html.modal-open body {
+    overflow: hidden;
   }
 
   body {
